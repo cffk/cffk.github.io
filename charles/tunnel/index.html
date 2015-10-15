@@ -1,0 +1,269 @@
+<html>
+ <head><!--Xbase href="http://charles.karney.info/tunnel.html"Y-->
+  <title>Setting up a Layer 3 VPN tunnel with SSH</title>
+  <meta name="description" content="Layer 3 SSH tunnel">
+  <meta name="author" content="Charles F. F. Karney">
+ </head>
+ <body topmargin=10 leftmargin=10>
+   <h2>Setting up a Layer 3 VPN tunnel with SSH</h2>
+
+<h3>Introduction</h3>
+
+Commercial VPN solutions can be deployed to allow outside access to a
+network from Windows PCs.  However, these solutions frequently don't
+work with Linux PCs.
+<p>
+The firewall at my work allows outgoing ssh connections.  So for several
+years, I have been using a "reverse ssh tunnel" based on the old local
+and remote port forwarding capabilities of ssh.  However, this approach
+is high maintenance and doesn't easily allow the forwarding of more
+complex protocols, e.g., to provide access to an
+internal <a href="http://www.openafs.org">AFS</a> server.
+<p>
+I recently installed Fedora 7 on my home and work computers and noted
+with interest the VPN tunneling support
+that <a href="http://www.openssh.org">openssh</a> version 4.3 and
+greater provides.  This note describes how I've set up layer 3 tunneling
+(which allows my computer to appear in the IP address space of my work).
+<p>
+My starting point was the description given in
+<a href="https://help.ubuntu.com/community/SSH_VPN">https://help.ubuntu.com/community/SSH_VPN</a>.
+This provides a good description of the various aspects of a working
+layer 3 tunnel.  However, it describes a setup where both the work and
+home computers are behind NAT front ends.  In addition, the instructions
+are somewhat specific to Ubuntu instead of Fedora.
+
+<h3>Downloads</h3>
+
+There are 4 scripts which you can download here
+<ul>
+  <li>
+    <a href="tunnel.sh">tunnel</a>
+  <li>
+    <a href="tunnela.sh">tunnela</a>
+  <li>
+    <a href="tunnelb.sh">tunnelb</a>
+  <li>
+    <a href="tunnel-vars.sh">tunnel-vars</a>
+</ul>
+Read on for a desciption of how to use these scripts.
+
+<h3>Requirements</h3>
+
+I have root access to my work and home desktop computers.  Both
+computers have public IP numbers (no private or NAT network).  The
+firewall at work permits outgoing ssh connections.  The goal is to use
+openssh to connect to my home from work and to set up a tunnel so that
+my home computer is on the work network.
+<p>
+This turned out to be impossible (as far as I can tell) unless I
+installed a second network interface on my work computer (with its own
+IP address in the work network) and routed the initial outgoing ssh
+connection through this second interface.  This was the magic that
+allowed tunneling to work.
+<p>
+So here are the requirements for the method described here to work:
+<ul>
+<li>
+  A computer at work with two IP addresses, HOSTA and HOSTAALT,
+  listening on two interfaces.  HOSTA and HOSTAALT are both in the work
+  network, ANET/AMASK.  HOSTA is on the interface with default route.
+<li>
+  A computer at home with a public IP address.
+<li>
+  Root access on both computers.
+<li>
+  openssh version 4.3 or later on both computers.  (VPN tunneling was
+  introduced with version 4.3.)
+<li>
+  A stable IP name, HOSTB, for the home computer.  You can use a
+  dynamic DNS service to provide this even if your home IP number
+  changes.
+<li>
+  ssh access from HOSTA to HOSTB.
+<li>
+  An IP address, HOSTBTUN, in the work network for use on the home
+  computer once the tunnel is set up.
+</ul>
+I use Fedora 7 on both computers.  The same technique should work with
+minor modifications for other Linux distributions.
+<p>
+My work and home IP numbers are public.  However, this is not essential.
+Everything should work the same if either or both networks are private
+provided you can establish an ssh connection from HOSTA to HOSTB.  (This
+will require redirection of port 22 if HOSTB is on a private network.)
+In addition, you'll have to take steps to use your work DNS to get the
+private work IP names resolved.
+
+<h3>Setup</h3>
+
+<ul>
+<li>
+Set up a password-less connection from root@HOSTA to root@HOSTB.  As
+root on HOSTA, create an ssh key with
+<pre>
+    ssh-keygen
+</pre>
+and supply an empty pass-phrase.  Put the public key
+HOSTA:/root/.ssh/id_rsa.pub into HOSTB:/root/.ssh/authorized_keys
+prefixed with
+<pre>
+    command="date",from="HOSTA,HOSTAALT",no-X11-forwarding,no-agent-forwarding,no-pty ...
+</pre>
+(Insert the IP addresses for HOSTA and HOSTAALT.)
+<p>
+As root on HOSTA, run
+<pre>
+    ssh -2 -n -a -x HOSTB true
+</pre>
+to confirm password-less access and to get the HOSTB's host key into
+HOSTA's known_hosts list.  Then modify the command="..." and from="..."
+strings in HOSTB:/root/.ssh/authorized_keys so that it begins.
+<pre>
+    command="/root/bin/tunnelb",from="HOSTAALT",no-X11-forwarding,no-agent-forwarding,no-pty ...
+</pre>
+<li>
+Allow forwarding on HOSTA with
+<pre>
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+</pre>
+and make this change permanent by setting
+<pre>
+    net.ipv4.ip_forward = 1
+</pre>
+in /etc/sysctl.conf.  If you are running iptables, then run
+<pre>
+    iptables -I FORWARD 1 -j ACCEPT
+</pre>
+and make this change permanent by inserting
+<pre>
+    -I FORWARD 1 -j ACCEPT
+</pre>
+into /etc/sysconfig/iptables.
+<li>
+Allow tunneling with sshd on HOSTB by specifying
+<pre>
+    PermitTunnel point-to-point
+</pre>
+in /etc/ssh/sshd_config on HOSTB.  Restart sshd on HOSTB with
+<pre>
+    service sshd restart
+</pre>
+<li>
+  Install <a href="tunnel.sh">tunnel</a>
+  and <a href="tunnela.sh">tunnela</a> in HOSTA:/root/bin/ (mode 755).
+  Install <a href="tunnelb.sh">tunnelb</a> in HOSTB:/root/bin/ (mode
+  755).  Edit the assignments
+  in <a href="tunnel-vars.sh">tunnel-vars</a> and install the result
+  in both HOSTA:/root/bin/ and HOSTB:/root/bin/ (mode 644).
+<li>
+  On HOSTA, run
+<pre>
+    /root/bin/tunnel < /dev/null > /dev/null 2>&1 &
+</pre>
+to set up the tunnel.  To have the tunnel brought up whenever HOSTA is
+rebooted, append this line to /etc/rc.d/rc.local.
+<li>
+  Test the tunnel out with
+<pre>
+    ping HOSTA
+</pre>
+on HOSTB and
+<pre>
+    ping HOSTBTUN
+</pre>
+on HOSTA.  In addition you should check access to the rest of ANET by
+pinging HOSTBTUN from some other computer on ANET and vice versa.  If
+there are problems, then check the log files in
+HOST{A,B}:/root/tunnel*.log.
+<p>
+Diagnosing problems is easiest when you are at work and have direct
+access to computers on ANET.  In addition, you should define HOSTBACKUP
+in tunnel-vars to be some other computer on ANET.  You can then connect
+directly to HOSTB from HOSTBACKUP using ssh (circumventing the tunnel)
+to reconfigure the files on HOSTB.
+<p>
+If you need to reestablish the tunnel after modifying the tunnela or
+tunnelb scripts, then kill the corresponding sshd daemon (tagged with
+"root@notty") on HOSTB, e.g.,
+<pre>
+    [root@hostb ~]# ps x | grep ssh
+     2418 ?        Ss     0:00 /usr/sbin/sshd
+     4468 ?        Ss     0:05 sshd: root@notty
+    11052 ?        Ss     0:00 sshd: root@pts/2
+    11562 pts/2    S+     0:00 grep ssh
+    [root@hostb ~]# kill 4468
+</pre>
+then wait 5 mins for the connection to be reestablished.  (If you're
+impatient, kill the sleep on HOSTA.)
+</ul>
+
+<h3>Notes</h3>
+<ul>
+<li>
+  tunnel is the controlling script which is run on HOSTA.  As configured
+  above, this runs permanently setting up the connection to HOSTB and
+  reestablishing the connection whenever it is broken.  On each new
+  connection, tunnela is run on HOSTA and tunnelb is run on HOSTB to
+  configure the endpoints of the tunnel.  To configure these scripts
+  edit the variables in tunnel-vars.
+<li>
+  Here's how the second interface on HOSTA is used.  The ssh connection
+  from HOSTA to HOSTB is made through this interface (so that HOSTB sees
+  the connection coming from HOSTAALT).  When HOSTB sets up its routing
+  rules, it specifies that traffic destined for ANET/AMASK should go
+  through the tunnel.  However it also specifies that traffic to
+  HOSTAALT should use the default route.  Without this latter rule for
+  HOSTAALT, the network packets for original ssh connection get diverted
+  into the tunnel and into never-never land.  It seems a pity that I
+  need the second interface and IP number on HOSTA.  If anyone knows a
+  way to avoid this, please let me know.
+<li>
+  The configuration of the tun devices on the two sides can be done more
+  elegantly with the ifup/ifdown mechanism.  This would have the
+  advantage that the configuration could be completely undone when the
+  tunneling goes away.  I'm too lazy to have figured out how to do this
+  yet.  (If someone wants to provide me with the necessary configuration
+  files, I'll be happy to test it and post the results.)  With the
+  scheme given here, a few routing rules stay in effect when the tunnel
+  disappears.  However these are innocuous and executing the route
+  commands redundantly is harmless.
+<li>
+  I found the behavior of ssh with VPN tunneling a little
+  counter-intuitive.  Apparently the setting up of the tunnel devices
+  take place as a separate step after the connection is made.  For this
+  reason
+  <ul>
+    <li>
+      ssh -N doesn't work since the tun devices aren't created.  However
+      this option isn't needed since ssh doesn't exit until the tunnel
+      is taken down.
+    <li>
+      LocalCommand needs to fork the commands to configure the tunnel on
+      HOSTA into the background (and these commands should start with a
+      sleep) so that the tunnel devices can be created.
+  </ul>
+<li>
+  I run a web server on my home computer and this is now inaccessible
+  from work (using http://HOSTB).  Instead, users on ANET have to access
+  it as http://HOSTBTUN.
+<li>
+  I have a small network at home, with HOSTB being the firewall and
+  providing NAT services.  I've intentionally not modified the
+  forwarding rules for NAT.  This means that internal computers on my
+  home network don't have access to the tunnel and my work network.  I
+  also have a networked printer at home and it was relatively simple to
+  set up a queue on HOSTA for this printer by modifying
+  /etc/sysconfig/iptables on HOSTB so that traffic destined for port 515
+  is redirected to the printer.
+<li>
+  Finally, I'd appreciate hearing of possible improvements to these
+  script and to this documentation.  (See E-mail address below.)
+</ul>
+<p>
+  <hr>
+  <address><a href="mailto:charles@karney.com">Charles Karney</a>
+    (2007-10-12)</address>
+  <a href="../index.html">Back to main page.</a>
+ </body>
+</html>

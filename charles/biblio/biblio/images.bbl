@@ -1,0 +1,1770 @@
+\begin{thebibliography}{80}
+%begin{latexonly}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{{\tt #1}}\fi
+%end{latexonly}
+
+\formatentry{karney74}{Parametric Coupling to Low Frequency Plasma Waves}%
+{\bibitem[Karney(1974)]{karney74}
+C.~F.~F. Karney.
+\newblock \eref{thesis74}{Parametric coupling to low frequency plasma waves}.
+\newblock {SM} thesis, Massachusetts Institute of Technology, January
+  1974.}{Nonlinear excitation of ion waves by a pump near the lower hybrid
+  frequency is examined. The ion waves considered are ion acoustic,
+  electrostatic ion cyclotron and magnetosonic waves. The approach adopted is
+  coupling of modes carried out to second order. We examine the effects of
+  varying the angles of the excited waves, and apply the results to excitation
+  of such waves in a bounded inhomogeneous plasma. The plasma is assumed
+  uniform and is described by the two fluid equations. Considerable complexity
+  is introduced by taking the angles of propagation to be arbitrary (subject to
+  frequency and wave number matching conditions), and by taking the magnetic
+  field to be finite. In order to treat this problem analytically, we have made
+  extensive use of MACSYMA, a large symbolic computation system, that has been
+  developed by the Mathlab group at M.I.T. Using this facility we have been
+  able to obtain approximate analytic results for the growth rates of the
+  excited waves. Using damping rates from kinetic theory, thresholds for these
+  interactions have been calculated, for typical tokamak plasmas. With the
+  interaction in a uniform plasma well understood, we have tried to examine
+  some of the effects of exciting the pump from a waveguide at the wall of an
+  inhomogeneous plasma. We find that in tokamak plasmas it is possible to
+  excite electrostatic ion cyclotron waves, but since the pump ray is very
+  narrow unstable pulses are unable to grow significantly before convecting out
+  of the pump region. However if it is possible to set up an array of
+  waveguides at the boundary of the plasma, a larger region of pump fields is
+  attainable, and strong excitation of the electrostatic ion cyclotron wave
+  should take place with reasonable external rf powers.}{thesis74}{}{Charles
+  F.~F. Karney}
+
+\formatentry{bers76}{Symbolic Computation of Nonlinear Wave Interactions on
+  {MACSYMA}}%
+{\bibitem[Bers(1976)]{bers76}
+A.~Bers, J.~L. Kulp, and C.~F.~F. Karney.
+\newblock Symbolic computation of nonlinear wave interactions on {MACSYMA}.
+\newblock \doix{10.1016/0010-4655(76)90012-6}{{\em Comput. Phys. Comm.},
+  12\penalty0 (1):\penalty0 81\endash{}98}, Sept./Oct. 1976.
+\newblock \preprint{M.I.T. Rept. RLE PPR 76/17 (Aug. 1977) 26 pp.}
+\newblock Reprinted in {\em Computing in Plasma Physics and Astrophysics},
+  edited by D. Biskamp (North-Holland Publishing Co., Amsterdam, 1976), Proc.
+  Second European Conf. on Computational Physics, Max-Planck-Institut f{\"u}r
+  Plasmaphysik, Garching, Germany, Apr. 27\endash{}30, 1976.}{In this paper we
+  describe the use of a large symbolic computation
+  system&mdash;MACSYMA&mdash;in determining approximate analytic expressions
+  for the nonlinear coupling of waves in an anisotropic plasma. MACSYMA was
+  used to implement the solutions of a fluid plasma model nonlinear partial
+  differential equations by perturbation expansions and subsequent iterative
+  analytic computations. By interacting with the details of the symbolic
+  computation, the physical processes responsible for particular nonlinear wave
+  interactions could be uncovered and appropriate approximations introduced so
+  as to simplify the final analytic result. Details of the MACSYMA system and
+  its use are discussed and
+  illustrated.}{}{10.1016/0010-4655(76)90012-6}{Abraham Bers, John~L. Kulp,
+  Charles F.~F. Karney}
+
+\formatentry{karney77a}{Stochastic Heating of Ions in a Tokamak by
+  Radio-Frequency Power}%
+{\bibitem[Karney(1977a)]{karney77a}
+C.~F.~F. Karney.
+\newblock \eref{thesis77}{{\em Stochastic Heating of Ions in a Tokamak by
+  Radio-Frequency Power}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, May 1977.}{The
+  nonlinear interaction of ions in a plasma with waves excited by RF power near
+  the lower hybrid frequency is considered. The object of this study is to
+  evaluate such an interaction as a method of heating the ions in a tokamak.
+  The problem is simplified by assuming the magnetic field,
+  <i>B</i><sub>0</sub>, to be uniform and the lower hybrid wave (whose
+  frequency, &omega;, is much greater than the ion cyclotron frequency,
+  &Omega;<sub><i>i</i></sub>&nbsp;) to be propagating perpendicular to the
+  magnetic field. It is shown that trapping by the wave significantly increases
+  the energy of the ions on a time scale of a few cyclotron periods. For longer
+  times the motion in a certain region of velocity space becomes stochastic for
+  fields satisfying <i>E</i>/<i>B</i><sub>0</sub> &gt;
+  &frac14;(&Omega;<sub><i>i</i></sub>&nbsp;/&omega;)<sup>1/3</sup>&omega;/<i>k%
+</i> (<i>k</i> is the wavenumber of the wave). The stochastic region of
+  velocity space extends from a lower limit given by &omega;/<i>k</i> -
+  (<i>qE</i>/<i>mk</i>)<sup>1/2</sup> (<i>q</i> and <i>m</i> are the ionic
+  charge and mass, respectively) where the ion dynamics are determined by
+  trapping to an upper limit which scales as <i>E</i><sup>2/3</sup>. The
+  stochasticity condition is independent of how close &omega; is to a cyclotron
+  harmonic. These results are extended to the case of propagation at an oblique
+  angle to the magnetic field and to the case of inhomogeneous magnetic field.
+  It is shown that stochastic ion heating can be an efficient method for
+  supplementary heating of the ions in a tokamak.}{thesis77}{}{Charles F.~F.
+  Karney}
+
+\formatentry{karney77b}{Reduction of the Equation for Lower Hybrid Waves in a
+  Plasma to a Nonlinear {\Schrodinger} Equation}%
+{\bibitem[Karney(1977b)]{karney77b}
+C.~F.~F. Karney.
+\newblock Reduction of the equation for lower hybrid waves in a plasma to a
+  nonlinear {\Schrodinger} equation.
+\newblock In {\em Proc. 1977 {MACSYMA} Users' Conf.}, pages 377\endash{}383, NASA
+  (CP-2012), 1977.
+\newblock \preprint{M.I.T. Rept. RLE PRR 77/10 (May 1977) 7 pp.}
+\newblock Meeting held at Univ. of California, Berkeley, CA, July 27\endash{}29,
+  1977.}{The equations describing the nonlinear propagation of waves in an
+  anisotropic plasma are rarely exactly soluble. However it is often possible
+  to make approximations that reduce the exact equations into a simple
+  equation. In this paper we will describe how MACSYMA may be used to make such
+  approximations, and so reduce the equation describing lower hybrid waves into
+  the nonlinear Schr&ouml;dinger equation which is soluble by the inverse
+  scattering method. It should be pointed out here that we have not used
+  MACSYMA to do the whole problem; rather MACSYMA is used at several stages in
+  the calculation that are otherwise done by hand. This is not to say that
+  MACSYMA could not do the whole problem, just that there is a natural division
+  between calculations what are easiest done by hand, and those that are
+  easiest done by machine.}{}{}{Charles F.~F. Karney}
+
+\formatentry{karney77c}{Stochastic Ion Heating by a Perpendicularly Propagating
+  Electrostatic Wave}%
+{\bibitem[Karney(1977c)]{karney77c}
+C.~F.~F. Karney and A.~Bers.
+\newblock \eref{prl77}{Stochastic ion heating by a perpendicularly propagating
+  electrostatic wave}.
+\newblock \doix{10.1103/PhysRevLett.39.550}{{\em Phys. Rev. Lett.}, 39\penalty0
+  (9):\penalty0 550\endash{}554}, August 1977.
+\newblock \preprint{M.I.T. Rept. RLE PRR 76/35 (Nov. 1976) 12 pp.}
+\newblock Reprinted in {\em Stochastic Behavior in Classical and Quantum
+  Hamiltonian Systems}, edited by G. Casati and J. Ford, volume 93 of {\em
+  Lecture Notes in Physics} (Springer-Verlag, Berlin, 1979), pages 44\endash{}50,
+  Proc. Volta Memorial Conf., Como, Italy, June 20\endash{}24, 1977.}{The motion of an
+  ion in the presence of a constant magnetic field and a perpendicularly
+  propagating electrostatic wave with frequency several times the ion cyclotron
+  frequency is shown to become stochastic for fields satisfying
+  <i>E</i>/<i>B</i><sub>0</sub> &gt;
+  &frac14;(&Omega;/&omega;)<sup>1/3</sup>(&omega;/<i>k</i>). This stochasticity
+  condition is independent of how close &omega; is to a cyclotron harmonic.
+  Applications of current interest in supplementary heating of plasmas with rf
+  power near the lower-hybrid frequency are
+  suggested.}{prl77}{10.1103/PhysRevLett.39.550}{Charles F.~F. Karney, Abraham
+  Bers}
+
+\formatentry{chu77}{Solution of the Three-Wave Resonant Equations with One Wave
+  Heavily Damped}%
+{\bibitem[Chu(1977)]{chu77}
+F.~Y.~F. Chu and C.~F.~F. Karney.
+\newblock \eref{pf77}{Solution of the three-wave resonant equations with one
+  wave heavily damped}.
+\newblock \doix{10.1063/1.861772}{{\em Phys. Fluids}, 20\penalty0
+  (10[1]):\penalty0 1728\endash{}1732}, October 1977.
+\newblock \preprint{M.I.T. Rept. RLE PRR 77/5 (Mar. 1977) 18 pp.}}{The three
+  wave equations in the limit where the waves at the upper two frequencies are
+  undamped and the lowest frequency mode is heavily damped so that its dynamic
+  equation becomes &gamma;<sub>3</sub><i>a</i><sub>3</sub> =
+  <i>K</i>*<i>a</i><sub>1</sub><i>a</i><sub>2</sub>*, are considered. These
+  equations are solved (by quadrature) in two dimensions and time subject to
+  arbitrary initial and boundary conditions. Illustrative examples arising in
+  tokamak heating by lower hybrid waves are
+  presented.}{pf77}{10.1063/1.861772}{Flora Y.~F. Chu, Charles F.~F. Karney}
+
+\formatentry{karney78a}{{\Alfven} Wave Heating with High-{\Q} Eigenmodes}%
+{\bibitem[Karney(1978a)]{karney78a}
+C.~F.~F. Karney and F.~W. Perkins.
+\newblock {\Alfven} wave heating with high-{\Q} eigenmodes.
+\newblock In {\em Proc. Third Topical Conf. on Radio Frequency Plasma Heating},
+  paper~D3, January 1978.
+\newblock Meeting held at California Institute of Technology, Pasadena, CA,
+  Jan. 11\endash{}13.}{We consider the equation governing the mode structure of
+  Alfv&eacute;n waves. Since the Alfv&eacute;n speed is a function of density,
+  the compressional Alfv&eacute;n wave changes from evanescent to propagating
+  at some point in the plasma. However the presence of the shear Alfv&eacute;n
+  resonance changes this cutoff into a cutoff-resonance-cutoff triplet. By
+  analytically and numerically studying the properties of the governing
+  equation, we determine the absorption due to the resonance and <i>Q</i> for
+  the eigenmode. We show that heating is possible using relatively
+  high-<i>Q</i> eigenmodes.}{}{}{Charles F.~F. Karney, Francis~W. Perkins}
+
+\formatentry{sen78a}{Complex Modified {K}orteweg\endash{}{D}e{V}ries Equation and
+  Nonlinear Propagation of Lower Hybrid Waves}%
+{\bibitem[Sen(1978a)]{sen78a}
+A.~Sen, C.~F.~F. Karney, A.~Bers, and N.~R. Pereira.
+\newblock Complex modified {K}orteweg\endash{}{D}e{V}ries equation and nonlinear
+  propagation of lower hybrid waves.
+\newblock In {\em Proc. Third Topical Conf. on Radio Frequency Plasma Heating},
+  paper~G7, January 1978.
+\newblock \preprint{M.I.T. Rept. RLE PRR 78/6 (Feb. 1978) 4 pp.}
+\newblock Meeting held at California Institute of Technology, Pasadena, CA,
+  Jan. 11\endash{}13.}{The nonlinear steady state propagation of lower hybrid waves in
+  a uniform plasma can be described by a &ldquo;Complex&rdquo; Modified
+  Korteweg-DeVries equation, <i>v</i><sub>&tau;</sub> +
+  (|<i>v</i>|<sup>2</sup><i>v</i>)<sub>&xi;</sub> +
+  <i>v</i><sub>&xi;&xi;&xi;</sub> = 0, where <i>v</i> the amplitude of the
+  electric field is complex. This equation is not amenable to analytic solution
+  by the inverse Scattering Transform method and we solve it numerically. In
+  the limit of a narrow spectrum excitation at the boundary it approximately
+  reduces to the nonlinear Schr&ouml;dinger equation and we obtain envelope
+  soliton solutions. For broader spectrums we obtain &ldquo;MKDV type
+  solitons&rdquo; with constant phases. We discuss these solutions in terms of
+  satisfying the radiation condition inside the plasma and the limitations
+  posed on the choice of &ldquo;initial&rdquo; conditions by nonlinear
+  reflections.}{}{}{Abhijit Sen, Charles F.~F. Karney, Abraham Bers, Nino~R.
+  Pereira}
+
+\formatentry{sen78b}{Three-Dimensional Effects in the Non-linear Propagation of
+  Lower-Hybrid Waves}%
+{\bibitem[Sen(1978b)]{sen78b}
+A.~Sen, C.~F.~F. Karney, G.~L. Johnston, and A.~Bers.
+\newblock Three-dimensional effects in the non-linear propagation of
+  lower-hybrid waves.
+\newblock {\em Nucl. Fusion}, 18\penalty0 (2):\penalty0 171\endash{}179, February
+  1978.
+\newblock \preprint{M.I.T. Rept. RLE PRR 77/16 (June 1977) 19
+  pp.}}{Self-modulation effects can become important for the propagation of
+  lower hybrid waves in plasma, particularly for the high power levels
+  envisioned in r.f. heating schemes. Earlier studies in two dimensions (in the
+  plane defined by the electric field of the pump wave and the background
+  magnetic field) have led to non-linear propagation equations, such as the
+  MKdV or the non-linear Schr&ouml;dinger equations, which admit
+  multiple-soliton solutions. These could physically manifest themselves by
+  breaking up the resonance cones into filaments with intense localized
+  electric fields and could further lead to localized heating. This problem is
+  studied in three dimensions with the motivation of including two additional
+  physical factors. First, the non-linear effect arising from the <b>E</b>
+  &times; <b>B</b> motion of electrons is included; this leads to an
+  enhancement in the threshold value for the formation of solitons. Secondly,
+  the stability of the two-dimensional solitons to perturbations in the third
+  dimension is studied, and it is found that the third dimension introduces
+  additional dispersive effects which render the solitons unstable to these
+  perturbations.}{}{}{Abhijit Sen, Charles F.~F. Karney, George~L. Johnston,
+  Abraham Bers}
+
+\formatentry{sen78c}{Two-Dimensional Depletion of a Lower Hybrid Pump by
+  Quasi-Mode Excitations}%
+{\bibitem[Sen(1978c)]{sen78c}
+A.~Sen, C.~F.~F. Karney, and A.~Bers.
+\newblock \eref{pf78a}{Two-dimensional depletion of a lower hybrid pump by
+  quasi-mode excitations}.
+\newblock \doix{10.1063/1.862309}{{\em Phys. Fluids}, 21\penalty0 (5):\penalty0
+  861\endash{}863}, May 1978.
+\newblock \preprint{M.I.T. Rept. RLE PRR 77/19 (Aug. 1977) 16 pp.}}{The
+  depletion of a finite extent lower hybrid pump wave due to the parametric
+  excitation of quasi-modes is calculated for parameters relevant to tokamak
+  plasmas.}{pf78a}{10.1063/1.862309}{Abhijit Sen, Charles F.~F. Karney, Abraham
+  Bers}
+
+\formatentry{karney78b}{The Complex Modified {K}orteweg\endash{}{D}e{V}ries Equation,
+  a Non-Integrable Evolution Equation}%
+{\bibitem[Karney(1978b)]{karney78b}
+C.~F.~F. Karney, A.~Sen, and F.~Y.~F. Chu.
+\newblock The complex modified {K}orteweg\endash{}{D}e{V}ries equation, a
+  non-integrable evolution equation.
+\newblock In A.~R. Bishop and T.~Schneider, editors, {\em Solitons and
+  Condensed Matter Physics}, volume~8 of {\em Springer Series in Solid-State
+  Sciences}, pages 71\endash{}75, Springer-Verlag, Berlin, 1978.
+\newblock \preprint{Princeton Univ. Rept. \eref{pppl1455}{PPPL\endash{}1455} (June
+  1978) 9 pp.}
+\newblock Proc. Symposium on Nonlinear (Soliton) Structure and Dynamics in
+  Condensed Matter, Oxford, England, June 27\endash{}29, 1978.}{The two-dimensional
+  steady-state propagation of electrostatic waves is governed by
+  &part;<i>v</i>/&part;&tau; +
+  &part;<sup>3</sup><i>v</i>/&part;&xi;<sup>3</sup> +
+  &part;(|<i>v</i>|<sup>2</sup><i>v</i>)/&part;&xi; = 0, the Complex Modified
+  Korteweg-DeVries equation. The properties of this equation are
+  studied.}{}{}{Charles F.~F. Karney, Abhijit Sen, Flora Y.~F. Chu}
+
+\formatentry{karney78c}{Stochastic Ion Heating by a Lower Hybrid Wave}%
+{\bibitem[Karney(1978c)]{karney78c}
+C.~F.~F. Karney.
+\newblock \eref{pf78b}{Stochastic ion heating by a lower hybrid wave}.
+\newblock \doix{10.1063/1.862406}{{\em Phys. Fluids}, 21\penalty0 (9):\penalty0
+  1584\endash{}1599}, September 1978 (\eref{stoch-errata}{errata}).
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1429 (Apr. 1978) 53 pp.}}{The
+  motion of an ion in a lower hybrid wave in a tokamak type plasma is studied.
+  For ions with <i>v</i><sub>&perp;</sub> &ge;
+  &omega;/<i>k</i><sub>&perp;</sub>, the motion is stochastic for fields
+  satisfying <i>E</i>/<i>B</i><sub>0</sub> &gt;
+  &frac14;(&Omega;<sub><i>i</i></sub>&nbsp;/&omega;)<sup>1/3</sup>(&omega;/<i>%
+k</i><sub>&perp;</sub>). Provided that the perpendicular phase velocity,
+  &omega;/<i>k</i><sub>&perp;</sub>, can be slowed down to a few times the ion
+  thermal speed, this stochastic ion motion may be an important mechanism by
+  which injected rf power near the lower hybrid frequency can directly heat the
+  ions.}{pf78b}{10.1063/1.862406}{Charles F.~F. Karney}
+
+\formatentry{karney79a}{Nonlinear Evolution of Lower Hybrid Waves}%
+{\bibitem[Karney(1979a)]{karney79a}
+C.~F.~F. Karney, A.~Sen, and F.~Y.~F. Chu.
+\newblock \eref{pf79a}{Nonlinear evolution of lower hybrid waves}.
+\newblock \doix{10.1063/1.862688}{{\em Phys. Fluids}, 22\penalty0 (5):\penalty0
+  940\endash{}952}, May 1979.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1452 (June 1978) 38 pp.}}{The
+  two-dimensional steady-state distribution of lower hybrid waves is governed
+  by the complex modified Korteweg-deVries equation, <i>v</i><sub>&tau;</sub> +
+  <i>v</i><sub>&xi;&xi;&xi;</sub> +
+  (|<i>v</i>|<sup>2</sup><i>v</i>)<sub>&xi;</sub> = 0, where <i>v</i> is
+  proportional to the electric field and &xi; and &tau; are two spatial
+  coordinates. The equation is studied numerically. Two types of solitary waves
+  can arise; one is a constant phase pulse, whereas the other is an envelope
+  solitary wave. These solitary waves are not solitons. The occurrence of the
+  constant phase pulses points to the possibility of internal reflections due
+  to scattering off ponderomotive density fluctuations. This necessitates
+  solving the equation as a boundary value problem. With typical fields for
+  lower hybrid heating of a tokamak, it is found that large reflections can
+  occur close to the edge of the plasma.}{pf79a}{10.1063/1.862688}{Charles
+  F.~F. Karney, Abhijit Sen, Flora Y.~F. Chu}
+
+\formatentry{karney79b}{Velocity-Space Diffusion in a Perpendicularly
+  Propagating Electrostatic Wave}%
+{\bibitem[Karney(1979b)]{karney79b}
+C.~F.~F. Karney.
+\newblock \eref{isp79}{Velocity-space diffusion in a perpendicularly
+  propagating electrostatic wave}.
+\newblock In G.~Laval and D.~Gr\'esillon, editors, {\em Intrinsic Stochasticity
+  in Plasmas}, pages 159\endash{}168, Editions de Physique Courtaboeuf, Orsay, 1979.
+\newblock \eprint{physics/0501035}.
+\newblock Proc. International Workshop on Intrinsic Stochasticity in Plasmas,
+  Carg\`ese, Corsica, France, June 17\endash{}23, 1979.}{The motion of ions in the
+  fields <b>B</b> = <i>B</i><sub>0</sub><b>z</b> and <b>E</b> =
+  <i>E</i><sub>0</sub><b>y</b> cos(<i>k</i><sub>&perp;</sub><i>y</i> -
+  &omega;<i>t</i>&nbsp;) is considered. When &omega; &gt;&gt;
+  &Omega;<sub><i>i</i></sub> and <i>v</i><sub>&perp;</sub> &gt;
+  &omega;/<i>k</i><sub>&perp;</sub>, the equations of motion may be reduced to
+  a set of difference equations. These equations exhibit stochastic behavior
+  when <i>E</i><sub>0</sub> exceeds a threshold. The diffusion coefficient
+  above the threshold is determined. Far above the threshold, ion Landau
+  damping is recovered. Extension of the method to include parallel propagation
+  is outlined.}{isp79}{}{Charles F.~F. Karney}
+
+\formatentry{karney79c}{{\Alfven} Resonance Effects on Magnetosonic Modes in
+  Large Tokamaks}%
+{\bibitem[Karney(1979c)]{karney79c}
+C.~F.~F. Karney, F.~W. Perkins, and Y.~C. Sun.
+\newblock \eref{prl79}{{\Alfven} resonance effects on magnetosonic modes in
+  large tokamaks}.
+\newblock \doix{10.1103/PhysRevLett.42.1621}{{\em Phys. Rev. Lett.},
+  42\penalty0 (24):\penalty0 1621\endash{}1624}, June 1979.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1471 (Aug. 1978) 9 pp.}}{The
+  theory of Alfv&eacute;n resonance effects on the wave modes of a tokamak is
+  extended beyond the incompressible magnetohydrodynamic model to include
+  finite-(&omega;/&Omega;<sub><i>i</i></sub>&nbsp;) effects and
+  compressibility. The discrete spectrum of compressional Alfv&eacute;n waves
+  consists of a sequence of frequencies with finite damping decrements
+  resulting from the Alfv&eacute;n resonance. The finite-frequency effects can
+  cause the damping to almost vanish. This permits Alfv&eacute;n resonance
+  heating via high-<i>Q</i> eigenmodes in large
+  tokamaks.}{prl79}{10.1103/PhysRevLett.42.1621}{Charles F.~F. Karney,
+  Francis~W. Perkins, Yung~C. Sun}
+
+\formatentry{leclert79}{Two-Dimensional Self-modulation of Lower Hybrid Waves
+  in Inhomogeneous Plasmas}%
+{\bibitem[Leclert(1979)]{leclert79}
+G.~P. Leclert, C.~F.~F. Karney, A.~Bers, and D.~J. Kaup.
+\newblock \eref{pf79b}{Two-dimensional self-modulation of lower hybrid waves in
+  inhomogeneous plasmas}.
+\newblock \doix{10.1063/1.862774}{{\em Phys. Fluids}, 22\penalty0 (8):\penalty0
+  1545\endash{}1553}, August 1979.
+\newblock \preprint{M.I.T. Rept. RLE PRR 77/25 (Aug. 1977) 44 pp.}}{For lower
+  hybrid waves in an inhomogeneous plasma, the two-dimensional self-modulation
+  effects due to ponderomotive force are studied under the assumption that the
+  field is electrostatic and has a narrow <i>k</i> spectrum. For a locally
+  linear temperature profile and a broad class of density profiles, exact
+  nonlinear solutions (solitons) are obtained by the inverse scattering method.
+  The solitons decay and spread as they propagate. In addition to the usual
+  area condition on the potential &int; &phi; <i>d</i>&xi; &ge; &pi;/2,
+  inhomogeneity introduces a second condition for solitons to occur. It is
+  shown that this second condition is not satisfied in typical tokamak plasmas,
+  i.e., there is no soliton formation, in contrast to the homogeneous case.
+  Furthermore, the scaling of the threshold conditions with density and
+  temperature makes them more difficult to satisfy in larger
+  machines.}{pf79b}{10.1063/1.862774}{Gerard~P. Leclert, Charles F.~F. Karney,
+  Abraham Bers, David~J. Kaup}
+
+\formatentry{karney79d}{Numerical Studies of Current Generation by
+  Radio-Frequency Traveling Waves}%
+{\bibitem[Karney(1979d)]{karney79d}
+C.~F.~F. Karney and N.~J. Fisch.
+\newblock \eref{pf79c}{Numerical studies of current generation by
+  radio-frequency traveling waves}.
+\newblock \doix{10.1063/1.862787}{{\em Phys. Fluids}, 22\penalty0 (9):\penalty0
+  1817\endash{}1824}, September 1979.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1506 (Jan. 1979) 39 pp.}}{By
+  injecting radio-frequency traveling waves into a tokamak, continuous toroidal
+  electron currents may be generated. This process is studied by numerically
+  solving the two-dimensional Fokker-Planck equation with an added quasi-linear
+  term. The results are compared with the one-dimensional analytic treatment of
+  Fisch, which predicted a reduced plasma resistivity when high-phase-velocity
+  waves are employed. It is shown that two-dimensional velocity space effects,
+  while retaining the predicted scaling, further reduce the ratio of power
+  dissipated to current generated by about 40\%. These effects enhance the
+  attractiveness of steady-state tokamak reactors utilizing this method of
+  current generation.}{pf79c}{10.1063/1.862787}{Charles F.~F. Karney,
+  Nathaniel~J. Fisch}
+
+\formatentry{karney79e}{Stochastic Ion Heating by a Lower Hybrid Wave: {II}}%
+{\bibitem[Karney(1979e)]{karney79e}
+C.~F.~F. Karney.
+\newblock \eref{pf79d}{Stochastic ion heating by a lower hybrid wave: {II}}.
+\newblock \doix{10.1063/1.862512}{{\em Phys. Fluids}, 22\penalty0
+  (11):\penalty0 2188\endash{}2209}, November 1979.
+\newblock \eprint{physics/0501034}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1528 (Apr. 1979) 68 pp.}}{The
+  motion of an ion in a coherent lower hybrid wave (characterized by
+  |<i>k</i><sub>||</sub>| &lt&lt; |<i>k</i><sub>&perp;</sub>| and &omega;
+  &gt;&gt; &Omega;<sub><i>i</i></sub>&nbsp;) in a tokamak plasma is studied.
+  For ions satisfying <i>v</i><sub>&perp;</sub> &gt;
+  &omega;/<i>k</i><sub>&perp;</sub>, the Lorentz force law for the ions is
+  reduced to a set of difference equations which give the Larmor radius and
+  phase of an ion on one cyclotron orbit in terms of these quantities a
+  cyclotron period earlier. From these difference equations an earlier result
+  [<a href="karney78c.html">Phys. Fluids <b>21</b>, 1584&ndash;1599 (1978)</a>]
+  that above a certain wave amplitude the ion motion is stochastic, is readily
+  obtained. The stochasticity threshold is given a simple physical
+  interpretation. In addition, the difference equations are used to derive a
+  diffusion equation governing the heating of the ions above the stochasticity
+  threshold. By including the effects of collisions, the heating rate for the
+  bulk ions is obtained.}{pf79d}{10.1063/1.862512}{Charles F.~F. Karney}
+
+\formatentry{porkolab81}{Lower-Hybrid Heating and Current Drive in Tokamaks and
+  Related Experiments}%
+{\bibitem[Porkolab(1981)]{porkolab81}
+M.~Porkolab, J.~J. Schuss, Y.~Takase, S.~F. Knowlton, S.~C. Luckhardt, R.~E.
+  Slusher, C.~M. Surko, N.~J. Fisch, W.~M. Hooke, C.~F.~F. Karney, A.~H. Kritz,
+  R.~D. McWilliams, R.~W. Motley, M.~Ono, F.~W. Perkins, T.~H. Stix, E.~J.
+  Valeo, J.~R. Wilson, and K.-L. Wong.
+\newblock Lower-hybrid heating and current drive in tokamaks and related
+  experiments.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1980},
+  volume~2, pages 507\endash{}514, IAEA, Vienna, 1981.
+\newblock Proc. Eighth International Conf., Brussels, Belgium, July 1\endash{}10,
+  1980.}{}{}{}{Miklos Porkolab, J.~J. Schuss, Yuichi Takase, Stephen~F.
+  Knowlton, Stanley~C. Luckhardt, Richard~E. Slusher, Clifford~M. Surko,
+  Nathaniel~J. Fisch, William~M. Hooke, Charles F.~F. Karney, Arnold~H. Kritz,
+  Roger~D. McWilliams, Robert~W. Motley, Masayuki Ono, Francis~W. Perkins,
+  Thomas~H. Stix, Ernest~J. Valeo, J.~Randall Wilson, King-Lap Wong}
+
+\formatentry{karney81a}{Temporal Evolution of Nonlinear Lower Hybrid Waves}%
+{\bibitem[Karney(1981a)]{karney81a}
+C.~F.~F. Karney.
+\newblock \eref{htp81}{Temporal evolution of nonlinear lower hybrid waves}.
+\newblock In E.~Canobbio, H.~P. Eubank, G.~G. Leotta, A.~Malein, and
+  E.~Sindoni, editors, {\em Heating in Toroidal Plasmas}, volume~I, pages
+  455\endash{}461, Commission of the European Communities, Brussels, Belgium (EUR 7424
+  EN), 1981.
+\newblock Proc. Second Joint Varenna\endash{}Grenoble International Symposium, Como,
+  Italy, Sept. 3\endash{}12, 1980.}{The nonlinear evolution of a single lower hybrid
+  wave in two dimensions and time is considered. If the potential is taken to
+  have the form &phi;(<i>x</i>, <i>z</i>, <i>t</i>&nbsp;)
+  exp(-<i>i</i>&omega;<i>t</i>&nbsp;), the equation describing the fields is
+  <i>i</i><i>v</i><sub>&tau;</sub> - &int; <i>v</i><sub>&xi;</sub>
+  <i>d</i>&zeta; + <i>v</i><sub>&zeta;&zeta;</sub> +
+  |<i>v</i>|<sup>2</sup><i>v</i> = 0 where <i>v</i> is proportional to the
+  electric field, &tau; to time, and &xi; and &zeta; measure distances across
+  and along the lower hybrid ray. The properties of this equation are
+  investigated numerically. When the amplitude of the injected lower hybrid
+  waves is sufficiently large, the following phenomena are observed: the fields
+  do not reach a steady state even though steady-state boundary conditions are
+  imposed; the density modulations are sufficient to cause an appreciable
+  fraction of the incident power to be reflected; the average wavenumber of the
+  transmitted wave is larger than that of the incident wave.}{htp81}{}{Charles
+  F.~F. Karney}
+
+\formatentry{fisch81}{Current Generation with Low-Frequency Waves}%
+{\bibitem[Fisch(1981)]{fisch81}
+N.~J. Fisch and C.~F.~F. Karney.
+\newblock \eref{pf81a}{Current generation with low-frequency waves}.
+\newblock \doix{10.1063/1.863243}{{\em Phys. Fluids}, 24\penalty0 (1):\penalty0
+  27\endash{}39}, January 1981.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1624 (Dec. 1979) 55
+  pp.}}{Various types of traveling waves may be injected into a tokamak to
+  continuously sustain the toroidal current. Interest in this problem arises
+  from the possibility of operating tokamak reactors in the steady state. The
+  low-frequency waves most suitable for this task are identified in terms of
+  the power cost for deployment in a reactor. Means of exciting these waves and
+  tradeoffs with design criteria are discussed. A comparison is made with the
+  alternative attractive regime of high-frequency waves. Conclusions are based,
+  in part, on the numerical solution of the two-dimensional Fokker-Planck
+  equation with an added quasi-linear term due to the
+  waves.}{pf81a}{10.1063/1.863243}{Nathaniel~J. Fisch, Charles F.~F. Karney}
+
+\formatentry{karney81b}{Temporal Evolution of Lower Hybrid Waves in the
+  Presence of Ponderomotive Density Fluctuations}%
+{\bibitem[Karney(1981b)]{karney81b}
+C.~F.~F. Karney.
+\newblock \eref{pf81b}{Temporal evolution of lower hybrid waves in the presence
+  of ponderomotive density fluctuations}.
+\newblock \doix{10.1063/1.863229}{{\em Phys. Fluids}, 24\penalty0 (1):\penalty0
+  127\endash{}137}, January 1981.
+\newblock \eprint{physics/0501047}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1672 (June 1980) 23 pp.}}{The
+  propagation of lower hybrid waves in the presence of ponderomotive density
+  fluctuations is considered. The problem is treated in two dimensions and, in
+  order to be able to correctly impose the boundary conditions, the waves are
+  allowed to evolve in time. The fields are described by
+  <i>i</i><i>v</i><sub>&tau;</sub> - &int; <i>v</i><sub>&xi;</sub>
+  <i>d</i>&zeta; + <i>v</i><sub>&zeta;&zeta;</sub> +
+  |<i>v</i>|<sup>2</sup><i>v</i> = 0 where <i>v</i> is proportional to the
+  electric field, &tau; to time, and &zeta; and &xi; measure distances across
+  and along the lower hybrid ray. The behavior of the waves is investigated
+  numerically. If the amplitude of the waves is large enough, the spectrum of
+  the waves broadens and their parallel wavelength becomes shorter. The
+  assumptions made in the formulation preclude the application of these results
+  to the lower hybrid heating experiment on Alcator&ndash;A. Nevertheless,
+  there are indications that the physics embodied in this problem are
+  responsible for some of the results of that
+  experiment.}{pf81b}{10.1063/1.863229}{Charles F.~F. Karney}
+
+\formatentry{kritz81}{Effect of Resonance Broadening on the Evolution of the
+  Edge of a Turbulent Spectrum}%
+{\bibitem[Kritz(1981)]{kritz81}
+A.~H. Kritz, N.~J. Fisch, and C.~F.~F. Karney.
+\newblock \eref{pf81c}{Effect of resonance broadening on the evolution of the
+  edge of a turbulent spectrum}.
+\newblock \doix{10.1063/1.863397}{{\em Phys. Fluids}, 24\penalty0 (3):\penalty0
+  504\endash{}508}, March 1981.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1699 (June 1980) 20 pp.}}{The
+  extent to which nonlinear wave-particle resonance broadening results in a
+  narrowing of an incident lower-hybrid wave spectrum is investigated. This
+  narrowing is of concern because it could make control of lower-hybrid heating
+  difficult. It is shown numerically, however, that relatively uniform spatial
+  power deposition occurs if resonance broadening effects are treated
+  consistently on both the wave spectrum and the particle
+  distribution.}{pf81c}{10.1063/1.863397}{Arnold~H. Kritz, Nathaniel~J. Fisch,
+  Charles F.~F. Karney}
+
+\formatentry{karney81c}{Comment on \ldquote{}{R}esonant Parametric Excitations Driven
+  by Lower-Hybrid Fields\rdquote{}}%
+{\bibitem[Karney(1981c)]{karney81c}
+C.~F.~F. Karney.
+\newblock \eref{pf81d}{Comment on \ldquote{}{R}esonant parametric excitations driven by
+  lower-hybrid fields\rdquote{}}.
+\newblock \doix{10.1063/1.863546}{{\em Phys. Fluids}, 24\penalty0 (8):\penalty0
+  1590}, August 1981.}{Comment on article by E. Villal&oacute;n, <a
+  href="http://dx.doi.org/10.1063/1.862926">Phys. Fluids <b>23</b>,
+  2308&ndash;2317 (1980)</a>. Reply to comments is given in <a
+  href="http://dx.doi.org/10.1063/1.863547">Phys. Fluids <b>24</b>,
+  1591&ndash;1592 (1981)</a>.}{pf81d}{10.1063/1.863546}{Charles F.~F. Karney}
+
+\formatentry{karney81d}{Currents Driven by Electron Cyclotron Waves}%
+{\bibitem[Karney(1981d)]{karney81d}
+C.~F.~F. Karney and N.~J. Fisch.
+\newblock \eref{nf81}{Currents driven by electron cyclotron waves}.
+\newblock {\em Nucl. Fusion}, 21\penalty0 (12):\penalty0 1549\endash{}1557, December
+  1981.
+\newblock \preprint{Princeton Univ. Rept. \eref{pppl1808}{PPPL\endash{}1808} (July
+  1981) 28 pp.}}{Certain aspects of the generation of steady-state currents by
+  electron cyclotron waves are explored. A numerical solution of the
+  Fokker-Planck equation is used to verify the theory of Fisch and Boozer and
+  to extend their results into the non-linear regime. Relativistic effects on
+  the current generated are discussed. Applications to steady-state tokamak
+  reactors are considered.}{nf81}{}{Charles F.~F. Karney, Nathaniel~J. Fisch}
+
+\formatentry{karney82}{Effect of Noise on the Standard Mapping}%
+{\bibitem[Karney(1982)]{karney82}
+C.~F.~F. Karney, A.~B. Rechester, and R.~B. White.
+\newblock Effect of noise on the standard mapping.
+\newblock \doix{10.1016/0167-2789(82)90045-8}{{\em Physica}, 4D\penalty0
+  (3):\penalty0 425\endash{}438}, March 1982.
+\newblock \eprint{nlin.CD/0501021}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1752 (Mar. 1981) 25 pp.}}{The
+  effect of a small amount of noise on the standard mapping is considered.
+  Whenever the standard mapping possesses accelerator modes (where the action
+  increases approximately linearly with time), the diffusion coefficient
+  contains a term proportional to the reciprocal of the variance of the noise
+  term. At large values of the stochasticity parameter, the accelerator modes
+  exhibit a universal behavior. As a result the dependence of the diffusion
+  coefficient on the stochasticity parameter also shows some universal
+  behavior.}{}{10.1016/0167-2789(82)90045-8}{Charles F.~F. Karney, Alexander~B.
+  Rechester, Roscoe~B. White}
+
+\formatentry{hosea82}{High Power {ICRF} Heating on {PLT} and Extrapolation to
+  Future Devices}%
+{\bibitem[Hosea(1982)]{hosea82}
+J.~C. Hosea, N.~L. Bretz, A.~J. Cavallo, P.~L. Colestock, C.~C. Daughney, S.~L.
+  Davis, D.~L. Dimock, P.~C. Efthimion, H.~P. Eubank, J.~A. Murphy, D.~Q.
+  Hwang, C.~F.~F. Karney, D.~H. McNeill, D.~R. Mikkelsen, D.~Mueller, D.~E.
+  Post, K.~Sato, G.~Schilling, S.~S. Medley, C.~E. Singer, A.~E. Silverman,
+  J.~D. Strachan, S.~Suckewer, H.~R. Thompson, H.~Toyama, and J.~R. Wilson.
+\newblock High power {ICRF} heating on {PLT} and extrapolation to future
+  devices.
+\newblock In C.~Gormezano, G.~G. Leotta, and E.~Sindoni, editors, {\em Heating
+  in Toroidal Plasmas}, volume~I, pages 213\endash{}223, Commission of the European
+  Communities, Brussels, Belgium (EUR 7979 EN), 1982.
+\newblock Proc. Third Joint Varenna\endash{}Grenoble International Symposium,
+  Grenoble, France, Mar. 22\endash{}26, 1982.}{}{}{}{Joel~C. Hosea, Norton~L. Bretz,
+  Alfred~J. Cavallo, Patrick~L. Colestock, C.~C. Daughney, Steven~L. Davis,
+  Dirk~L. Dimock, Phillip~C. Efthimion, Harold~P. Eubank, Jane~A. Murphy,
+  David~Q. Hwang, Charles F.~F. Karney, D.~H. McNeill, David~R. Mikkelsen,
+  Dennis Mueller, Douglass~E. Post, K. Sato, Gerd Schilling, Sidney~S. Medley,
+  Clifford~E. Singer, A.~E. Silverman, James~D. Strachan, Szymon Suckewer,
+  H.~R. Thompson, Hiroshi Toyama, J.~Randall Wilson}
+
+\formatentry{rechester83}{Statistical Description of the {C}hirikov\endash{}{T}aylor
+  Model in the Presence of Noise}%
+{\bibitem[Rechester(1983)]{rechester83}
+A.~B. Rechester, M.~N. Rosenbluth, R.~B. White, and C.~F.~F. Karney.
+\newblock \eref{ltpd83}{Statistical description of the {C}hirikov\endash{}{T}aylor
+  model in the presence of noise}.
+\newblock In C.~W. Horton, L.~E. Reichl, and V.~G. Szebehely, editors, {\em
+  Long-Time Prediction in Dynamics}, volume~II of {\em Wiley-Interscience
+  Series on Nonequilibrium Problems in the Physical Sciences and Biology},
+  pages 471\endash{}483, Wiley, New York, 1983.
+\newblock \preprint{Preprint \eref{lakeway}{lakeway}}.
+\newblock Proc. Workshop on Long-Time Predictions in Nonlinear Conservative
+  Dynamical Systems, Lakeway, TX, Mar. 16\endash{}19, 1981.}{A review of recent
+  analytical and numerical results concerning the Chirikov-Taylor model is
+  given. It is shown that the presence of noise makes the statistical
+  description of this system unique. The form of the diffusion coefficient is
+  quite different depending on the nature of the dynamical orbits (integrable,
+  stochastic, or accelerator). We have found that in the presence of noise,
+  dynamical averaging, performed numerically, and statistical averaging,
+  performed analytically with the path-integral method, are the same. Some
+  unsolved problems are presented and discussed.}{ltpd83}{}{Alexander~B.
+  Rechester, Marshall~N. Rosenbluth, Roscoe~B. White, Charles F.~F. Karney}
+
+\formatentry{baker83}{Tokamak Reactor Studies: Studies of {DT} Demonstration
+  Reactors and {DD} Reactors}%
+{\bibitem[Baker(1983)]{baker83}
+C.~C. Baker, M.~A. Abdou, C.~D. Boley, J.~N. Brooks, R.~C. Clemmer, D.~A. Ehst,
+  K.~Evans, P.~A. Finn, Y.~Gohar, J.~Jung, R.~F. Mattas, B.~Misra, D.~L. Smith,
+  H.~C. Stevens, L.~R. Turner, R.~B. Wehrle, G.~D. Morgan, C.~A. Trachsel,
+  L.~M. Waganer, D.~A. DeFreece, F.~W. Perkins, N.~J. Fisch, D.~Q. Hwang, D.~W.
+  Ignat, S.~C. Jardin, C.~F.~F. Karney, K.~M. Ling, D.~R. Mikkelsen, C.~E.
+  Singer, Y.~C. Sun, D.~C. Baxter, R.~N. Byrne, A.~E. Dabiri, D.~R. Dobrott,
+  J.~E. Glancy, W.~K. Hagan, J.~B. McBride, S.~Tamor, K.~M. Berry, and R.~T.
+  McGrath.
+\newblock Tokamak reactor studies: Studies of {DT} demonstration reactors and
+  {DD} reactors.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1982},
+  volume~3, pages 349\endash{}361, IAEA, Vienna, 1983.
+\newblock Proc. Ninth International Conf., Baltimore, MD, Sept. 1\endash{}8,
+  1982.}{}{}{}{Charles~C. Baker, M.~A. Abdou, C.~D. Boley, Jeffrey~N. Brooks,
+  R.~C. Clemmer, David~A. Ehst, Kenneth Evans, P.~A. Finn, Y. Gohar, J. Jung,
+  Richard~F. Mattas, B. Misra, D.~L. Smith, H.~C. Stevens, L.~R. Turner, R.~B.
+  Wehrle, G.~D. Morgan, C.~A. Trachsel, L.~M. Waganer, D.~A. DeFreece,
+  Francis~W. Perkins, Nathaniel~J. Fisch, David~Q. Hwang, David~W. Ignat,
+  Stephen~C. Jardin, Charles F.~F. Karney, K.~M. Ling, David~R. Mikkelsen,
+  Clifford~E. Singer, Yung~C. Sun, D.~C. Baxter, R.~N. Byrne, A.~E. Dabiri,
+  D.~R. Dobrott, J.~E. Glancy, W.~K. Hagan, J.~B. McBride, S. Tamor, K.~M.
+  Berry, R.~T. McGrath}
+
+\formatentry{white83}{Confinement in Toroidal Systems with Partially Destroyed
+  Magnetic Surfaces}%
+{\bibitem[White(1983)]{white83}
+R.~B. White, A.~H. Boozer, R.~J. Goldston, R.~G. Hay, J.~Albert, and C.~F.~F.
+  Karney.
+\newblock Confinement in toroidal systems with partially destroyed magnetic
+  surfaces.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1982},
+  volume~3, pages 391\endash{}401, IAEA, Vienna, 1983.
+\newblock Proc. Ninth International Conf., Baltimore, MD, Sept. 1\endash{}8, 1982.}{A
+  Hamiltonian formulation of the guiding centre drift equations valid for
+  stochastic fields is given. Modification of neoclassical transport due to
+  imperfect magnetic surfaces is investigated numerically. For banana-trapped
+  particles a discrete map representation is given for the orbits and used to
+  study loss of banana-trapped &alpha;-particles due to ripple
+  fields.}{}{}{Roscoe~B. White, Allen~H. Boozer, Robert~J. Goldston, R.~G. Hay,
+  J. Albert, Charles F.~F. Karney}
+
+\formatentry{karney83a}{Complex Plotting and Graphics\emdash{}{PLOT2}}%
+{\bibitem[Karney(1983a)]{karney83a}
+C.~F.~F. Karney.
+\newblock {\em Complex Plotting and Graphics\emdash{}{PLOT2}}.
+\newblock The Mathlab Group, Laboratory for Computer Science, M.I.T., January
+  1983.
+\newblock URL
+  \url{http://cvs.sourceforge.net/viewcvs.py/maxima/maxima-pre59/share/plot2.u%
+sg}.
+\newblock Chapter 2 of {\em {MACSYMA} Reference Manual, Version 10}, Vol. II,
+  82 pp.}{}{}{}{Charles F.~F. Karney}
+
+\formatentry{ichikawa83}{Stochastic Motion of Particles in Tandem Mirror
+  Devices}%
+{\bibitem[Ichikawa(1983)]{ichikawa83}
+Y.~H. Ichikawa, T.~Kamimura, and C.~F.~F. Karney.
+\newblock Stochastic motion of particles in tandem mirror devices.
+\newblock \doix{10.1016/0167-2789(83)90008-8}{{\em Physica}, 6D\penalty0
+  (2):\penalty0 233\endash{}240}, January 1983.
+\newblock \preprint{Nagoya Univ. Rept. IPPJ\endash{}562 (Mar. 1982) 35
+  pp.}}{Stochastic motion of collisionless guiding centers in tandem mirror
+  devices is analyzed in terms of a nonlinear mapping of particle positions on
+  the equatorial plane. Local stability analysis determines the appearance of
+  various patterns of particle trajectories. Numerical observation of radial
+  motion of particles makes it possible to estimate the rate of stochastic
+  diffusion.}{}{10.1016/0167-2789(83)90008-8}{Yoshi~H. Ichikawa, T. Kamimura,
+  Charles F.~F. Karney}
+
+\formatentry{karney83b}{Comment on \ldquote{}{C}haos, Periodic Chaos, and the
+  Random-Walk Problem\rdquote{}}%
+{\bibitem[Karney(1983b)]{karney83b}
+C.~F.~F. Karney.
+\newblock \eref{prl83}{Comment on \ldquote{}{C}haos, periodic chaos, and the
+  random-walk problem\rdquote{}}.
+\newblock \doix{10.1103/PhysRevLett.50.703}{{\em Phys. Rev. Lett.}, 50\penalty0
+  (9):\penalty0 703}, February 1983.
+\newblock \preprint{Preprint \eref{mccom}{mccom}}.}{Comment on article by J. J.
+  Kozak, M. K. Musho, and M. D. Hatlee, <a
+  href="http://dx.doi.org/10.1103/PhysRevLett.49.1801">Phys. Rev. Lett.
+  <b>49</b>, 1801&ndash;1804
+  (1982)</a>.}{prl83}{10.1103/PhysRevLett.50.703}{Charles F.~F. Karney}
+
+\formatentry{vongoeler83}{Determination of the Electron Velocity Distribution
+  from the Soft and Hard {X}-Ray Emission during Lower Hybrid Current Drive on
+  {PLT}}%
+{\bibitem[von Goeler(1983)]{vongoeler83}
+S.~E. von Goeler, J.~E. Stevens, C.~F.~F. Karney, S.~Bernabei, M.~L. Bitter,
+  T.-K. Chu, P.~C. Efthimion, K.~W. Hill, W.~M. Hooke, F.~C. Jobes,
+  E.~Mazzucato, E.~B. Meservey, R.~W. Motley, P.~G. Roney, N.~R. Sauthoff,
+  S.~S. Sesnic, G.~Taylor, F.~H. Tenney, and E.~J. Valeo.
+\newblock Determination of the electron velocity distribution from the soft and
+  hard {X}-ray emission during lower hybrid current drive on {PLT}.
+\newblock In {\em Proc. Fifth Topical Conf. on Radio Frequency Plasma Heating},
+  volume~2, pages 96\endash{}103, 1983.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2012 (June 1983) 21 pp.}
+\newblock Meeting held at University of Wisconsin, Madison, WI, Feb. 22\endash{}24,
+  1983.}{During lower hybrid heating in low-density-tokamak discharges, a
+  non-Maxwellian tail of high energy electrons is formed. This tail carries the
+  plasma current. Utilizing the fact that relativistic electrons emit
+  bremsstrahlung predominantly in the forward direction, we investigate the
+  shape of the electron distribution by measuring the dependence of the X-ray
+  emission on the angle between the magnetic field and the line of sight. The
+  experimental data indicate that the distribution function is predominantly
+  peaked in the forward direction, although a small fraction of the electrons
+  is in the backward cone. The energy dependence of the X-ray spectra is
+  consistent with that of a velocity distribution which has a plateau extending
+  out to several hundred kilo-electron volts. Radial profiles show that the hot
+  electrons are located in the central plasma region and form a high
+  conductivity plasma with the current profile frozen in. The slope of the
+  spectrum depends on the rf power and on the phasing of the waveguide grill,
+  but not on the externally applied plasma voltage. Relaxation oscillations
+  occur shortly after switching the rf off. They also appear during the rf for
+  low rf power and at the high density limit of the lower hybrid current drive.
+  The X-ray spectra confirm that parallel energy is transferred to
+  perpendicular energy during the instability, suggesting an instability due to
+  the anomalous Doppler effect.}{}{}{Schweickhard~E. von Goeler, James~E.
+  Stevens, Charles F.~F. Karney, Stefano Bernabei, Manfred~L. Bitter, Tsu-Kai
+  Chu, Phillip~C. Efthimion, Kenneth~W. Hill, William~M. Hooke, Forrest~C.
+  Jobes, Ernesto Mazzucato, E.~B. Meservey, Robert~W. Motley, Phyllis~G. Roney,
+  Ned~R. Sauthoff, Steven~S. Sesnic, Gary Taylor, Fred~H. Tenney, Ernest~J.
+  Valeo}
+
+\formatentry{hwang83}{Modeling of {ICRF} Heating of a Tokamak Plasma}%
+{\bibitem[Hwang(1983)]{hwang83}
+D.~Q. Hwang, C.~F.~F. Karney, J.~C. Hosea, J.~A. Murphy, C.~E. Singer, and
+  J.~R. Wilson.
+\newblock Modeling of {ICRF} heating of a tokamak plasma.
+\newblock Technical Report PPPL\endash{}1990, Princeton Univ., May 1983.
+\newblock 27 pp.}{A model for wave propagation and absorption on the Ion
+  Cyclotron Range of Frequencies (ICRF) has been constructed and fitted into
+  the 1-D BALDUR transport code. The wave propagation is handled by ray tracing
+  techniques. Wave absorption is calculation using the Fokker-Planck equation
+  and quasilinear diffusion. The wave propagation and damping profiles are
+  evolved in time according to the plasma evolution. A simulation of PLT
+  hydrogen minority ICRF heating with a comparison to experimental data is
+  given.}{}{}{David~Q. Hwang, Charles F.~F. Karney, Joel~C. Hosea, Jane~A.
+  Murphy, Clifford~E. Singer, J.~Randall Wilson}
+
+\formatentry{chirikov83}{Statistics of {\Poincare} Recurrences and the
+  Structure of the Stochastic Layer of a Nonlinear Resonance}%
+{\bibitem[Chirikov(1983)]{chirikov83}
+B.~V. Chirikov and D.~L. Shepelyansky.
+\newblock Statistics of {\Poincare} recurrences and the structure of the
+  stochastic layer of a nonlinear resonance.
+\newblock Technical Report PPPL\endash{}TRANS\endash{}133, Princeton Univ., February 1983.
+\newblock 20 pp. Translation of {\RussRept} Preprint INP 81\endash{}69, Novosibirsk
+  (April 14, 1981); translated by N. M. Turitzin and edited by C. F. F. Karney.
+  Proc. 9th Int. Conf. on Nonlinear Oscillations, Kiev (1981), Naukova Dumka,
+  vol. 2, pp. 420\endash{}425 (1984).}{Motion in the stochastic layer around the
+  separatrix of a nonlinear resonance was investigated. The integral
+  distribution function <i>F</i>(&tau;) of trajectory recurrence times &tau; to
+  the center of the layer was numerically determined. It was found that the
+  distribution <i>F</i>(&tau;) = <i>A</i>&tau;<sup>-<i>p</i></sup> is a power
+  function, the exponent assuming two different values: for &tau; &le;
+  $tau;<sub>0</sub>, <i>p</i> = 1/2 and for &tau; &gt;&gt; $tau;<sub>0</sub>,
+  <i>p</i> = 3/2 (time &tau; is determined by the characteristics for the
+  layer).}{}{}{Boris~V. Chirikov, Dmitrii~L. Shepelyansky}
+
+\formatentry{karney83c}{Long-Time Correlations in the Stochastic Regime}%
+{\bibitem[Karney(1983c)]{karney83c}
+C.~F.~F. Karney.
+\newblock \eref{physd83}{Long-time correlations in the stochastic regime}.
+\newblock \doix{10.1016/0167-2789(83)90232-4}{{\em Physica}, 8D\penalty0
+  (3):\penalty0 360\endash{}380}, September 1983.
+\newblock \eprint{nlin.CD/0501023}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}1938 (Nov. 1982) 40 pp.}
+\newblock Reprinted in {\em Hamiltonian Dynamical Systems}, edited by R. S.
+  MacKay and J. D. Meiss (Adam-Hilger, Bristol, 1987), pages 585\endash{}605.}{The
+  phase space for Hamiltonians of two degrees of freedom is usually divided
+  into stochastic and integrable components. Even when well into the stochastic
+  regime, integrable orbits may surround small stable regions or islands. The
+  effect of these islands on the correlation function for the stochastic
+  trajectories is examined. Depending on the value of the parameter describing
+  the rotation number for the elliptic fixed point at the center of the island,
+  the long-time correlation function may decay as <i>t</i>&nbsp;<sup>-5</sup>
+  or exponentially, but more commonly it decays much more slowly (roughly as
+  <i>t</i>&nbsp;<sup>-1</sup>). As a consequence these small islands may have a
+  profound effect on the properties of the stochastic orbits. In particular,
+  there is evidence that the evolution of a distribution of particles is no
+  longer governed by a diffusion
+  equation.}{physd83}{10.1016/0167-2789(83)90232-4}{Charles F.~F. Karney}
+
+\formatentry{karney84}{Long-Time Correlations in Stochastic Systems}%
+{\bibitem[Karney(1984)]{karney84}
+C.~F.~F. Karney.
+\newblock \eref{spc84}{Long-time correlations in stochastic systems}.
+\newblock In C.~W. Horton and L.~E. Reichl, editors, {\em Statistical Physics
+  and Chaos in Fusion Plasmas}, volume III of {\em Wiley-Interscience Series on
+  Nonequilibrium Problems in the Physical Sciences and Biology}, pages 33\endash{}42,
+  Wiley, New York, 1984.
+\newblock \eprint{nlin.CD/0501024}.
+\newblock Proc. US\endash{}Japan Workshop, Austin, TX, Dec. 13\endash{}17, 1982.}{In recent
+  years, there has been considerable interest in understanding the motion in
+  Hamiltonian systems when phase space is divided into stochastic and
+  integrable regions. This paper studies one aspect of this problem, namely,
+  the motion of trajectories in the stochastic sea when there is a small island
+  present. The results show that the particle can be stuck close to the island
+  for very long times. For the standard mapping, where accelerator modes are
+  possible, it appears that the mean squared displacement of particles in the
+  stochastic sea may increase faster than linearly with time indicating
+  non-diffusive behavior.}{spc84}{}{Charles F.~F. Karney}
+
+\formatentry{motley85}{Lower Hybrid Current Ramp-up in the {PLT} Tokamak}%
+{\bibitem[Motley(1985)]{motley85}
+R.~W. Motley, R.~E. Bell, S.~Bernabei, A.~J. Cavallo, T.-K. Chu, S.~A. Cohen,
+  B.~G. Denne, P.~C. Efthimion, N.~J. Fisch, E.~Hinnov, W.~M. Hooke, J.~C.
+  Hosea, F.~C. Jobes, C.~F.~F. Karney, E.~Mazzucato, E.~B. Meservey, J.~E.
+  Stevens, S.~Suckewer, G.~Taylor, J.~R. Timberlake, S.~E. von Goeler, and
+  J.~R. Wilson.
+\newblock Lower hybrid current ramp-up in the {PLT} tokamak.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1984},
+  volume~1, pages 473\endash{}478, IAEA, Vienna, 1985.
+\newblock Proc. Tenth International Conf., London, England, Sept. 12\endash{}19,
+  1984.}{A study of radiofrequency current ramp-up in the PLT tokamak is
+  reported. The plasma current was first raised to 200&ndash;300 kA by the
+  Ohmic heating transformer, and the current in the transformer primary circuit
+  was then held constant to remove the OH drive. After the current fell below
+  200 kA, up to 300 kW of toroidally-directed RF power at 800 MHz was
+  transmitted into the PLT plasma via a 6-element phased waveguide array.
+  Current ramp-up rates between 0 and 120 kA/s for a 0.35 s time interval
+  ((&frac12;&ndash;1/3) <i>L</i>/<i>R</i> time) where measured at densities
+  between 2 and 4 &times; 10<sup>12</sup> cm<sup>-3</sup>. It is estimated that
+  about 20\% of the RF energy introduced into the vacuum vessel was converted
+  into poloidal magnetic field energy, <i>LI</i><sup>2</sup>/2, where <i>L</i>
+  &cong; 3 &mu;H is the total inductance of the plasma current loop. This
+  conversion ratio should depend on a variety of factors, including the
+  percentage of RF power absorbed by resonant electrons and the magnitude of
+  the back current induced by the changing poloidal flux <i>LI</i>. The high
+  ramp-up efficiencies are predicted theoretically in the regime in which the
+  PLT ramp-up experiments operate, i.e., where the phase velocity of the waves
+  is approximately equal in magnitude to the runaway velocity due to the back
+  voltage. Comparison of the raw data with theory suggest that about &frac12;
+  to &frac34; of the incident RF power is absorbed by resonant high-velocity
+  electrons.}{}{}{Robert~W. Motley, Ronald~E. Bell, Stefano Bernabei, Alfred~J.
+  Cavallo, Tsu-Kai Chu, Samuel~A. Cohen, Boel~G. Denne, Phillip~C. Efthimion,
+  Nathaniel~J. Fisch, Einar Hinnov, William~M. Hooke, Joel~C. Hosea, Forrest~C.
+  Jobes, Charles F.~F. Karney, Ernesto Mazzucato, E.~B. Meservey, James~E.
+  Stevens, Szymon Suckewer, Gary Taylor, John~R. Timberlake, Schweickhard~E.
+  von Goeler, J.~Randall Wilson}
+
+\formatentry{karney85a}{Efficiency of Current Drive by Fast Waves}%
+{\bibitem[Karney(1985a)]{karney85a}
+C.~F.~F. Karney and N.~J. Fisch.
+\newblock \eref{pf85a}{Efficiency of current drive by fast waves}.
+\newblock \doix{10.1063/1.865191}{{\em Phys. Fluids}, 28\penalty0 (1):\penalty0
+  116\endash{}126}, January 1985.
+\newblock \eprint{physics/0501058}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2128 (Aug. 1984) 30 pp.}}{The
+  Rosenbluth form for the collision operator for a weakly relativistic plasma
+  is derived. The formalism adopted by Antonsen and Chu can then be used to
+  calculate the efficiency of current drive by fast waves in a relativistic
+  plasma. Accurate numerical results and analytic asymptotic limits for the
+  efficiencies are given.}{pf85a}{10.1063/1.865191}{Charles F.~F. Karney,
+  Nathaniel~J. Fisch}
+
+\formatentry{fisch85a}{Conversion of Wave Energy to Magnetic Field Energy in a
+  Plasma Torus}%
+{\bibitem[Fisch(1985a)]{fisch85a}
+N.~J. Fisch and C.~F.~F. Karney.
+\newblock \eref{prl85}{Conversion of wave energy to magnetic field energy in a
+  plasma torus}.
+\newblock \doix{10.1103/PhysRevLett.54.897}{{\em Phys. Rev. Lett.}, 54\penalty0
+  (9):\penalty0 897\endash{}900}, March 1985.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2132 (Aug. 1984) 13 pp.}}{The
+  circuit equations for current drive are derived by the finding of appropriate
+  response functions in the presence of an electric field. The effect of
+  arbitrary wave-induced fluxes on runaway production and current generation
+  can then be determined. An interpretation of recent remarkable experiments is
+  now possible, and the favorable results appear to scale to reactor-grade
+  devices.}{prl85}{10.1103/PhysRevLett.54.897}{Nathaniel~J. Fisch, Charles
+  F.~F. Karney}
+
+\formatentry{fisch85b}{Asymptotic Analysis of Radio Frequency-Heated
+  Collisional Plasma}%
+{\bibitem[Fisch(1985b)]{fisch85b}
+N.~J. Fisch and C.~F.~F. Karney.
+\newblock \eref{pf85b}{Asymptotic analysis of radio frequency-heated
+  collisional plasma}.
+\newblock \doix{10.1063/1.865352}{{\em Phys. Fluids}, 28\penalty0
+  (10):\penalty0 3107\endash{}3115}, October 1985.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2205 (Mar. 1985) 40 pp.}}{It is
+  shown that a distribution of electrons in resonance with traveling waves, but
+  colliding with background distributions of electrons and ions, evolves to a
+  steady state. Previously, the existence of such solutions had been assumed,
+  but not proved, in numerical and other calculations. Details of the steady
+  state are given analytically in the asymptotic limit of high electron energy
+  and are compared with numerical solutions. The asymptotic analytic solution
+  may be useful for quickly relating emission data to likely excitations and is
+  more reliable than conventional numerical solutions at high energy. A method
+  of improving numerics at high energy is
+  suggested.}{pf85b}{10.1063/1.865352}{Nathaniel~J. Fisch, Charles F.~F.
+  Karney}
+
+\formatentry{karney85b}{Comparison of the Theory and the Practice of Lower
+  Hybrid Current Drive}%
+{\bibitem[Karney(1985b)]{karney85b}
+C.~F.~F. Karney, N.~J. Fisch, and F.~C. Jobes.
+\newblock \eref{pra85}{Comparison of the theory and the practice of lower
+  hybrid current drive}.
+\newblock \doix{10.1103/PhysRevA.32.2554}{{\em Phys. Rev.}, 32A\penalty0
+  (4):\penalty0 2554\endash{}2556}, October 1985.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2152 (Oct. 1984) 12 pp.}}{The
+  theory of rf-driven plasma currents is applied to the lower-hybrid
+  experiments on the Princeton Large Torus tokamak. Particular emphasis is
+  placed on those experiments in which the plasma current was varying. The
+  comparison between theory and experiment is made with respect to the
+  efficiency with which rf energy was converted to poloidal magnetic field
+  energy. Good agreement is found irrespective of whether the current was
+  increasing, constant, or
+  decreasing.}{pra85}{10.1103/PhysRevA.32.2554}{Charles F.~F. Karney,
+  Nathaniel~J. Fisch, Forrest~C. Jobes}
+
+\formatentry{vongoeler85}{Angular Distribution of the Bremsstrahlung Emission
+  during Lower Hybrid Current Drive on {PLT}}%
+{\bibitem[von Goeler(1985)]{vongoeler85}
+S.~E. von Goeler, J.~E. Stevens, S.~Bernabei, M.~L. Bitter, T.-K. Chu, P.~C.
+  Efthimion, N.~J. Fisch, W.~M. Hooke, K.~W. Hill, J.~C. Hosea, F.~C. Jobes,
+  C.~F.~F. Karney, J.~A. Mervine, E.~B. Meservey, R.~W. Motley, P.~G. Roney,
+  S.~S. Sesnic, K.~Silber, and G.~Taylor.
+\newblock Angular distribution of the bremsstrahlung emission during lower
+  hybrid current drive on {PLT}.
+\newblock {\em Nucl. Fusion}, 25\penalty0 (11):\penalty0 1515\endash{}1528, November
+  1985.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2225 (June 1985) 46 pp.}}{The
+  bremsstrahlung emission from the PLT tokamak during lower-hybrid current
+  drive has been measured as a function of angle between the magnetic field and
+  the emission direction. The emission is peaked strongly in the forward
+  direction, indicating a strong anisotropy of the electron velocity
+  distribution. The data demonstrate the existence of a nearly flat tail of the
+  velocity distribution, which extends out to approximately 500 keV and which
+  is interpreted as the plateau created by Landau damping of the lower-hybrid
+  waves.}{}{}{Schweickhard~E. von Goeler, James~E. Stevens, Stefano Bernabei,
+  Manfred~L. Bitter, Tsu-Kai Chu, Phillip~C. Efthimion, Nathaniel~J. Fisch,
+  William~M. Hooke, Kenneth~W. Hill, Joel~C. Hosea, Forrest~C. Jobes, Charles
+  F.~F. Karney, J.~A. Mervine, E.~B. Meservey, Robert~W. Motley, Phyllis~G.
+  Roney, Steven~S. Sesnic, K. Silber, Gary Taylor}
+
+\formatentry{stevens85}{Modelling of the Electron Distribution Based on
+  Bremsstrahlung Emission during Lower-Hybrid Current Drive on {PLT}}%
+{\bibitem[Stevens(1985)]{stevens85}
+J.~E. Stevens, S.~E. von Goeler, S.~Bernabei, M.~L. Bitter, T.-K. Chu, P.~C.
+  Efthimion, N.~J. Fisch, W.~M. Hooke, J.~C. Hosea, F.~C. Jobes, C.~F.~F.
+  Karney, E.~B. Meservey, R.~W. Motley, and G.~Taylor.
+\newblock Modelling of the electron distribution based on bremsstrahlung
+  emission during lower-hybrid current drive on {PLT}.
+\newblock {\em Nucl. Fusion}, 25\penalty0 (11):\penalty0 1529\endash{}1541, November
+  1985.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2204 (Mar. 1985) 38
+  pp.}}{Lower-hybrid current drive requires the generation of a high-energy
+  electron tail anisotropic in velocity. Measurements of bremsstrahlung
+  emission produced by this tail are compared with the calculated emission from
+  reasonable model distributions. The physical basis and the sensitivity of
+  this modelling process are described, and the plasma properties of
+  current-driven discharges which can be derived from the model are
+  discussed.}{}{}{James~E. Stevens, Schweickhard~E. von Goeler, Stefano
+  Bernabei, Manfred~L. Bitter, Tsu-Kai Chu, Phillip~C. Efthimion, Nathaniel~J.
+  Fisch, William~M. Hooke, Joel~C. Hosea, Forrest~C. Jobes, Charles F.~F.
+  Karney, E.~B. Meservey, Robert~W. Motley, Gary Taylor}
+
+\formatentry{karney86a}{Numerical Techniques for the Study of Long-Time
+  Correlations}%
+{\bibitem[Karney(1986a)]{karney86a}
+C.~F.~F. Karney.
+\newblock \eref{pa86}{Numerical techniques for the study of long-time
+  correlations}.
+\newblock {\em Particle Accelerators}, 19\penalty0 (1\endash{}4):\penalty0 213\endash{}221,
+  May 1986.
+\newblock \eprint{nlin.CD/0401035}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2218 (May 1985) 9 pp.}
+\newblock Proc. Workshop on Orbital Dynamics and Applications to Accelerators,
+  Berkeley, CA, Mar. 7\endash{}12, 1985.}{In the study of long-time correlations
+  extremely long orbits must be calculated. This may be accomplished much more
+  reliably using fixed-point arithmetic. Use of this arithmetic on the Cray-1
+  computer is illustrated.}{pa86}{}{Charles F.~F. Karney}
+
+\formatentry{jobes86}{Start-up and Ramp-up of the {PLT} Tokamak by Lower Hybrid
+  Waves}%
+{\bibitem[Jobes(1986)]{jobes86}
+F.~C. Jobes, S.~Bernabei, T.-K. Chu, N.~J. Fisch, W.~M. Hooke, C.~F.~F. Karney,
+  E.~B. Meservey, R.~W. Motley, J.~E. Stevens, and S.~E. von Goeler.
+\newblock Start-up and ramp-up of the {PLT} tokamak by lower hybrid waves.
+\newblock In H.~Knoepfel, editor, {\em Tokamak Start-up}, volume~26 of {\em
+  Ettore Majorana International Science Series, Physical Sciences}, pages
+  203\endash{}216, Plenum Press, New York (EUR 10114 EN), 1986.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2241 (Aug. 1985) 31 pp.}
+\newblock Proc. Seventh Course of the International School of Fusion Reactor
+  Technology, Erice, Sicily, July 14\endash{}20, 1985.}{Lower hybrid waves have been
+  used on the PLT tokamak both to start the plasma current and to ramp it up
+  from pre-existing levels. The waves, at 800 MHz, were launched from a
+  6-waveguide grill. The phasing between adjacent guides could be selected
+  electronically, and thus the launched spectrum could be set and changed at
+  will. For start-up, the waveguide phase difference was initially set at
+  0&deg; in order to create a plasma, then switched to 90&deg; to drive the
+  current. Over 100 kA of plasma current, at a density of 0.5&ndash;1 &times;
+  10<sup>12</sup> cm<sup>-3</sup>, was generated in this manner. Ramp-up
+  experiments were performed under a wide variety of conditions. The most
+  efficient ramp-up was found at the lowest plasma densities and with the
+  fastest launched spectrum (<i>n</i><sub><i>e</i></sub> &sim; 2 &times;
+  10<sup>12</sup> cm<sup>-3</sup>, N<sub>||</sub> &sim; 1.6 peak); &sim; 20\%
+  of the launched RF power was converted to (increased) poloidal field energy.
+  All of the ramp-up results are in excellent agreement with a theory which
+  determines the efficiency of ramp-up from the consideration of the relative
+  energy losses of the superthermal current-carrying electrons to collisions
+  and to the opposing inductive <i>E</i>-field.}{}{}{Forrest~C. Jobes, Stefano
+  Bernabei, Tsu-Kai Chu, Nathaniel~J. Fisch, William~M. Hooke, Charles F.~F.
+  Karney, E.~B. Meservey, Robert~W. Motley, James~E. Stevens, Schweickhard~E.
+  von Goeler}
+
+\formatentry{karney86b}{Current in Wave Driven Plasmas}%
+{\bibitem[Karney(1986b)]{karney86b}
+C.~F.~F. Karney and N.~J. Fisch.
+\newblock \eref{pf86}{Current in wave driven plasmas}.
+\newblock \doix{10.1063/1.865975}{{\em Phys. Fluids}, 29\penalty0 (1):\penalty0
+  180\endash{}192}, January 1986.
+\newblock \eprint{physics/0501059}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2222 (June 1985) 36 pp.}}{A
+  theory for the generation of current in a toroidal plasma by radio-frequency
+  waves is presented. The effect of an opposing electric field is included,
+  allowing the case of time varying currents to be studied. The key quantities
+  that characterize this regime are identified and numerically calculated.
+  Circuit equations suitable for use in ray-tracing and transport codes are
+  given.}{pf86}{10.1063/1.865975}{Charles F.~F. Karney, Nathaniel~J. Fisch}
+
+\formatentry{karney86c}{{F}okker\endash{}{P}lanck and Quasilinear Codes}%
+{\bibitem[Karney(1986c)]{karney86c}
+C.~F.~F. Karney.
+\newblock \eref{cpr86}{{F}okker\endash{}{P}lanck and quasilinear codes}.
+\newblock \doix{10.1016/0167-7977(86)90029-8}{{\em Comput. Phys. Rep.},
+  4\penalty0 (3\endash{}4):\penalty0 183\endash{}244}, August 1986
+  (\eref{fp-errata}{errata}).
+\newblock \eprint{physics/0501066}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2290 (Nov. 1985) 77 pp.}
+\newblock Reprinted in {\em Problems in the Numerical Modeling of Plasmas},
+  edited by K. Appert (1986), Proc. 3rd European Workshop, Varenna, Italy,
+  Sept. 10\endash{}13 (1985).}{The interaction of radio-frequency waves with a plasma
+  is described by a Fokker-Planck equation with an added quasilinear term.
+  Methods for solving this equation on a computer are
+  discussed.}{cpr86}{10.1016/0167-7977(86)90029-8}{Charles F.~F. Karney}
+
+\formatentry{braams87a}{Numerical {F}okker\endash{}{P}lanck Studies}%
+{\bibitem[Braams(1987a)]{braams87a}
+B.~J. Braams and C.~F.~F. Karney.
+\newblock Numerical {F}okker\endash{}{P}lanck studies.
+\newblock In F.~Engelmann and J.~L. {Alvarez Rivas}, editors, {\em Controlled
+  Fusion and Plasma Physics}, volume 11D, part III of {\em Europhysics
+  Conference Abstracts}, pages 994\endash{}997, European Physical Society, 1987.
+\newblock Fourteenth European Conf., Madrid, June 22\endash{}26, 1987.}{We are
+  developing a code to solve the time-dependent Fokker-Planck equation for a
+  high temperature magnetized plasma, including the full collision operator,
+  quasi-linear wave-plasma interaction, and an electric field term. For the
+  solution of the equations the multigrid method is employed, making the code
+  cheap in terms of cpu-time and memory. In its initial version our code is
+  suitable to study some basic problems in which all species except one are
+  assumed Maxwellian. Examples are the runaway problem, and rf heating and
+  current drive by electron cyclotron or lower hybrid waves. Another class of
+  fundamental studies that we intend to undertake involves the determination of
+  linear response functions for various moments of the distribution function
+  via the adjoint method. Moments of interest include the current and the
+  parallel and perpendicular energy. In particular we are interested in
+  studying the response function for synchrotron radiation for the purpose of
+  experimental determination of the electron distribution function and the rf
+  energy deposition profile.}{}{}{Bastiaan~J. Braams, Charles F.~F. Karney}
+
+\formatentry{braams87b}{Multigrid Solution of the {F}okker\endash{}{P}lanck Equation}%
+{\bibitem[Braams(1987b)]{braams87b}
+B.~J. Braams and C.~F.~F. Karney.
+\newblock Multigrid solution of the {F}okker\endash{}{P}lanck equation.
+\newblock In {\em Proc. 12th Conference on the Numerical Simulation of
+  Plasmas}, paper IT3, 1987.
+\newblock Meeting held in San Fransisco, CA, Sept. 20\endash{}23.}{An application is
+  described of the multigrid numerical method to solve the Fokker-Planck
+  equation for a magnetized plasma.}{}{}{Bastiaan~J. Braams, Charles F.~F.
+  Karney}
+
+\formatentry{braams87c}{Differential Form of the Collision Integral for a
+  Relativistic Plasma}%
+{\bibitem[Braams(1987c)]{braams87c}
+B.~J. Braams and C.~F.~F. Karney.
+\newblock \eref{prl87}{Differential form of the collision integral for a
+  relativistic plasma}.
+\newblock \doix{10.1103/PhysRevLett.59.1817}{{\em Phys. Rev. Lett.},
+  59\penalty0 (16):\penalty0 1817\endash{}1820}, October 1987.
+\newblock \eprint{physics/0501067}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2467 (Aug. 1987) 6 pp.}}{The
+  differential formulation of the Landau-Fokker-Planck collision integral is
+  developed for the case of relativistic electromagnetic
+  interactions.}{prl87}{10.1103/PhysRevLett.59.1817}{Bastiaan~J. Braams,
+  Charles F.~F. Karney}
+
+\formatentry{braams89}{Conductivity of a Relativistic Plasma}%
+{\bibitem[Braams(1989)]{braams89}
+B.~J. Braams and C.~F.~F. Karney.
+\newblock \eref{pfb89}{Conductivity of a relativistic plasma}.
+\newblock \doix{10.1063/1.858966}{{\em Phys. Fluids}, 1B\penalty0 (7):\penalty0
+  1355\endash{}1368}, July 1989 (\eref{cond-addendum}{errata}).
+\newblock \eprint{plasm-ph/9502001}.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2598 (Mar. 1989) 39 pp.}}{The
+  collision operator for a relativistic plasma is reformulated in terms of an
+  expansion in spherical harmonics. In this formulation the collision operator
+  is expressed in terms of five scalar potentials that are given by
+  one-dimensional integrals over the distribution function. This formulation is
+  used to calculate the electrical conductivity of a uniform electron-ion
+  plasma with infinitely massive ions.}{pfb89}{10.1063/1.858966}{Bastiaan~J.
+  Braams, Charles F.~F. Karney}
+
+\formatentry{taylor89}{Non-Thermal Electron Cyclotron Emission from {TFTR}
+  Supershot Plasmas}%
+{\bibitem[Taylor(1989)]{taylor89}
+G.~Taylor, C.~W. Barnes, B.~J. Braams, A.~J. Cavallo, P.~C. Efthimion, C.~F.~F.
+  Karney, S.~Tamor, M.~C. Zarnstorff, and S.~J. Zweben.
+\newblock Non-thermal electron cyclotron emission from {TFTR} supershot
+  plasmas.
+\newblock In S.~Segre, H.~Knoepfel, and E.~Sindoni, editors, {\em Controlled
+  Fusion and Plasma Physics}, volume 13B, part I of {\em Europhysics Conference
+  Abstracts}, pages 31\endash{}34, European Physical Society, 1989.
+\newblock Sixteenth European Conf., Venice, Italy, Mar. 13\endash{}17 1989, paper
+  P2-A1-2.}{The Ohmic targets of Supershot plasmas in the Tokamak Fusion Test
+  Reactor (TFTR) are often characterized by the presence of non-thermal
+  electron cyclotron emission(ECE) from a runaway or slideaway electron
+  population. However in the 100&ndash;150 msec after the start of neutral beam
+  injection (NBI) this non-thermal ECE decays away as the electron density
+  rises and the loop voltage drops. After this usual slideaway-induced,
+  non-thermal ECE is quenched a new non-thermal feature develops at frequencies
+  just below both the optically thick, thermal emission of the ECE fundamental
+  ordinary mode, and the second harmonic extraordinary mode. This paper
+  presents an analysis of the ECE data which indicates a possible source of
+  this non-thermal emission feature. In addition, correlation of the peak
+  intensity of the non-thermal feature with various plasma parameters for 130
+  TFTR discharges from 1988 provides some clues toward identifying possible
+  physical conditions which give rise to the feature.}{}{}{Gary Taylor, Cris~W.
+  Barnes, Bastiaan~J. Braams, Alfred~J. Cavallo, Phillip~C. Efthimion, Charles
+  F.~F. Karney, S. Tamor, Michael~C. Zarnstorff, Stewart~J. Zweben}
+
+\formatentry{karney89}{Green's Function for rf-Driven Current in a Toroidal
+  Plasma}%
+{\bibitem[Karney(1989)]{karney89}
+C.~F.~F. Karney, N.~J. Fisch, and A.~H. Reiman.
+\newblock Green's function for rf-driven current in a toroidal plasma.
+\newblock In R.~D. McWilliams, editor, {\em Radio-Frequency Power in Plasmas},
+  volume 190 of {\em AIP Conf. Proc.}, pages 430\endash{}433, AIP, New York, July
+  1989.
+\newblock \eprint{physics/0402004}.
+\newblock Proc. Eighth Topical Conf. on Radio Frequency Plasma Heating, Irvine,
+  CA, May 1\endash{}3, 1989.}{The Green's function for rf-driven currents in a
+  toroidal plasma is calculated in the long mean-free-path limit.}{}{}{Charles
+  F.~F. Karney, Nathaniel~J. Fisch, Allan~H. Reiman}
+
+\formatentry{stotler90}{Compact Ignition Tokamak Edge and Divertor Modeling}%
+{\bibitem[Stotler(1990)]{stotler90}
+D.~P. Stotler, M.~Ulrickson, D.~P. Coster, A.~B. Ehrhardt, B.~J. Braams, and
+  C.~F.~F. Karney.
+\newblock Compact ignition tokamak edge and divertor modeling.
+\newblock In {\em 1990 IEEE International Conference on Plasma Science}, paper
+  1P1-1, IEEE, No. 90CH2857-1, 1990.
+\newblock Meeting held in Oakland, CA, May 21\endash{}23, 1990.}{}{}{}{Daren~P.
+  Stotler, Michael Ulrickson, David~P. Coster, Alicia~B. Ehrhardt, Bastiaan~J.
+  Braams, Charles F.~F. Karney}
+
+\formatentry{braams90}{Modelling of Carbon in the {TFTR} Edge Plasma}%
+{\bibitem[Braams(1990)]{braams90}
+B.~J. Braams, D.~P. Coster, A.~B. Ehrhardt, C.~F.~F. Karney, D.~M. Manos,
+  M.~Petravic, C.~S. Pitcher, A.~T. Ramsey, D.~P. Stotler, and M.~Ulrickson.
+\newblock Modelling of carbon in the {TFTR} edge plasma.
+\newblock In G.~Briffod, A.~Nijsen-Vis, and F.~C. Sch{\"u}ller, editors, {\em
+  Controlled Fusion and Plasma Physics}, volume 14B, part III of {\em
+  Europhysics Conference Abstracts}, pages 1417\endash{}1418, European Physical
+  Society, 1990.
+\newblock Seventeenth European Conf. Amsterdam, The Netherlands, June 25\endash{}29
+  1990, paper H20.}{}{}{}{Bastiaan~J. Braams, David~P. Coster, Alicia~B.
+  Ehrhardt, Charles F.~F. Karney, Dennis~M. Manos, Marijan Petravic, C.~Spencer
+  Pitcher, Alan~T. Ramsey, Daren~P. Stotler, Michael Ulrickson}
+
+\formatentry{ehst91}{Approximate Formula for Radio-Frequency Current Drive
+  Efficiency with Magnetic Trapping}%
+{\bibitem[Ehst(1991)]{ehst91}
+D.~A. Ehst and C.~F.~F. Karney.
+\newblock Approximate formula for radio-frequency current drive efficiency with
+  magnetic trapping.
+\newblock {\em Nucl. Fusion}, 31\penalty0 (10):\penalty0 1933\endash{}1938, October
+  1991.
+\newblock \preprint{Argonne Natl. Lab. Rept. \eref{anl247}{ANL/FPP/TM\endash{}247}
+  (Apr. 1990) 18 pp.}}{A functional form is presented for the efficiency of
+  current drive in toroidal geometry with waves at frequencies below the
+  electron cyclotron frequency. By fitting constants in order to duplicate
+  numerical results for the efficiency we obtain an accurate function which
+  will be useful for computer calculations of current drive.}{}{}{David~A.
+  Ehst, Charles F.~F. Karney}
+
+\formatentry{batchelor91}{Fast-Wave Current Drive Modelling for Large
+  Non-Circular Tokamaks}%
+{\bibitem[Batchelor(1991)]{batchelor91}
+D.~B. Batchelor, R.~C. Goldfinger, E.~F. Jaeger, M.~D. Carter, D.~W. Swain,
+  D.~A. Ehst, and C.~F.~F. Karney.
+\newblock Fast-wave current drive modelling for large non-circular tokamaks.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1990},
+  volume~1, pages 817\endash{}822, IAEA, Vienna, 1991.
+\newblock Proc. Thirteenth International Conf., Washington, DC, Oct. 1\endash{}5,
+  1990.}{It is widely recognized that a key element in he development of an
+  attractive tokamak reactor, and in the successful achievement of the mission
+  of ITER, is the development of an efficient steady-state current drive
+  technique. Fast waves in the ion cyclotron range of frequencies hold the
+  promise to drive steady-state currents with the required efficiency and to
+  effectively heat the plasma to ignition. Advantages over other heating and
+  current drive techniques include low cost per watt and the ability to
+  penetrate to the center of high-density plasmas. The primary issues that must
+  be resolved are:<br> 1. Can an antenna be designed to radiate the required
+  spectrum of waves and have adequate coupling properties?<br> 2. Will the RF
+  power be efficiently absorbed by electrons in the desired velocity range
+  without unacceptable parasitic damping by fuel ions or &alpha; particles?<br>
+  3. What will the efficiency of current drive be when toroidal effects such as
+  trapped particles are included?<br> 4. Can a practical RF system be designed
+  and integrated into the device?<br> We have addressed these issues by
+  performing extensive calculations with ORION, a 2-D code, and the ray tracing
+  code RAYS, which calculates wave propagation, absorption and current drive in
+  tokamak geometry, and with RIP, a 2-D code that self-consistently calculates
+  current drive and MHD equilibrium. An important figure of merit in this
+  context is the integrated, normalized current drive efficiency, &gamma; =
+  (<i>n</i><sub><i>e</i></sub>&nbsp;/10<sup>20</sup>m<sup>-3</sup>)<i>I</i><su%
+b>RF</sub>(<i>R</i>/<i>P</i><sub>RF</sub>), where <i>n</i><sub><i>e</i></sub>
+  is the average electron density, <i>I</i><sub>RF</sub> is the total RF driven
+  current, and <i>P</i><sub>RF</sub>is the RF power required. The calculations
+  that we present here emphasize the ITER device. We consider (1) a
+  low-frequency scenario (<i>f</i> &sim; 17 MHz) such that no ion resonances
+  appear in the machine, and (2) a high-frequency scenario (<i>f</i> &sim;
+  51&ndash;59 MHz) such that the deuterium second harmonic resonance is just
+  outside the plasma and the tritium second harmonic is in the plasma, midway
+  between the magnetic axis and the inside edge. In both cases electron
+  currents are driven by combined TTMP and Landau damping of the fast waves. We
+  find that fast waves are quite competitive with other current drive
+  techniques.}{}{}{Donald~B. Batchelor, Richard~C. Goldfinger, E.~Frederick
+  Jaeger, Mark~D. Carter, D.~W. Swain, David~A. Ehst, Charles F.~F. Karney}
+
+\formatentry{chiu92}{A Formula for Efficiency of Fast Wave Current Drive in
+  Fusion Devices}%
+{\bibitem[Chiu(1992)]{chiu92}
+S.~C. Chiu, C.~F.~F. Karney, R.~W. Harvey, and T.~K. Mau.
+\newblock A formula for efficiency of fast wave current drive in fusion
+  devices.
+\newblock In {\em Europhysics Topical Conf. on Radio Frequency Heating and
+  Current Drive of Fusion Devices}, page 173, 1992.
+\newblock \preprint{General Atomics Rept. GA\endash{}A20873 (1992), 4 pp.}
+\newblock Meeting held in Brussels, July 7\endash{}10, 1992.}{Fast wave current drive
+  (FWCD) is a principal candidate for non-inductive current drive schemes in
+  reactors. Major experiments are in progress or planned on DIII-D, JET, and
+  Tore-Supra. A theory for FWCD was presented by two of the authors and
+  collaborators. To minimize computations required in transport simulations,
+  and for analytical understanding, it is very useful to have a concise
+  analytical efficiency formula. Fisch and Karney, and Ehst and Karney have
+  obtained empirical formulae that fit numerical results for the Landau limit
+  and Alfv&eacute;n limit (low frequency limit); the latter fits results at 1
+  &lt; <i>Z</i><sub>i</sub> &le; 2. This paper extends a previous numerical
+  study on FWCD at arbitrary frequencies and <i>Z</i><sub>i</sub>. Analytical
+  formulae for FWCD efficiency, valid for all frequencies and
+  <i>Z</i><sub>i</sub>, are derived using the adjoint technique in high and low
+  phase velocity regions. A smooth patching between the two regimes produces an
+  analytical formula which is accurate for all frequencies,
+  <i>Z</i><sub>i</sub>, and phase velocities. Comparison with existing results
+  will be discussed. A corollary of the present calculation is that at low
+  phase velocities and in the Landau limit, the efficiency is the same as that
+  calculated for the Lorentz model collision operator.}{}{}{S.~C. Chiu, Charles
+  F.~F. Karney, Robert~W. Harvey, Tak~K. Mau}
+
+\formatentry{stotler92}{Scrape-off Layer Modeling Using Coupled Plasma and
+  Neutral Transport Codes}%
+{\bibitem[Stotler(1992)]{stotler92}
+D.~P. Stotler, D.~P. Coster, B.~J. Braams, A.~B. Ehrhardt, C.~F.~F. Karney, and
+  M.~Petravic.
+\newblock Scrape-off layer modeling using coupled plasma and neutral transport
+  codes.
+\newblock {\em J. Nucl. Mater.}, 196\endash{}198:\penalty0 894\endash{}897, 1992.
+\newblock \preprint{Princeton Univ. Rept. PPPL\endash{}2842 (May 1992) 14 pp.}
+\newblock Proc. Tenth International Conference on Plasma Surface Interactions
+  in Controlled Fusion Devices, March 30\endash{}April 3, 1992, Monterey, CA.}{An
+  effort is made to refine the neutral transport model used in the B2 edge
+  plasma code by coupling it to the DEGAS Monte Carlo code. Results are
+  discussed for a simulation of a high recycling divertor. It appears that on
+  the order of 100 iterations between the two codes are required to achieve a
+  converged solution. However, the amount of computer time used in the DEGAS
+  simulations is large, making complete runs impractical for design purposes.
+  On the other hand, the difference in the resulting plasma parameters when
+  compared to the B2 analytic neutrals model indicate that it would be
+  worthwhile to explore techniques for speeding up the coupled system of
+  codes.}{}{}{Daren~P. Stotler, David~P. Coster, Bastiaan~J. Braams, Alicia~B.
+  Ehrhardt, Charles F.~F. Karney, Marijan Petravic}
+
+\formatentry{karney92}{Neutral Gas Modeling in Divertors}%
+{\bibitem[Karney(1992)]{karney92}
+C.~F.~F. Karney.
+\newblock Neutral gas modeling in divertors.
+\newblock In E.~Sindoni and J.~Vaclavik, editors, {\em Theory of Fusion
+  Plasmas}, pages 183\endash{}189, International School of Plasma Physics, Editrice
+  Compositori, Bologna, 1992.
+\newblock \preprint{Preprint \eref{varenna}{varenna}}.
+\newblock Proc. Joint Varenna\endash{}Lausanne International Workshop, Villa
+  Monastero, Varenna, Italy, Aug. 24\endash{}28, 1992 (ISPP-12).}{The divertor is one
+  of the critical components in a tokamak reactor. It must absorb the
+  &alpha;-particle power and particle flux and any auxiliary heating power; it
+  must permit the removal of the helium ash so that the hydrogen fuel in not
+  diluted. The major constraints on the operation of the divertor are that it
+  should not result in a large flux of impurities into the plasma and that the
+  divertor plate should not erode too quickly. In order to satisfy the last
+  constraint, it is necessary to reduce the temperature of the plasma striking
+  the plate to far below the temperature at the last closed flux surface;
+  otherwise the erosion rate in quasi-steady operation for a machine such as
+  ITER is meters per year.<br> Neutrals play a pivotal role in the divertor. In
+  the steady state, the flux of ions onto the plate is approximately balanced
+  by an outflow of neutrals. In addition, in a &ldquo;high-recycling&rdquo;
+  divertor a given ion strikes the divertor plate, is neutralized, flows back
+  towards the plasma, is ionized, and swept back to the divertor plate hundreds
+  of times before the particle is pumped away. This results in a high neutral
+  density and a lower temperature in front of the divertor plate. Other ways of
+  reducing the erosion rate are also being investigated: for example, in the
+  &ldquo;gas target&rdquo; divertor, the plasma flows into a gas cell and a
+  high-<i>Z</i> element radiates away much of the power. In such a divertor,
+  neutrals also play a central role.<br> In order to model a divertor it is
+  therefore necessary to describe the plasma and the neutrals, the various
+  reactions between them (ionization, recombination, charge exchange,
+  dissociation, etc.), and their interaction with the divertor plate and other
+  material surfaces.<br> In this paper, I address the issue of modeling the
+  transport of the neutrals. The goals of such modeling are to provide reliable
+  measures of the neutral transport in a divertor for coupling to a plasma
+  code, the evaluation of erosion rates, impurities influx, etc., and the
+  evaluation of diagnostic quantities, e.g., the line integrated radiation, for
+  calibration against experimental measurements.}{}{}{Charles F.~F. Karney}
+
+\formatentry{chiu94}{The Efficiency of Fast Wave Current Drive for a Weakly
+  Relativistic Plasma}%
+{\bibitem[Chiu(1994)]{chiu94}
+S.~C. Chiu, Y.~R. Lin-Liu, and C.~F.~F. Karney.
+\newblock The efficiency of fast wave current drive for a weakly relativistic
+  plasma.
+\newblock In M.~Porkolab and J.~Hosea, editors, {\em Radio-Frequency Power in
+  Plasmas}, volume 289 of {\em AIP Conf. Proc.}, pages 305\endash{}308, AIP, New York,
+  October 1994.
+\newblock \preprint{General Atomics Rept. GA\endash{}A21254 (Apr. 1993) 4 pp.}
+\newblock Proc. Tenth Topical Conf. on Radio Frequency Plasma Heating, Boston,
+  MA, Apr. 1\endash{}3, 1993.}{Current drive by fast waves (FWCD) is an important
+  candidate for steady-state operation of tokamaks. Major experiments using
+  this scheme are being carried out on DIII-D. There has been considerable
+  study of the theoretical efficiency of FWCD.<sup>1&ndash;7</sup> In Refs. 4
+  and 5, the nonrelativistic efficiency of FWCD at arbitrary frequencies was
+  studied. For DIII-D parameters, the results can be considerably different
+  from the Laudau and Alfv&eacute;n limits. At the high temperatures of
+  reactors and DIII-D upgrade, relativistic effects become important. In this
+  paper, the relativistic FWCD efficiency for arbitrary frequencies is studied.
+  Assuming that the plasma is weakly relativistic, i.e.,
+  <i>T</i><sub>e</sub>/<i>mc</i><sup>2</sup> is small, an analytic expression
+  for FWCD is obtained for high resonant energies
+  (<i>u</i><sub>ph</sub>/<i>u</i><sub><i>T</i>e</sub> &gt;&gt; 1). Comparisons
+  with the results from a numerical code ADJ<sup>7</sup> and the
+  nonrelativistic results<sup>5</sup> shall be made and analytical fits in the
+  whole range of velocities shall be presented.}{}{}{S.~C. Chiu, Y.~R. Lin-Liu,
+  Charles F.~F. Karney}
+
+\formatentry{stotler94}{Neutral Gas Transport Modeling with {D}egas 2}%
+{\bibitem[Stotler(1994)]{stotler94}
+D.~P. Stotler and C.~F.~F. Karney.
+\newblock Neutral gas transport modeling with {D}egas 2.
+\newblock {\em Contrib. Plasma Phys.}, 34:\penalty0 392\endash{}397, 1994.
+\newblock Proc. Fourth International Workshop on Plasma Edge Theory in Fusion
+  Devices, Varenna, Italy, October, 1993.}{}{}{}{Daren~P. Stotler, Charles
+  F.~F. Karney}
+
+\formatentry{fisch94}{Possibility of Using Ion {B}ernstein Waves for Alpha
+  Power Extraction in Tokamaks}%
+{\bibitem[Fisch(1994)]{fisch94}
+N.~J. Fisch, E.~J. Valeo, C.~F.~F. Karney, and R.~P. Majeski.
+\newblock Possibility of using ion {B}ernstein waves for alpha power extraction
+  in tokamaks.
+\newblock In E.~Joffrin, P.~Platz, and P.~E. Stott, editors, {\em Controlled
+  Fusion and Plasma Physics}, volume 18B, part II of {\em Europhysics
+  Conference Abstracts}, pages 640\endash{}643, 1994.
+\newblock Twenty-first European Conf., Montpellier, France, June 27\endash{}July 1,
+  1994.}{}{}{}{Nathaniel~J. Fisch, Ernest~J. Valeo, Charles F.~F. Karney,
+  Richard~P. Majeski}
+
+\formatentry{chiu95}{Theory of Current Drive by Parallel Acceleration of
+  Electrons in a Weakly Relativistic Plasma}%
+{\bibitem[Chiu(1995)]{chiu95}
+S.~C. Chiu, C.~F.~F. Karney, T.~K. Mau, and Y.~R. Lin-Liu.
+\newblock \eref{pop95}{Theory of current drive by parallel acceleration of
+  electrons in a weakly relativistic plasma}.
+\newblock \doix{10.1063/1.870970}{{\em Phys. Plasmas}, 2\penalty0 (2):\penalty0
+  450\endash{}458}, February 1995.
+\newblock \preprint{General Atomics Rept. GA\endash{}A21599 (June 1994) 31 pp.}}{A
+  weakly relativistic theory of current drive by parallel acceleration of
+  electrons in toroidal geometry is presented. Analytic expressions of
+  efficiency are obtained for superthermal and subthermal electrons. By using a
+  few adjustable parameters for intermediate energies, an accurate formula for
+  the efficiency is obtained by fitting numerical results. This includes
+  trapping effects and is valid for all frequencies up to the lower hybrid
+  range of frequencies. It is found that for low-frequency fast-wave current
+  drive, the relativistic and nonrelativistic efficiencies agree to within 15\%
+  up to 500 keV, although the relativistic corrections to power absorption and
+  current density can be much larger separately. Relativistic effects on the
+  efficiency become prominent at lower energies for Landau
+  damping.}{pop95}{10.1063/1.870970}{S.~C. Chiu, Charles F.~F. Karney, Tak~K.
+  Mau, Y.~R. Lin-Liu}
+
+\formatentry{majeski95}{Mode Conversion Studies in {TFTR}}%
+{\bibitem[Majeski(1995)]{majeski95}
+R.~P. Majeski, N.~J. Fisch, H.~Adler, S.~Batha, M.~G. Bell, R.~E. Bell, M.~L.
+  Bitter, N.~L. Bretz, R.~Budny, C.~E. Bush, S.~R. Cauffman, Z.~Chang, D.~S.
+  Darrow, A.~C. England, E.~Fredrickson, H.~P. Furth, G.~R. Hanson, M.~C.
+  Herrmann, K.~W. Hill, J.~C. Hosea, L.~C. Johnson, D.~W. Ignat, C.~F.~F.
+  Karney, F.~Levinton, E.~Mazzucato, S.~S. Medley, D.~R. Mikkelsen,
+  M.~Murakami, H.~E. Mynick, R.~M. Nazikian, H.~K. Park, C.~Kieras-Phillips,
+  A.~T. Ramsey, D.~A. Rasmussen, J.-M. Rax, J.~H. Rogers, G.~Schilling, J.~F.
+  Schivell, S.~D. Scott, P.~B. Snyder, J.~E. Stevens, E.~Synakowski, G.~Taylor,
+  E.~J. Valeo, Z.~H. Wang, J.~B. Wilgen, J.~R. Wilson, M.~C. Zarnstorff, and
+  S.~J. Zweben.
+\newblock Mode conversion studies in {TFTR}.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1994},
+  volume~1, pages 443\endash{}452, IAEA, Vienna, 1995.
+\newblock \preprint{Princeton Univ. Rept. \eref{pppl3086}{PPPL\endash{}3086} (March
+  1994) 12 pp.}
+\newblock Proc. Fourteenth International Conf., Seville, Spain, Sept. 26\endash{}Oct.
+  1, 1994.}{Mode converted Ion Bernstein Waves (IBW) have important potential
+  applications in tokamak reactors. These applications include on or off axis
+  electron heating and current drive [1] and the channeling of alpha particle
+  power for both current drive and increased reactivity [2]. Efficient mode
+  conversion electron heating with a low field side antenna, with both on and
+  off axis power deposition, has been demonstrated for the first time in TFTR
+  in D-<sup>3</sup>He-<sup>4</sup>He plasmas. Up to 80\% of the Ion Cyclotron
+  Range of Frequency (ICRF) power is coupled to electrons at the mode
+  conversion surface. Experiments during deuterium and tritium neutral beam
+  injection (NBI) indicate that good mode conversion efficiency can be
+  maintained during NBI if sufficient <sup>3</sup>He is present. No evidence of
+  strong alpha particle heating by the IBW is seen. Recent modelling indicates
+  that if the mode converted IBW is preferentially excited off the horizontal
+  midplane then the resultant high poloidal mode number wave may channel alpha
+  particle power to either electrons or ions [2]. In TFTR both the propagation
+  of the IBW and its effect on the alpha particle population is being
+  investigated. Experiments with 2 MW of ICRF power launched with &plusmn;
+  90&deg; antenna phasing for current drive show that electron heating and
+  sawtooth activity depend strongly on the direction of the launched wave. The
+  noninductively driven current could not be experimentally determined in these
+  relatively high plasma current (1.2 MA), short pulse discharges. Experiments
+  at higher RF power and lower plasma current are planned to determine on and
+  off axis current drive efficiency.}{}{}{Richard~P. Majeski, Nathaniel~J.
+  Fisch, H. Adler, S. Batha, Michael~G. Bell, Ronald~E. Bell, Manfred~L.
+  Bitter, Norton~L. Bretz, Robert Budny, Charles~E. Bush, Stephen~R. Cauffman,
+  Z. Chang, Douglass~S. Darrow, Alan~C. England, Eric Fredrickson, Harold~P.
+  Furth, G.~R. Hanson, Mark~C. Herrmann, Kenneth~W. Hill, Joel~C. Hosea,
+  Larry~C. Johnson, David~W. Ignat, Charles F.~F. Karney, F. Levinton, Ernesto
+  Mazzucato, Sidney~S. Medley, David~R. Mikkelsen, M. Murakami, Harry~E.
+  Mynick, Raffi~M. Nazikian, Hyeon~K. Park, Cynthia Kieras-Phillips, Alan~T.
+  Ramsey, D.~A. Rasmussen, Jean-Marcel Rax, J.~H. Rogers, Gerd Schilling,
+  John~F. Schivell, Steven~D. Scott, Philip~B. Snyder, James~E. Stevens, Edmund
+  Synakowski, Gary Taylor, Ernest~J. Valeo, Z.~H. Wang, J.~B. Wilgen,
+  J.~Randall Wilson, Michael~C. Zarnstorff, Stewart~J. Zweben}
+
+\formatentry{stotler95}{Modeling of {A}lcator {C-MOD} Divertor Plasmas in High
+  Recycling and Detached Regimes}%
+{\bibitem[Stotler(1995)]{stotler95}
+D.~P. Stotler, J.~A. Snipes, G.~M. McCracken, B.~LaBombard, M.~Petravic, R.~A.
+  Vesey, S.~Barle, G.~Bateman, C.~F.~F. Karney, B.~Lipschultz, J.~L. Terry, and
+  S.~M. Wolfe.
+\newblock Modeling of {A}lcator {C-MOD} divertor plasmas in high recycling and
+  detached regimes.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1994},
+  volume~3, pages 363\endash{}372, IAEA, Vienna, 1995.
+\newblock Proc. Fourteenth International Conf., Seville, Spain, Sept. 26\endash{}Oct.
+  1, 1994.}{Simulations of high recycling divertor operation in the Alcator
+  C-Mod device are performed using the DEGAS Monte Carlo neutral transport
+  code; these form the foundation for future simulations of detached plasmas.
+  The PLANET fluid code is used to provide the initial modeling insight into
+  those high recycling and detached plasma. Obtaining the best match to the
+  experimental data with DEGAS requires an ion flux to the divertor targets
+  which exceeds the measure parallel flux, consistent with previous
+  investigations of glancing incidence in limiter tokamaks. The qualitative
+  features of both high recycling and detached Alcator C-Mod discharges are
+  reproduced with PLANET; however, obtaining quantitative agreement requires
+  larger perpendicular transport coefficients above the X-point than below
+  it.}{}{}{Daren~P. Stotler, Joseph~A. Snipes, Gary~M. McCracken, Brian
+  LaBombard, Marijan Petravic, Richard~A. Vesey, S. Barle, Glenn Bateman,
+  Charles F.~F. Karney, Bruce Lipschultz, James~L. Terry, S.~M. Wolfe}
+
+\formatentry{stotler97}{{D}egas 2 Neutral Transport Modeling in High Density,
+  Low Temperature Plasmas}%
+{\bibitem[Stotler(1997)]{stotler97}
+D.~P. Stotler, A.~Y. Pigarov, C.~F.~F. Karney, S.~I. Krasheninnikov,
+  B.~LaBombard, B.~Lipschultz, G.~M. McCracken, A.~Niemczewski, J.~A. Snipes,
+  J.~L. Terry, and R.~A. Vesey.
+\newblock {D}egas 2 neutral transport modeling in high density, low temperature
+  plasmas.
+\newblock In {\em Plasma Physics and Controlled Nuclear Fusion Research 1996},
+  volume~2, pages 633\endash{}639, IAEA, Vienna, 1997.
+\newblock \preprint{Princeton Univ. Rept. \eref{PPPL-3221}{PPPL\endash{}3221} (1996) 8
+  pp.}
+\newblock Proc. Sixteenth International Conf., Montreal, Canada, September,
+  1996.}{Neutral transport in the high density, low temperature plasma regime
+  is examined using the DEGAS 2 Monte Carlo neutral transport code. DEGAS 2 is
+  shown to agree with an analytic fluid neutral model valid in this regime as
+  long as the grid cell spacing is less than twice the neutral mean-free path.
+  Using new atomic physics data provided by the collisional radiative code
+  CRAMD, DEGAS 2 is applied to a detached Alcator C-Mod discharge. A model
+  plasma with electron temperature &sim; 1 eV along detached flux tubes,
+  between the target and the ionization front, is used to demonstrate that
+  recombination is essential to matching the experimental data. With the CRAMD
+  data, &sim; 20\% of the total recombination is due to molecular activated
+  recombination.}{}{}{Daren~P. Stotler, Alexander~{Yu}. Pigarov, Charles F.~F.
+  Karney, Sergei~I. Krasheninnikov, Brian LaBombard, Bruce Lipschultz, Gary~M.
+  McCracken, Artur Niemczewski, Joseph~A. Snipes, James~L. Terry, Richard~A.
+  Vesey}
+
+\formatentry{karney98a}{Modeling of Neutral Plasma in a Divertor in the
+  Fluid-Kinetic Transition}%
+{\bibitem[Karney(1998a)]{karney98a}
+C.~F.~F. Karney, D.~P. Stotler, and B.~J. Braams.
+\newblock Modeling of neutral plasma in a divertor in the fluid-kinetic
+  transition.
+\newblock {\em Contrib. Plasma Phys.}, 38\penalty0 (1\endash{}2):\penalty0 319\endash{}324,
+  1998.
+\newblock \preprint{Preprint \eref{pet97-papera}{pet97-papera}}.
+\newblock Proc. Sixth International Workshop on Plasma Edge Theory in Fusion
+  Devices, Oxford, England, September 15\endash{}16, 1997.}{The neutrals in a tokamak
+  divertor in the so-called &ldquo;detached&rdquo; mode of operation may be in
+  a kinetic regime (long mean free path) in some regions and in a fluid regime
+  (short mean free path) elsewhere. For example, a kinetic description is
+  necessary in the thin ionization front, while the cold neutrals in front of
+  the divertor plate are adequately described by fluid equations. The paper
+  describes a way to model this by coupling existing Monte Carlo neutral
+  transport and plasma fluid codes. This is explored with a simple analytical
+  model.}{}{}{Charles F.~F. Karney, Daren~P. Stotler, Bastiaan~J. Braams}
+
+\formatentry{karney98b}{Modern Computational Techniques in Plasma Physics}%
+{\bibitem[Karney(1998b)]{karney98b}
+C.~F.~F. Karney.
+\newblock \eref{pop98}{Modern computational techniques in plasma physics}.
+\newblock \doix{10.1063/1.872831}{{\em Phys. Plasmas}, 5\penalty0 (5):\penalty0
+  1632\endash{}1635}, May 1998.
+\newblock \preprint{Preprint \eref{apsinvpaper-97b}{apsinvpaper-97b}}.
+\newblock Invited tutorial at the Thirty-ninth Annual Meeting of the American
+  Physical Society, Division of Plasma Physics, Pittsburgh, PA, Nov. 17\endash{}21,
+  1997.}{This paper offers practical suggestions for how to make the best use
+  of computers to model plasma behavior. This includes advice for ensuring the
+  correctness of a computer code, how to manage a large code project, and how
+  to take advantage of parallel computers.}{pop98}{10.1063/1.872831}{Charles
+  F.~F. Karney}
+
+\formatentry{karney99}{Effect of Reflection on {\Halpha} Emissions in {A}lcator
+  {C-MOD}}%
+{\bibitem[Karney(1999)]{karney99}
+C.~F.~F. Karney, D.~P. Stotler, C.~H. Skinner, J.~L. Terry, and D.~A. Pappas.
+\newblock \eref{rsi99a}{Effect of reflection on {\Halpha} emissions in
+  {A}lcator {C-MOD}}.
+\newblock \doix{10.1063/1.1149347}{{\em Rev. Sci. Instrum.}, 70\penalty0
+  (1):\penalty0 344\endash{}346}, January 1999.
+\newblock \preprint{Preprint \eref{diag98-papera}{diag98-papera}}.
+\newblock Proc. 12th Topical Conf. on High-Temperature Plasma Diagnostics,
+  Princeton, NJ, June 7\endash{}11, 1998.}{In order to explain anomalous intensity
+  ratios which have been observed in Alcator C-MOD, the H<sub>&alpha;</sub>
+  emissions in that experiment have been modeled with the Degas 2 code
+  including the effects of wall reflection. By assuming that the first wall has
+  different reflection coeffiicients for the two polarizations, we have
+  qualitatively reproduce the observed
+  anomaly.}{rsi99a}{10.1063/1.1149347}{Charles F.~F. Karney, Daren~P. Stotler,
+  Charles~H. Skinner, James~L. Terry, Dimitrios~A. Pappas}
+
+\formatentry{stotler99a}{Spectroscopic Measurements of Hydrogen Ion Temperature
+  during Divertor Recombination}%
+{\bibitem[Stotler(1999a)]{stotler99a}
+D.~P. Stotler, C.~H. Skinner, and C.~F.~F. Karney.
+\newblock \eref{rsi99b}{Spectroscopic measurements of hydrogen ion temperature
+  during divertor recombination}.
+\newblock \doix{10.1063/1.1149431}{{\em Rev. Sci. Instrum.}, 70\penalty0
+  (1):\penalty0 347\endash{}350}, January 1999.
+\newblock Proc. 12th Topical Conf. on High-Temperature Plasma Diagnostics,
+  Princeton, NJ, June 7\endash{}11, 1998.}{We explore the possibility of using the
+  neutral H<sub>&alpha;</sub> spectral line profile to measure the ion
+  temperature, <i>T</i><sub><i>i</i></sub>&nbsp;, in a recombining plasma.
+  Since the H<sub>&alpha;</sub> emissions due to recombination are larger than
+  those due to other mechanisms, interference from nonrecombining regions
+  contributing to the chord integrated data is insignificant. A Doppler and
+  Stark broadened H<sub>&alpha;</sub> spectrum is simulated by the DEGAS 2
+  neutral transport code using assumed plasma conditions. The application of a
+  simple fitting procedure to this spectrum yields an electron density,
+  <i>n</i><sub><i>e</i></sub>&nbsp;, and <i>T</i><sub><i>i</i></sub> consistent
+  with the assumed plasma parameters if the spectrum is dominated by
+  recombination from a region of modest <i>n</i><sub><i>e</i></sub> variation.
+  General measurements of the ion temperature by H<sub>&alpha;</sub>
+  spectroscopy appear feasible within the context of a model for the entire
+  divertor plasma.}{rsi99b}{10.1063/1.1149431}{Daren~P. Stotler, Charles~H.
+  Skinner, Charles F.~F. Karney}
+
+\formatentry{stotler99b}{Coupled {M}onte {C}arlo Neutral-Fluid Plasma
+  Simulation of {A}lcator {C-Mod} Divertor Plasma Near Detachment}%
+{\bibitem[Stotler(1999b)]{stotler99b}
+D.~P. Stotler, D.~P. Coster, C.~F.~F. Karney, B.~LaBombard, B.~Lipschultz,
+  C.~S. Pitcher, R.~Schneider, and R.~A. Vesey.
+\newblock \eref{jnm99}{Coupled {M}onte {C}arlo neutral-fluid plasma simulation
+  of {A}lcator {C-Mod} divertor plasma near detachment}.
+\newblock \doix{10.1016/S0022-3115(98)00555-8}{{\em J. Nucl. Mater.},
+  266\endash{}269:\penalty0 947\endash{}952}, March 1999.
+\newblock Proc. Thirteenth International Conference on Plasma Surface
+  Interactions in Controlled Fusion Devices, 1998, San Diego, CA.}{Using the
+  coupled fluid plasma and Monte Carlo neutral transport code, B2-EIRENE, we
+  simulate and analyze a nearly detached Alcator C-Mod discharge exhibiting the
+  divertor over-pressure or &ldquo;death ray&rdquo phenomenon. Qualitative
+  agreement is obtained between the measured and simulated density and
+  temperature profiles at the outboard midplane and divertor target. In the
+  simulation, the divertor over-pressure is caused by radial transport of
+  parallel momentum. Momentum transport by the neutral species is
+  negligible.}{jnm99}{10.1016/S0022-3115(98)00555-8}{Daren~P. Stotler, David~P.
+  Coster, Charles F.~F. Karney, Brian LaBombard, Bruce Lipschultz, C.~Spencer
+  Pitcher, Ralf Schneider, Richard~A. Vesey}
+
+\formatentry{stotler00}{Coupling of Parallelized {D}egas 2 and {UEDGE} Codes}%
+{\bibitem[Stotler(2000)]{stotler00}
+D.~P. Stotler, C.~F.~F. Karney, M.~E. Rensink, and T.~D. Rognlien.
+\newblock \eref{cpp00}{Coupling of parallelized {D}egas 2 and {UEDGE} codes}.
+\newblock
+  \doix{10.1002/1521-3986(200006)40:3/4<221::AID-CTPP221>3.0.CO;2-L}{{\em
+  Contrib. Plasma Phys.}, 40\penalty0 (3\endash{}4):\penalty0 221\endash{}226}, June 2000.
+\newblock Proc. Seventh International Workshop on Plasma Edge Theory in Fusion
+  Devices, Tajimi, Japan, October 1999.}{Benchmarks of DEGAS 2 against EIRENE
+  yield agreement to within 5\% and comparable single processor run times.
+  DEGAS 2 demonstrates a nearly linear increase in processing speed with the
+  number of parallel processors. That speed is put to practical use here in the
+  first runs of UEDGE coupled to DEGAS 2. The results of the coupled codes
+  match those of coupled UEDGE and EIRENE. Additional algorithmic improvements
+  such as use of the correlated sampling technique promise to make runs of the
+  coupled UEDGE&ndash;DEGAS 2 codes practical for everyday
+  use.}{cpp00}{10.1002/1521-3986(200006)40:3/4<221::AID-CTPP221>3.0.CO;2-L}{Da%
+ren~P. Stotler, Charles F.~F. Karney, Marvin~E. Rensink, Thomas~D. Rognlien}
+
+\formatentry{kanzleiter00}{Improved Elastic Collision Modeling in {D}egas 2 for
+  Low-Temperature Plasmas}%
+{\bibitem[Kanzleiter(2000)]{kanzleiter00}
+R.~J. Kanzleiter, D.~P. Stotler, C.~F.~F. Karney, and D.~Steiner.
+\newblock \eref{pop00}{Improved elastic collision modeling in {D}egas 2 for
+  low-temperature plasmas}.
+\newblock \doix{10.1063/1.1321018}{{\em Phys. Plasmas}, 7\penalty0
+  (12):\penalty0 5064\endash{}5069}, December 2000.}{Recent emphasis on
+  low-temperature divertor operations has focused attention on proper treatment
+  of neutral-elastic collisions in low-temperature environments. For like
+  species collisions, as in D<sup>+</sup> + D, quantum mechanical
+  indistinguishability precludes differentiation of small-angle elastic
+  scattering from resonant charge exchange for collision energies &lt; 2 eV.
+  The current work improves the low-temperature simulation capabilities of the
+  DEGAS 2 Monte Carlo neutral transport code [<a href="stotler94.html">D. P.
+  Stotler and C. F. F. Karney, Contrib. Plasma Phys. <b>34</b>, 392&ndash;397
+  (1994)</a>] by employing a set of quantum mechanical collision cross sections
+  produced by Oak Ridge National Laboratory to provide a comprehensive
+  treatment of ion-neutral elastic collisions. Ion-molecular collisions in the
+  form of D<sup>+</sup> + D<sub>2</sub> are included for the first time. An
+  integration technique is utilized that reduces the total collision cross
+  section while keeping the other transport cross sections invariant. The
+  inclusion of ion-molecular elastic collisions results in significant
+  increases in energy exchange between background ions and neutral test
+  species.}{pop00}{10.1063/1.1321018}{Randall~J. Kanzleiter, Daren~P. Stotler,
+  Charles F.~F. Karney, Don Steiner}
+
+\formatentry{takenaga01}{Study of Particle Pumping Characteristics for
+  Different Pumping Geometries in {JT-60U} and {DIII-D} Divertors}%
+{\bibitem[Takenaga(2001)]{takenaga01}
+H.~Takenaga, A.~Sakasai, H.~Kubo, N.~Asakura, M.~J. Schaffer, T.~W. Petrie,
+  M.~A. Mahdavi, D.~R. Baker, S.~L. Allen, G.~D. Porter, T.~D. Rognlien, M.~E.
+  Rensink, D.~P. Stotler, and C.~F.~F. Karney.
+\newblock \eref{nf01}{Study of particle pumping characteristics for different
+  pumping geometries in {JT-60U} and {DIII-D} divertors}.
+\newblock \doix{10.1088/0029-5515/41/12/305}{{\em Nucl. Fusion}, 41\penalty0
+  (12):\penalty0 1777\endash{}1787}, December 2001.}{Particle pumping characteristics
+  were compared between pumping from the inner side private flux region (IPP)
+  and pumping from both sides of the private flux region (BPP) in the JT-60U W
+  shaped divertor, and between JT-60U IPP and pumping in the DIII-D lower
+  baffled divertor. The pumping flux for BPP is smaller than that for IPP by
+  about a factor of 2 with weak in-out asymmetry of recycling neutral flux and
+  by a factor of 3.5&ndash;6.5 with strong in-out asymmetry. The reduction of
+  the pumping flux for BPP is consistent with Monte Carlo simulations, where
+  backflow at the outer pumping slot is observed due to in-out recycling
+  asymmetry. The pumping flux in DIII-D at <i>I</i><sub><i>p</i></sub> = 0.8 MA
+  and <i>B</i><sub><i>T</i></sub> = 1.6 T is comparable to or smaller than that
+  for JT-60U IPP at <i>I</i><sub><i>p</i></sub> = 1.0 MA,
+  <i>B</i><sub><i>T</i></sub> = 3.8 T and <i>I</i><sub><i>p</i></sub> = 1.5 MA,
+  <i>B</i><sub><i>T</i></sub> = 3.5 T in the same density regime. In the DIII-D
+  divertor with pumping from the private flux region, the pumping flux
+  decreases with increasing in-out asymmetry. The pumping flux normalized by
+  the integrated D<sub>&alpha;</sub> emission over the whole plasma exhibits a
+  similar dependence on the distance between the pumping slot and the strike
+  point in JT-60U IPP and the DIII-D lower divertor with pumping through the
+  outer divertor plasma region.}{nf01}{10.1088/0029-5515/41/12/305}{H.
+  Takenaga, A. Sakasai, H. Kubo, N. Asakura, M.~J. Schaffer, T.~W. Petrie,
+  M.~A. Mahdavi, D.~R. Baker, S.~L. Allen, Gary~D. Porter, Thomas~D. Rognlien,
+  Marvin~E. Rensink, Daren~P. Stotler, Charles F.~F. Karney}
+
+\formatentry{stotler01}{User's Guide for {DEGAS} 2}%
+{\bibitem[Stotler(2001)]{stotler01}
+D.~P. Stotler, C.~F.~F. Karney, R.~J. Kanzleiter, and S.~Jaishankar.
+\newblock \eref{degas2_all}{{\em User's Guide for {DEGAS} 2}}.
+\newblock PPPL, Princeton Univ., November 2001.
+\newblock URL \url{http://w3.pppl.gov/degas2/}.
+\newblock Version 1.2, 148 pp.}{This is the user's manual for DEGAS 2&mdash;a
+  Monte Carlo code for the study of neutral atom and molecular transport in
+  confined plasmas. It is intended to cover all aspects of DEGAS 2 from the
+  user's point-of-view: obtaining the files, compiling them, setting up the
+  input files, executing the code, and interpreting the output. References will
+  be provided for the underlying physics, but the essential aspects will be
+  highlighted. Information for programmers interested in modifying DEGAS 2 can
+  be found within the source code itself. Links to some of the more useful ones
+  are provided.}{degas2_all}{}{Daren~P. Stotler, Charles F.~F. Karney,
+  Randall~J. Kanzleiter, Satyapalan Jaishankar}
+
+\formatentry{brunner04}{Method and Computer Program Product for Drug Discovery
+  Using Weighted Grand Canonical {M}etropolis {M}onte {C}arlo Sampling}%
+{\bibitem[Brunner(2004)]{brunner04}
+S.~Brunner and C.~F.~F. Karney.
+\newblock \eref{US20040267456}{Method and computer program product for drug
+  discovery using weighted grand canonical {M}etropolis {M}onte {C}arlo
+  sampling}, December 2004.
+\newblock U.S. Patent Application
+  \HREF{http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=P%
+G01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20040267456.PGNR.&OS=DN/2%
+0040267456&RS=DN/20040267456}{2004/0267456}.}{A method and computer program
+  product for modeling a system that includes a protein and a plurality of
+  different fragment types in order to identify drug leads is presented. The
+  basis of the method is a weighted Metropolis Monte Carlo approach for
+  sampling the grand canonical ensemble. This method distinguishes itself from
+  an energy minimization approach in that it provides fragment distributions
+  which are consistent with thermal fluctuations at physiologically relevant
+  temperatures. The weighted Metropolis Monte Carlo scheme performs a
+  quasi-uniform sampling of all regions of interest on the protein, and, in
+  this way, enables to resolve the wide range in densities of the thermodynamic
+  distribution which could not be achieved by a non-weighted Metropolis scheme.
+  Making use of the properties of the grand canonical ensemble, the affinity of
+  fragments for different regions on the protein surface can be efficiently
+  computed, using a so-called &ldquo;simulated annealing of the chemical
+  potential&rdquo; process. A protein binding site is then identified as a
+  region with high affinity for multiple fragments with a diverse set of
+  physico-chemical properties. Within a binding site, assembly of fragments
+  into drug leads is finally carried out based on binding affinity of the
+  different fragments, on geometric proximity, and a variety of rules by which
+  organic fragments may bond together.}{US20040267456}{}{Stephan Brunner,
+  Charles F.~F. Karney}
+
+\formatentry{karney05}{Method for Computing Protein Binding Affinity}%
+{\bibitem[Karney(2005)]{karney05}
+C.~F.~F. Karney, J.~E. Ferrara, and S.~Brunner.
+\newblock \eref{jcc05}{Method for computing protein binding affinity}.
+\newblock \doix{10.1002/jcc.20167}{{\em J. Comput. Chem.}, 26\penalty0
+  (3):\penalty0 243\endash{}251}, February 2005 (\eref{wh-errata}{errata}).
+\newblock \eprint{cond-mat/0401348}.}{A Monte Carlo method is given to compute
+  the binding affinity of a ligand to a protein. The method involves extending
+  configuration space by a discrete variable indicating whether the ligand is
+  bound to the protein and a special Monte Carlo move, which allows transitions
+  between the unbound and bound states. Provided that an accurate protein
+  structure is given, that the protein ligand binding site is known, and that
+  an accurate chemical force field together with a continuum solvation model is
+  used, this method provides a quantitative estimate of the free energy of
+  binding.}{jcc05}{10.1002/jcc.20167}{Charles F.~F. Karney, Jason~E. Ferrara,
+  Stephan Brunner}
+
+\end{thebibliography}

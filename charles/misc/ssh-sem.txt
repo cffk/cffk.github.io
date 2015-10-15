@@ -1,0 +1,611 @@
+
+		   SSH / Unix Computer Security Tutorial
+
+			      Charles Karney
+				   PPPL
+
+				1999-10-12
+
+
+INTRODUCTION
+
+The conventional protocols (telnet, ftp, rlogin, X) used to connection
+computers on the Internet are insecure.
+
+For example, if you use telnet, your password may be "sniffed" by an
+intruder on any network between the client and server.
+
+SSH is a network protocol and implementation written in 1995 by Tatu Ylonen
+of Helsinki University of Technology.  Because it was not written in the
+US, it can be easily used anywhere.  About a year ago, a new version of ssh
+was created (ssh2).  This has a more restrictive license, so most places
+only use the original version (ssh1), and this talk will only discuss ssh1.
+
+Features:
+
+    Secure mutual authentication
+    The connection is private and secure (cannot be read or altered)
+    Login, ftp transfers, X, mail, etc. can be secured
+    Unix, PC, and Mac versions available
+
+Required by many computer centers -- hecate, NERSC (soon), LANL, PPPL (?).
+
+For more information see the man pages:
+
+ssh(1), xssh(1), sshd(8), scp(1), ssh-keygen(1), ssh-agent(1), ssh-add(1).
+
+				  OUTLINE
+
+Simple examples
+Authentication methods
+Public key cryptography
+Public key authentication
+Configuration file
+X forwarding
+xssh
+AFS token forwarding
+Port forwarding
+ssh in Java
+ssh at home
+ssh insecurities
+Other security-related software
+More information
+
+			      SIMPLE EXAMPLES
+
+To log into killeen
+
+    ssh -l u4154 killeen.nersc.gov
+    Password:
+
+To copy files to (from) killeen
+
+    scp *.f u4154@killeen.nersc.gov:work/
+    Password:
+
+If you have problems connecting use the -v option
+
+    ssh -v ...
+
+The man pages ssh(1) and scp(1) supply comprehensive documentation.
+
+
+
+			  AUTHENTICATION METHODS
+
+(In all cases machine authentication is by a public key.)
+
+(1) Password.  In addition, client will check the identity of server.
+
+(2) ~/.shosts (similar in function to ~/.rhosts) on server listing client.
+    Client and server will each check the identity of the other.  (THIS IS
+    NOT SUPPORTED AT ALL SITES.)
+
+(3) An individual public key.  Client will check the identity of server.
+
+
+			  PUBLIC KEY CRYPTOGRAPHY
+
+For most of human history, cryptography involved a "shared secret".  These
+methods are often called symmetric ciphers since the keys for encryption
+and decryption are the same (or are trivially related), i.e.,
+
+    f^-1(...; key)            = f(...; key)
+    f( f(message; key); key ) = message
+
+Such methods are difficult to deploy on the Internet because a secure means
+needs to be found to communicate the shared secret.
+
+A breakthrough occurred in 1977 by Diffie and Hellman with the invention of
+public key cryptography.  In this case 
+
+    g^-1(...; key1)             = g(...; key2)
+    g( g(message; key1); key2 ) = message
+
+where key1 != key2.  DH proposed a system where g is chosen so that
+
+* it is easy to generate pairs of (key1, key2)
+
+* but it is virtually impossible to determine key1 (the private key) given
+  key2 (the public key).
+
+This was followed in 1978 by an algorithm invented by Rivest, Shamir, and
+Adelman that realizes the DH concept.
+
+Public key cryptography is used for two purposes by ssh:
+
+* Authentication: To prove an identity by encrypting an arbitrary random
+  number with a private key.
+
+* Encryption: To negotiate a key for use with a symmetric encryption method
+  (since public key encryption is too slow).
+
+			    PASSWORDLESS LOGINS
+
+* Use .shosts.
+      + unsupported at some sites;
+      + requires that server knows the public key for your machine;
+      + remote account is compromised if local account is broken into.
+      + doesn't work if the local machine has a dynamically assigned IP.
+
+* Use Public key authentication.
+      + requires some setup, but
+      + more secure
+      + and more convenient
+
+
+
+			 PUBLIC KEY AUTHENTICATION
+
+Summary:
+
+* run ssh-keygen to create a public/private key pair;
+
+* copy the public key to ~/.ssh/authorized_keys on any remote systems we
+  need to log into;
+
+* run ssh-agent (and ssh-add) to provide ssh with access to the private
+  key.
+
+
+(1) Run ssh-keygen as follows
+
+  $ ssh-keygen
+  ...
+  Enter file in which to save the key (~/.ssh/identity): [RETURN]
+  Enter passphrase: [ENTER A GOOD PASS PHRASE TO PROTECT THE PRIVATE KEY]
+  Enter the same passphrase again: [DITTO]
+  ...
+
+This creates a private and public key pair in ~/.ssh/identity and
+~/.ssh/identity.pub.  The first file is protected by (a) Unix permissions,
+and (b) your pass phrase.  The second file only needs to be protected
+against writing by anyone except you.
+
+(2) Create ~/.ssh/authorized_keys with a copy of your PUBLIC key:
+
+  cp ~/.ssh/identity.pub ~/.ssh/authorized_keys
+or
+  cat ~/.ssh/identity.pub >> ~/.ssh/authorized_keys
+
+Create ~/.ssh/authorized_keys on any remote systems you want to access.
+E.g., on killeen.nersc.gov
+
+  mkdir ~/.ssh
+  chmod 755 ~/.ssh
+
+and use FTP to transfer the local copy of ~/.ssh/authorized_keys to
+killeen.nersc.gov.
+
+Now the remote ssh daemon will permit access to anyone knowing the private
+key corresponding to one of the public keys listed in authorized_keys (on
+the remote machine).
+
+(3) Near the beginning of your ~/.xsession, put
+
+  eval `ssh-agent -s`           OR        eval `ssh-agent -c`
+  ssh-add < /dev/null &			  ssh-add < /dev/null &
+
+depending on whether your .xsession is a /bin/sh or /bin/csh script.  Look
+at the first line to find out.
+
+At the end (AFTER the invocation of the window manager), put
+
+  eval `ssh-agent -k -s`       OR         eval `ssh-agent -k -c`
+
+Your .xsession may then look like:
+
+  #! /bin/sh
+  . /etc/env.default
+  eval `ssh-agent -s`                # ADDITION
+  ssh-add < /dev/null &              # ADDITION
+  ...
+  twm
+  eval `ssh-agent -k -s`             # ADDITION
+
+[These steps can also be carried out in a non-X context, e.g., in a
+conventional telnet session.  Just leave off the "< /dev/null" when running
+ssh-add.
+
+BUT, you've probably lost all of the security advantages of ssh by running
+it in a telnet session.]
+
+ssh-agent is a program that runs in the background.  ssh-add tells it how
+to unlock your private key (in ~/.ssh/identity).  A remote ssh daemon can
+query the local ssh-agent and ask it to prove that it knows the private
+key corresponding to a public key in the remote ~/.ssh/authorized_keys.
+Furthermore the connection to ssh-agent is forwarding to the remote site
+(see below).
+
+			    CONFIGURATION FILE
+
+ssh looks in a personal configuration file, ~/.ssh/config, when it runs.
+See ssh(1) for information on what goes in here.  For now, I suggest
+something along the lines of
+
+In the PPPL copy:
+
+    Host *.nersc.gov
+	User u4154
+	Compression yes
+
+In the copy on killeen.nersc.gov and other NERSC machines:
+
+    Host *.pppl.gov
+	User karney
+	Compression yes
+
+The "User" lines obviate the need for the annoying "-l USER" in ssh or
+"USER@" in scp.  The Compression line turns on compression which is useful
+for any long-haul connection.
+
+			       TRYING IT OUT
+
+Start a new X session, on taurus, for example.  The 'ssh-add < /dev/null'
+will cause a dialogue box to be displayed on your screen.  Enter your pass
+phrase.  (ssh-add works in "keyboard grab" mode, so your mouse pointer
+doesn't need to be in the dialogue box.)
+
+To verify the operation of ssh-agent, type (in an xterm window)
+
+    ssh-add -l
+
+This should list the public keys that ssh-agent knows about.
+
+Then type
+
+    ssh killeen.nersc.gov
+
+This should log you into killeen without the need for a password (or for -l
+u4154).  Now on killeen try
+
+    scp orion.pppl.gov:/etc/motd /tmp/
+
+If you set everything up correctly, this will copy /etc/motd on orion to
+/tmp/motd on killeen.
+
+In order for the scp to work seamlessly,
+
+* scp determined your user name on orion (from killeen:~/.ssh/config);
+
+* orion asked scp on killeen to prove knowledge of the private key
+  corresponding to orion:~/.ssh/authorized_keys;
+
+* scp on killeen contacted ssh-agent on taurus to get the necessary proof.
+
+			       X FORWARDING
+
+After logging into killeen.nersc.gov via ssh, type
+
+    killeen$ echo $DISPLAY
+    ==> killeen:57.0
+
+This strange looking DISPLAY name is a virtual display that the ssh daemon
+on killeen has set up for you.  If you run an X client on killeen, e.g.,
+
+    killeen$ emacs &
+
+then emacs will send the X traffic to sshd on killeen which compresses and
+encrypts it and sends it to your ssh process on taurus.  This decrypts and
+uncompresses the traffic and sends it to your X terminal.
+
+With ssh you don't need to fiddle around to set DISPLAY nor do you have to
+do anything special to authenticate the X connections (with xauth or
+xhost).
+
+			     IMPORTANT CAVEATS
+
+* If 'echo $DISPLAY' returns something like thx34.pppl.gov:0, then you're
+  setting DISPLAY in one of your startup files (.login, .profile, etc.).
+  You should locate where this is happening and remove the offending
+  lines.  If you don't then X traffic will use the old insecure method.
+
+* Also, on your XDM host (e.g., taurus) you should do
+
+  $ xhost
+
+and verify that it says
+
+  access control enabled, only authorized clients can connect
+
+If it says "access control disabled", then your X session and all the
+computers you connect to are VERY EASY targets for crackers.  You should
+immediately do
+
+    $ xhost -
+
+and locate and delete the lines where you said 'xhost +', e.g., in
+.xsession or possibly in some X configuration menu on a PC.
+
+* You should also verify that xhost reports no hosts (or a minimal set of
+  hosts) under the "access control enabled" line.  In particular, there's
+  NO NEED to have any Unix Cluster hosts or any NERSC hosts.
+
+				   XSSH
+
+xssh is convenience script to run an X client (by default, xterm) on a
+remote host.  It requires that you have password-less access to the remote
+machine.  Simple examples
+
+(1) From a Unix Cluster machine
+
+    xssh orion
+
+Start an xterm on orion.  The X connection will NOT be encrypted by ssh.
+However, ssh is used to log into orion and this implies that the resulting
+xterm window will have access to
+
+* your forwarded AFS tokens
+* your ssh-agent
+
+(2) From a Unix Cluster machine
+
+    xssh -auth ssh mcurie.nersc.gov xterm -ls
+
+Start and xterm on mcurie.  The "-auth ssh" means that X will be
+encrypted.  The "xterm -ls" means that you will get a login session.
+
+Other examples; see xssh(1)
+
+Set up a single encrypted and compressed channel between home and PPPL and
+direct all the X clients running on PPPL machines to use this channel.
+(This reduces the latency involved in compression.)
+
+xssh can forward selected environment variables, e.g., PRINTER, to the
+remote machine.
+
+			   AFS TOKEN FORWARDING
+
+ssh can be built to forward AFS tokens.  It is built in this way on the
+Unix Cluster and an AFS-capable version of the ssh daemon is running on
+hecate on a nonstandard port.  To access this version of sshd insert into
+~/.ssh/config
+
+    Host hecate.princeton.edu
+        Port 1515
+
+Then
+
+    taurus$ /usr/afsws/bin/tokens
+
+    Tokens held by the Cache Manager:
+
+    User's (AFS ID 4154) tokens for afs@nersc.gov [Expires Nov  7 15:19]
+    User's (AFS ID 4154) tokens for afs@pppl.gov [Expires Oct 15 12:35]
+
+    taurus$ ssh hecate.princeton.edu
+
+    hecate$ /usr/afsws/bin/tokens
+
+    Tokens held by the Cache Manager:
+
+    User's (AFS ID 4154) tokens for afs@pppl.gov [Expires Oct 12 20:36]
+    User's (AFS ID 4154) tokens for afs@nersc.gov [Expires Oct 13 03:28]
+
+			      PORT FORWARDING
+
+ssh can encrypt other protocols in a more-or-less painless way using "port
+forwarding".  An example of forwarding the POP mail connection will show
+you how it works.
+
+    ssh -f -L 2110:pop.pppl.gov:110 orion.pppl.gov xmessage POP tunnel
+
+This connects to orion and runs "xmessage POP tunnel" which writes the
+message in an X dialogue box.
+
+The -f causes ssh to go into the background once authentication is
+complete.
+
+The forwarding "-L 2110:pop.pppl.gov:110" is interpreted as follows:
+
+* ssh will listen on port 2110
+
+* Any traffic it sees on this port will be encrypted and forwarded to
+  orion
+
+* sshd on orion will decrypt the traffic and send it to port 110 (the POP
+  port) on pop.pppl.gov.
+
+Instead of telling your POP mail client (fetchmail or Eudora or Netscape)
+to connect to pop.pppl.gov on port 110, you tell it to connect to
+
+    localhost (127.0.0.1) on port 2110
+
+ssh will then forward this connection to pop.pppl.gov where you will be
+able to pick up your mail.  The advantage of this scheme is that the
+passwords that the mail client sends to pop will be encrypted from your
+local machine through to taurus and so will be immune to most sniffing.
+
+Notes:
+
+* The local port number needs to be > 1024 on Unix machines (unless you're
+  root).  You'll need to be able to reconfigure the client to use the
+  resulting nonstandard port.
+
+* On Macs/PCs, it's usually most convenient to have ssh listen on the
+  standard port (110 in this example).
+
+* Port forwarding will be set up via dialogue boxes on Macs/PCs.  Check the
+  documentation.
+
+Other useful ports to forward:
+
+    25 -- smtp (sendmail mail)
+    23 -- telnet (e.g., Versaterm)
+    21 -- ftp
+
+(ssh can do multiple port forwardings by giving multiple -L options.)
+
+ftp is an odd ball.  The following works
+
+    ssh -g -f -L 2021:killeen:21 killeen.nersc.gov xlogo
+    ftp `hostname` 2021
+
+  - This ONLY encrypts the command channel, not the data channel.
+
+  - For some reason "ftp localhost 2021" doesn't work.
+
+  - `hostname` returns the name of your local host.  The -g is needed to
+    allow it to connect
+
+				SSH IN JAVA
+
+You're in an Internet Cafe; you don't trust the network; and the PC doesn't
+have a version of ssh.
+
+Solution: run a Java version of ssh under Netscape or Internet Explorer by
+connecting to
+
+    http://w3.pppl.gov/ssh/
+
+This will let you log into orion (= w3.pppl.gov).
+
+This seems not to work with any Mac browser (presumably because of broken
+Java implementations).
+
+This is insecure if the PC is running a rogue browser, a keyboard sniffer,
+etc., so don't do this if you don't like the look of the place.
+
+				SSH AT HOME
+
+In all of the discussion above, you (the user) are running the ssh client.
+You might consider running the daemon, sshd, on your home machine (if it's
+running Linux).  Indeed, I recommend turning off nearly all network
+services (telnet, ftp, et al) at home EXCEPT for ssh.  This will allow you
+to log into your home machine remotely if you need to.
+
+For extra security, you should run a version of sshd which implements
+tcp-wrappers.  This further limits the scope of who can connect to your
+machine.  I suggest the following
+
+/etc/hosts.allow
+    sshd: ALL@.pppl.gov
+    ALL: ALL@localhost ALL@petrel  # petrel is your IP name/number
+
+/etc/hosts.deny
+    ALL: ALL@ALL
+
+The first line in /etc/hosts.allow allows you to connect to your home
+machine but ONLY from a PPPL machine.  The second line is needed for ssh
+port forwarding.
+
+Also, I recommend that /etc/sshd_config contains:
+
+    RhostsAuthentication no
+    RhostsRSAAuthentication no
+    RSAAuthentication yes
+    PasswordAuthentication no
+    PermitEmptyPasswords no
+
+so that the ONLY way to get in via ssh is with the public key method
+(RSAAuthentication).  This allows family members to have accounts on your
+machine (personal, of course) with easy-to-remember passwords.
+
+			     SSH INSECURITIES
+
+ssh secures the network connection between two machines.  If either machine
+is compromised your connection may be compromised.
+
+If you use an insecure method to connect to the machine you're running ssh
+on, then your connection may be compromised.  In particular, X traffic to
+your X terminal is unencrypted.  (This should become less of a problem as
+PPPL deploys switched Ethernet.)
+
+If you have a guessable password, then a cracker could try a dictionary
+attack.  (However, ssh precludes a passive dictionary attack.  The cracker
+would have to use ssh to test the various passwords.)
+
+If you run ssh to establish a secure login from your laptop to PPPL and at
+the same time run Eudora to pick up your mail from pop.pppl.gov, then your
+Eudora password can be sniffed by an intruder and used for connecting via
+ssh.
+
+The Unix Cluster home directories are shared between computers in an
+insecure fashion (via NFS).  Your X sessions (ssh-protected or not) are
+vulnerable to crackers within PPPL since your .Xauthority file is in your
+home directory.  If you use an easy-to-guess (or null) passphrase to
+protect your private key, an intruder could determine your private key and
+impersonate you.
+
+The management of host keys doesn't scale well and becomes haphazard with a
+large number of hosts.  This increases the likelihood that a user will
+accept a bogus remote host as a legitimate one.
+
+ssh is subject to denial of service attacks.  E.g., a cracker can disrupt
+your ssh connection.
+
+ssh sessions are subject to traffic analysis, potentially revealing private
+information.
+
+		      OTHER SECURITY-RELATED SOFTWARE
+
+ssh provides secure authentication and connections for login, file transfer
+and X.  What other related software is available?
+
+* Kerberos
+    - A protocol to authenticate users securely.
+    - In addition it offers encrypted versions of telnet and ftp.
+    - AFS uses Kerberos.  ssh is Kerberos aware.
+    - Windows 2000 will use Kerberos as the default authentication method.
+
+* VPN (Virtual Private Network)
+    - A method for securely tunneling all the network traffic from one
+      machine to another.
+    - Your machine becomes part of the remote network (e.g., it might look
+      like a PPPL machine).
+
+* SSL (Secure Sockets Layer)
+    - secures web (and other) transactions (similarly to ssh tunneling).
+    - Netscape offers IMAP over SSL as a secure way of reading mail (in use
+      at Princeton University)
+
+* File sharing
+    - AFS - secure authentication, insecure data.
+    - Kerberos ftp - secure authentication and data.
+    - rsync over ssh - secure mirroring of files.
+    - CVS over ssh - secure mirroring of files.
+    - CFS - cryptographic file system, data is encrypted on NFS server,
+      backup tapes, and in transit via NFS; no need to write unencrypted
+      data to disk.
+
+* Mail
+    - PGP (and now GPG) can be used to encrypt and sign mail.  Of limited
+      usefulness because of lack of standardization.  (May be important at
+      PPPL for CRADAs.)
+
+			     MORE INFORMATION
+
+Main ssh site
+    http://www.ssh.fi/
+
+A handy ssh tutorial
+    http://www.tac.nyc.ny.us/~kim/ssh/
+
+SSH FAQ
+    http://www.tigerlair.com/ssh/ssh-faq.html
+
+NERSC ssh page
+    http://hpcf.nersc.gov/help/access/ssh.html
+
+
+AFS
+    http://w3.pppl.gov/misc/afs/unix/Html/user/user.htm
+
+rsync
+    rsync(1)
+
+CVS
+    info (cvs.info)
+
+CFS
+    cmkdir(1), cattach(1), cdetach(1), cfsd(8)
+
+PGP/GPG
+    pgp(1), gpg(1)
+
+
+
+
+
+Accessible as: http://w3.pppl.gov/~karney/ssh-sem.txt
+Print with: enscript --margins=::72:72 -B -r -f Courier14

@@ -1,0 +1,190 @@
+<html>
+<head><!--Xbase href="http://charles.karney.info/random/index.html"Y-->
+<title>Random numbers</title>
+<meta name="description" content="Random numbers">
+<meta name="author" content="Charles F. F. Karney">
+</head>
+<body topmargin=10 leftmargin=10>
+
+<h3>Random numbers</h3>
+
+<p>$Id: index.html 6119 2006-03-07 01:23:05Z ckarney $
+
+<h2>NOTE: This package has been superseded by a newer
+and better one found <a href="../random/index.html">here</a>.</h2>
+
+<h4>Introduction</h4>
+
+<p>This package provides a C++ interface to the
+<a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html">
+Mersenne Twister</a>
+random number generator, MT19937, which is described in
+<blockquote>
+<a mailto="m-mat@math.sci.hiroshima-u.ac.jp">Makoto Matsumoto</a>
+and Takuji Nishimura, 
+<br>
+<a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/ARTICLES/mt.pdf">
+Mersenne Twister: A 623-Dimensionally Equidistributed Uniform
+Pseudo-Random Number Generator</a>,
+<br>ACM TOMACS 8, 3&ndash;30 (1998)
+</blockquote>
+
+and which has a phenomenonally large period of 2<sup>19937</sup> &minus
+1 &sim; 10<sup>6000</sup>.  The code for the underlying generator is
+adapted from
+
+<a
+href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/emt19937ar.html">
+mt19937ar.c</a>
+
+<p>This C++ interface offers
+
+<ul>
+
+<li>Easy to create independent streams of random numbers
+<li>Complete set of uniform distributions over all types of integer
+<ul>
+<li>Integer() returns an unsigned long
+<li>Integer&lt;short int&gt;() returns a short int
+<li>Integer(<i>n</i>) returns an integer in [0,<i>n</i>)
+<li>IntegerC(<i>n</i>) returns an integer in [0,<i>n</i>] (closed)
+<li>Integer&lt;<i>b</i>&gt;() returns an integer in [0,2<sup>b</sup>)
+</ul>
+<li>Complete set of uniform distributions over reals
+<ul>
+<li>Real() returns a double in [0,1)
+<li>RealU() returns a double in (0,1] (upper)
+<li>RealS() returns a double in (&minus;1/2,1/2) (symmetric)
+<li>RealO() returns a double in (0,1) (open)
+<li>RealC() returns a double in [0,1] (closed)
+</ul>
+<li>Supports all types of reals at the precision of the architecture
+<ul>
+<li>Real&lt;float&gt;() returns a float in [0,1)
+<li>Real&lt;double&gt;() returns a double in [0,1)
+<li>Real&lt;long double&gt;() returns a long double in [0,1)
+</ul>
+<li>Support for variable precision
+<ul>
+<li>Real&lt;double&gt;() returns a double in [0,1) with spacing
+2<sup>&minus;53</sup> (usually)
+<li>Real&lt;double,32&gt;() returns a double in [0,1) with spacing
+2<sup>&minus;32</sup>
+</ul>
+<li>Boolean results
+<ul>
+<li>Bool() true with probability 1/2
+<li>Prob(<i>z</i>) true with probability <i>z</i> (real)
+<li>Prob(<i>m</i>,<i>n</i>) true with probabilty <i>m</i>/<i>n</i> (rational)
+</ul>
+<li>Floating point results
+<ul>
+<li>Float() a double in [0,1) such that
+probability(Float()&nbsp;&lt;&nbsp;<i>X</i>)
+         = <i>X</i>
+for all doubles in [0,1]
+<li>FloatU() a double in (0,1] such that
+probability(FloatU()&nbsp;&le;&nbsp;<i>X</i>)
+         = <i>X</i>
+for all doubles in [0,1]
+</ul>
+
+<li>Above routines are &ldquo;exact&rdquo; (assuming that the underlying
+generator is perfect)
+
+<li>Normally distributed reals
+
+<li>Shuffling a vector
+
+<li>Methods to save and restore the state
+
+<li> Generator can be stepped forward or backward
+
+<li>Methods to simplify the management of seeds
+<ul>
+<li>Seed is any vector of unsigned longs
+<li>By default, seeded from &mu;s clock and /dev/urandom
+<li>Easy printing of seed
+<li>Seed saved and restored with state
+</ul>
+<li>Speed comparable to the fastest C++ implementations (tested on Linux,
+i686, g++ 4.x)
+<li>Interface is designed to allow use in scientific applications where
+there's a premium on
+<ul>
+<li>accuracy
+<li>repeatability
+<li>portability
+<li>efficiency
+<li>ease of use
+</ul>
+
+</ul>
+
+
+<h4>Other links</h4>
+<ul>
+<li>Full <a href="RandomDoc.html">documentation</a>
+<li>Header file, <a href="Random.hpp">Random.hpp</a>
+<li>C++ code, <a href="Random.cpp">Random.cpp</a>
+<li>Example of use, <a href="RandomExample.cpp">RandomExample.cpp</a>
+<li>Everything bundled into a tar file <a href="Random.tgz">Random.tgz</a>
+</ul>
+
+<h4>Simple example</h4>
+
+<p>Compile and link this with, e.g.,
+g++ -O2 -funroll-loops -o RandomExample RandomExample.cpp Random.cpp
+
+<blockquote>
+#include&nbsp;"Random.hpp"<br>
+#include&nbsp;&lt;iostream&gt;<br>
+<br>
+using&nbsp;namespace&nbsp;std;<br>
+<br>
+int&nbsp;main()&nbsp;{<br>
+&nbsp;&nbsp;Random&nbsp;r;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;r&nbsp;created&nbsp;with&nbsp;random&nbsp;seed<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Seed&nbsp;set&nbsp;to&nbsp;"&nbsp;&lt;&lt;&nbsp;r.SeedString()&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Estimate&nbsp;pi&nbsp;=&nbsp;";<br>
+&nbsp;&nbsp;size_t&nbsp;in&nbsp;=&nbsp;0,&nbsp;num&nbsp;=&nbsp;1000;<br>
+&nbsp;&nbsp;for&nbsp;(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;num;&nbsp;++i)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;double&nbsp;x&nbsp;=&nbsp;r.RealS();&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;r.RealS()&nbsp;is&nbsp;in&nbsp;the&nbsp;interval&nbsp;(-1/2,&nbsp;1/2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;double&nbsp;y&nbsp;=&nbsp;r.RealS();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(x&nbsp;*&nbsp;x&nbsp;+&nbsp;y&nbsp;*&nbsp;y&nbsp;&lt;&nbsp;0.25)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++in;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Inside&nbsp;the&nbsp;circle<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;(4.0&nbsp;*&nbsp;in)&nbsp;/&nbsp;num&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Tossing&nbsp;a&nbsp;coin&nbsp;20&nbsp;times";<br>
+&nbsp;&nbsp;for&nbsp;(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;20;&nbsp;++i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&nbsp;"&nbsp;&lt;&lt;&nbsp;(r.Boolean()&nbsp;?&nbsp;"H"&nbsp;:&nbsp;"T");<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Throwing&nbsp;a&nbsp;pair&nbsp;of&nbsp;dice&nbsp;15&nbsp;times";<br>
+&nbsp;&nbsp;for&nbsp;(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;15;&nbsp;++i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&nbsp;"&nbsp;&lt;&lt;&nbsp;r.Integer(6)&nbsp;+&nbsp;r.Integer(6)&nbsp;+&nbsp;2;<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Draw&nbsp;5&nbsp;balls&nbsp;from&nbsp;urn&nbsp;containing&nbsp;5&nbsp;red&nbsp;and&nbsp;5&nbsp;white&nbsp;balls";<br>
+&nbsp;&nbsp;int&nbsp;t&nbsp;=&nbsp;10,&nbsp;w&nbsp;=&nbsp;5;<br>
+&nbsp;&nbsp;while&nbsp;(t&nbsp;&gt;&nbsp;5)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&nbsp;"&nbsp;&lt;&lt;&nbsp;(r.Prob(w,&nbsp;t--)&nbsp;?&nbsp;w--,&nbsp;"W"&nbsp;:&nbsp;"R");<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Used&nbsp;"&nbsp;&lt;&lt;&nbsp;r.Count()&nbsp;&lt;&lt;&nbsp;"&nbsp;random&nbsp;numbers"&nbsp;&lt;&lt;&nbsp;endl;<br>
+}<br>
+</blockquote>
+output
+<blockquote>
+Seed set to [3368565555]<br>
+Estimate pi = 3.14<br>
+Tossing a coin 20 times H H T T H T H T T T H T H T T H T H H T<br>
+Throwing a pair of dice 15 times 7 6 12 7 7 11 9 7 9 7 7 9 2 12 7<br>
+Draw 5 balls from urn containing 5 red and 5 white balls W R R W W<br>
+Used 4061 random numbers
+</blockquote>
+<hr>
+<address><a href="http://charles.karney.info">Charles Karney</a> (2005-11-10)</address>
+<a href="http://charles.karney.info/misc/index.html">Back to index.</a>
+</body></html>

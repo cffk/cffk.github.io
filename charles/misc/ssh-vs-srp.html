@@ -1,0 +1,125 @@
+<html>
+<head><!--Xbase href="http://charles.karney.info/misc/ssh-vs-srp.html"Y-->
+<title>ssh as an "inconvenient authentication" mechanism</title>
+<meta name="description" content="ssh as an inconvenient authentication mechanism">
+<meta name="author" content="Charles F. F. Karney">
+</head>
+<body topmargin=10 leftmargin=10>
+<h3>ssh as an &ldquo;inconvenient authentication&rdquo; mechanism</h3>
+Note: The <a href="http://srp.stanford.edu">SRP</a> web site no longer
+contains the remarks complained about here and instead provides a more
+even-handed
+<a href="http://srp.stanford.edu/analysis.html">comparison</a>.
+The link provided below uses the
+<a href="http://www.archive.org">Wayback Machine</a> (from 1998-01-18).
+However, this E-mail is still relevant in that it raises the issue that
+security software needs to be used before it can be effective.
+<hr>
+<pre>
+From: <a href="../index.html">Charles Karney</a> &lt;karney@pppl.gov&gt;
+Sender: owner-ssh@clinet.fi
+Reply-To: karney@Princeton.EDU
+To: srp-dev@quasimodo.stanford.edu
+Cc: ssh@clinet.fi
+Subject: ssh as an "inconvenient authentication" mechanism.
+Date:   Fri, 27 Mar 1998 17:22:23 -0500
+<hr>
+The Web blurb about <a href="http://srp.stanford.edu">SRP</a> includes this (from
+<a href="http://web.archive.org/web/19980118154114/http://srp.stanford.edu/srp/history.html#inconvenient">http://srp.stanford.edu/srp/history.html#inconvenient</a>)
+
+    INCONVENIENT AUTHENTICATION
+    ...
+    SSH
+
+    ... To negotiate a partially secure file transfer, for example, a user
+    must remember to do:
+
+    $ ssh -L 1234:remote-server.stanford.edu:21 remote-server
+    (in a different window)
+    $ ftp myhost 1234
+
+    instead of the customary 
+
+    $ ftp remote-server
+
+    Not surprisingly, ssh is regarded as "power-user" software by most
+    ordinary users.
+
+Since few people actually use ssh in this way, perhaps this example
+should be replaced by
+
+    ... To transfer files securely, for example, a user does:
+
+    $ scp files remote-server.stanford.edu:remote-directory/
+
+    instead of the customary 
+
+    $ rcp files remote-server.stanford.edu:remote-directory/
+
+    except that scp will nicely prompt for a password if access is not
+    granted via ~/.rhosts.  Not surprisingly, ssh is quite easy for
+    ordinary users.
+
+or better still:
+
+    ... To log into a remote host while providing both access to both
+    AFS and to his X server, a user does
+
+    $ ssh remote-host
+    Password:
+
+    instead of the customary
+
+    $ xauth list $DISPLAY
+    x-server:0 MIT-MAGIC-COOKIE-1 zrandom-cookie
+    $ telnet remote-host
+    Password:
+    $ export DISPLAY=x-server:0.0
+    $ xauth add x-server:0 MIT-MAGIC-COOKIE-1 random-cookie
+    $ klog
+    Password:
+
+    Not surprisingly, ordinary users are very happy to start using
+    ssh.
+
+I appreciate the point being made about ssh, namely that users have to
+learn some new commands to use ssh, especially if they want to take
+advantage of some of its attractive features (e.g., agent forwarding
+so that the pass-phrase need only be given once per "session").
+
+As I see it there are (at least) two impediments to the wide
+deployment of secure communication protocols on the Internet: (a) user
+inertia (the point made by SRP's author) and (b) the need to
+interoperate with an existing body of hardware and software.
+
+ssh shines on the second point.  No existing programs or files need to
+be changed.  ssh just provides an alternative secure connection method.
+
+srp on the other hand is likely to be difficult to deploy in many
+cases.  For example, we use NIS to provide a common password database.
+srp doesn't currently support this, nor any other method of
+distributed management of accounts.
+
+Also our users currently expect not to have to type their passwords
+more than once a day, even though they may be logging into a score of
+computers.  Here again ssh provides a workable solution.
+
+I'm not intending to knock srp--it has some very attractive features.
+It's just that I find the comparisons with other authentication
+methods (in particular with ssh) a little unbalanced.
+
+I think it would be worthwhile to implement srp in ssh.  Also, it's
+possible that ssh could be used to implement a reasonable scheme for
+the distribution of srp passwords.
+
+-- 
+<a href="../index.html">Charles Karney</a>
+<a href="http://www.pppl.gov">Plasma Physics Laboratory</a>         E-mail:  Karney@Princeton.EDU
+Princeton University              Phone:   +1 609 243 2607
+Princeton, NJ 08543-0451          FAX:     +1 609 243 3438
+
+</pre>
+<hr>
+<address><a href="../index.html">Charles Karney</a> (1998-03-27)</address>
+<a href="../index.html">Back to index.</a>
+</body></html>

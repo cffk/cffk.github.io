@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/dev)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: biblio.aux
+The style file: unsrtnata.bst
+Database file #1: biblio.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 93 entries,
+            3028 wiz_defined-function locations,
+            1457 strings with 96663 characters,
+and the built_in function-call counts, 57573 in all, are:
+= -- 3553
+> -- 4714
+< -- 75
++ -- 1697
+- -- 1484
+* -- 6534
+:= -- 9522
+add.period$ -- 409
+call.type$ -- 93
+change.case$ -- 190
+chr.to.int$ -- 66
+cite$ -- 186
+duplicate$ -- 2267
+empty$ -- 4627
+format.name$ -- 1577
+if$ -- 11701
+int.to.chr$ -- 28
+int.to.str$ -- 94
+missing$ -- 78
+newline$ -- 696
+num.names$ -- 402
+pop$ -- 950
+preamble$ -- 1
+purify$ -- 93
+quote$ -- 0
+skip$ -- 1286
+stack$ -- 0
+substring$ -- 1914
+swap$ -- 539
+text.length$ -- 53
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 651
+warning$ -- 0
+while$ -- 391
+width$ -- 0
+write$ -- 1702

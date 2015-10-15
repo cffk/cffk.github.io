@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>
+Scripts for manipulating molecules
+</title>
+</head>
+<body>
+<center><h2>Scripts for manipulating molecules</h2></center>
+&copy; 2004, 2005, Sarnoff Corporation, Princeton, NJ, USA<br>
+$Id: index.html 6001 2005-06-23 15:51:30Z ckarney $<br>
+<hr>
+This collection of scripts was written by Sarnoff to help prepare
+organic molecules for simulation.  These scripts rely heavily on the
+following software packages:
+<ol>
+<li> Antechamber,
+<a href="http://amber.scripps.edu/antechamber/antechamber.html">http://amber.scripps.edu/antechamber/antechamber.html</a>
+<li> RESP,
+<a href="http://amber.scripps.edu/ftp/plep.tar.gz">http://amber.scripps.edu/ftp/plep.tar.gz</a>
+<li> OpenBabel,
+<a href="http://openbabel.sourceforge.net">http://openbabel.sourceforge.net</a>
+<li> Gamess,
+<a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html">http://www.msg.ameslab.gov/GAMESS/GAMESS.html</a>
+<li> Gromacs,
+<a href="http://www.gromacs.org">http://www.gromacs.org</a>
+</ol>
+Our thanks to the authors of these packages.
+<p><blockquote><strong>
+These scripts are released under the GNU General Public License.  See
+<a href="LICENSE.txt">LICENSE.txt</a> for details.  In particular note
+that this software comes with NO WARRANTY.</strong></blockquote>
+<p>
+This software was created under Sarnoff's Bug-to-Drug&reg; Engineered
+Identification and Countermeasures Program which is funded by the
+U.S. Army Medical Research and Materiel Command under Contract
+No. DAMD17-03-C-0082.
+<p>
+The people involved are:
+<ul>
+<li> Charles Karney
+&lt;<a href="mailto:ckarney@sarnoff.com">ckarney@sarnoff.com</a>&gt; 
+<li> Vincent Finley 
+<li> Jason Ferrara
+&lt;<a href="mailto:jeferrara@sarnoff.com">jeferrara@sarnoff.com</a>&gt; 
+<li> Qiang Wang 
+</ul>
+The complete set of scripts is available at
+<a href="b2dscripts-r1.tar.gz">b2dscripts-r1.tar.gz</a>
+<p>
+Questions, comments, and improvements on this work should be sent to
+<a href="mailto:ckarney@sarnoff.com">ckarney@sarnoff.com</a>
+<p>
+Here are the main objectives of these scripts:
+<ul><li>Allow Gamess to be used in conjunction with Antechamber for the
+assignment of partial charges by the RESP or AM1-BCC methods.
+<li>
+Add hydrogens to a PDB file using Gromacs and adjust atom names and
+certain bond angles to conform to Amber's rules.
+</ul>
+A couple of shortcomings of Antechamber are addressed.
+<ul><li>
+The charges produced by the AM1-BCC method are symmetrized between
+chemically equivalent atoms (using respgen's symmetry detection).
+<li>
+Antechamber produces several temporary files which mean that it is
+unsafe to run multiple instances within the same directory.  This
+is addressed by placing the temporary files in a unique directory.
+</ul>
+<p>These scripts are written as filters expecting input on stdin and
+producing output on stdout.  Diagnostic messages appear on stderr.
+Generally a -h option produces a description of the script.  A -d option
+causes the temporary directory to be retained for diagnostic purposes.
+The auxiliary programs that these scripts call should be located in
+your PATH.  These scripts were written and tested under Linux.  They
+should work on other Unix platforms.  (It is possible that we rely on
+GNU awk extensions.  Let us know if this is the case.)
+<p>
+Here is a quick description of the scripts.  More complete documentation
+is obtained by running the script with the -h option.
+<ul><li>
+<a href="gjftogcrt.sh">gjftogcrt</a>:
+Converts a general Gaussian input file (possibly in mixed
+Z-matrix and Cartesian form) into a pure Cartesian representation.
+<li>
+<a href="gjftogms.sh">gjftogms</a>:
+Converts a Gaussian input file to a Gamess format.  It does
+this by invoking gjftogcrt and using Antechamber to convert the result
+to a Z-matrix form.  The Z-matrix input allows the use of delocalized
+coordinates during geometry optimization by Gamess.  acreorder is used
+to reorder of the atoms in order that the Z-matrix makes sense.
+<li>
+<a href="gmstoresp.sh">gmstoresp</a>:
+Converts the log file produced with Gamess to an Antechamber
+file with RESP charges.  The input file for Gamess can be created with
+gjftogms -r.  OpenBabel is used to extract the coordinate information
+for the output file.  RESP and Antechamber are used to calculate the
+charges and create the output file.  (The starting point for this script
+was one written by Hans De Winter, Katholieke Universiteit Leuven,
+<a href="mailto:hans@s151h14.rega.kuleuven.ac.be">hans@s151h14.rega.kuleuven.ac.be</a>,
+which is provided with the RESP
+distribution.)
+<li>
+<a href="gmstobcc.sh">gmstobcc</a>:
+Converts the log file produced with Gamess to an Antechamber
+file with AM1-BCC charges.  The input file for Gamess can be created
+with gjftogms -a.  OpenBabel is used to extract the coordinate
+information for the output file.  A work-alike divcon output file is
+created and Antechamber is invoked requesting AM1-BCC charges.  (This
+invokes divcon for which we use a dummy script.)  Finally we invoke
+chargesym to symmetrize the charges.
+<li>
+<a href="divcon.sh">divcon</a>:
+A dummy divcon program (which merely copies the previously
+prepared output file to divcon.out).  The Makefile copies this to
+$AMBERHOME/exe.
+<li>
+<a href="chargesym.sh">chargesym</a>:
+This symmetrizes the charges in an Antechamber file using
+respgen to identify equivalent atoms.
+<li>
+<a href="acreorder.sh">acreorder</a>:
+Reorders the atoms in an Antechamber file following the bonds
+from a starting atom.  This is sometimes necessary as a precursor to
+converting the molecule to a Z-matrix representation.
+<li>
+<a href="addhydrogens.sh">addhydrogens</a>:
+Adds the hydrogens to the protein in a PDB file.  This
+invokes the Gromacs tool, pdb2gmx, to add hydrogens.  The result is
+fixed up to comply with Amber conventions by g96topdb.
+<a href="gromacs.patch">gromacs.patch</a>
+contains a patch
+to gromacs 3.2.1 to correct the angles in NH2 groups.
+<li>
+<a href="g96topdb.sh">g96topdb</a>:
+Reads in a Gromacs96 (g96) file, performs OPLS to Amber atom
+type and residue translation, replaces hydrogen bond lengths with bond
+lengths consistent with Amber force field, corrects for the SH bond
+angle in CYS, and finally writes the result to a pdb file.  Amber
+residue variants by including the variant code (ASH, CYX, GLH, HID, HIE,
+or LYN) in columns 73-75 of the output.
+<li>
+<a href="gjfrenumber.sh">gjfrenumber</a>:
+Reads in a Gaussian input file and renumbers the atoms and
+converts numerical indexes in Z-matrix lines into symbolic indexes.
+This would allow two molecules in Z-matrix format to be bonded together
+with a straightforward edit of the files.
+<li>
+<a href="antechamberfilt.sh">antechamberfilt</a> and
+<a href="babelfilt.sh">babelfilt</a>:
+These are simple scripts that change
+antechamber and babel into filters so that they can be used in pipes.
+</ul>
+<hr>
+<address>
+<a href="http://charles.karney.info">Charles Karney</a>
+&lt;<a href="mailto:ckarney@sarnoff.com">ckarney@sarnoff.com</a>&gt;
+</address>
+<a href="http://www.sarnoff.com">Sarnoff Corporation</a>, 201 Washington Rd<br>
+Princeton, NJ 08543-5300
+</body>
+</html>

@@ -1,0 +1,16 @@
+1999-09-29  Charles Karney  <karney@pppl.gov>
+
+	* Fixed bug in implementation of single precision routines for
+	Crays.  Minor optimizations in random_init.
+	* Version 1.2 released
+
+Fri Aug  6 13:42:20 1999  Charles Karney  <karney@pppl.gov>
+
+	* Add randother.f to compute gaussian, isotropic, and cosine
+	distributions.
+	* Version 1.1 released
+
+Wed Aug  4 23:25:29 1999  Charles Karney  <karney@pppl.gov>
+
+	* Version 1.0 released
+

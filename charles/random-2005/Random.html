@@ -1,0 +1,1044 @@
+<html>
+<head><!--Xbase href="http://charles.karney.info/misc/bitmap.html"Y-->
+<title>Random numbers</title>
+<meta name="description" content="Random numbers PostScript">
+<meta name="author" content="Charles F. F. Karney">
+</head>
+<body topmargin=10 leftmargin=10>
+<h3>Random numbers</h3>
+
+<p>$Id: Random.html 6069 2005-11-08 21:14:57Z ckarney $
+
+<h4>Introduction</h4>
+
+<p>This package provides a C++ interface to the
+<a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html">MT19937</a>
+random number generator, which is described in
+<blockquote>
+<a href="mailto:m-mat@math.sci.hiroshima-u.ac.jp">Makoto Matsumoto</a>
+and Takuji Nishimura, 
+<br>
+<a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/ARTICLES/mt.pdf">
+Mersenne Twister: A 623-Dimensionally Equidistributed Uniform
+Pseudo-Random Number Generator</a>,
+<br>ACM TOMACS 8, 3&ndash;30 (1998)
+</blockquote>
+The code for the underlying generator is adapted from
+<a
+href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/emt19937ar.html">
+mt19937ar.c</a>
+
+<p>This offers
+
+<ul>
+
+<li>Thread safety.  Thus multiple threads can use independent random
+number streams seeded in some systematic way.
+
+<li>Complete set of uniform distributions over all types of integer.
+Integer() returns an unsigned long, Integer&lt;short int&gt; returns
+a short int, Integer(52) returns an int in [0,&nbsp;52), etc.
+
+<li>Complete set of uniform distributions over float, doubles, long
+doubles, over a variety of intervals.
+
+<li>Automatically adjusted to the precision of reals
+
+<li>A Float() method returns a double in [0,&nbsp;1) with the full floating
+point precision.
+
+<li>Ability to increase the granularity of real results
+
+<li>Routines are &ldquo;exact&rdquo; (assuming that the underlying
+generator is perfect)
+
+<li>Methods to simplify the management of seeds
+
+<li>Interface is designed to allow use in scientific applications where
+there's a premium on accuracy, repeatability, portability, efficiency,
+and ease of use.
+
+</ul>
+
+The packages uses standard C++ but makes extensive use of templates.
+Old C++ compilers may not be able to handle some of the constructs.  In
+addition, some C++ compilers may do a poor job optimizing the
+instantiations of the template functions.  On the other hand C++ version
+4.x produces code comparable in speed to a non-template implementation.
+
+<p>
+<ul>
+<li>Brief <a href="random.html">documentation</a>.
+<li>Header file, <a href="Random.hpp">Random.hpp</a>
+<li>C++ code, <a href="Random.cpp">Random.cpp</a>
+</ul>
+
+<h4>Simple example</h4>
+<blockquote>
+#include&nbsp;"mRandom.hpp"<br>
+#include&nbsp;&lt;iostream&gt;<br>
+using&nbsp;namespace&nbsp;std;<br>
+<br>
+int&nbsp;main()&nbsp;{<br>
+&nbsp;&nbsp;Random&nbsp;r;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;r&nbsp;created&nbsp;with&nbsp;random&nbsp;seed<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Seed&nbsp;set&nbsp;to&nbsp;"&nbsp;&lt;&lt;&nbsp;r.SeedString()&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Random&nbsp;point&nbsp;in&nbsp;the&nbsp;unit&nbsp;circle&nbsp;[";<br>
+&nbsp;&nbsp;double&nbsp;x,&nbsp;y;<br>
+&nbsp;&nbsp;do&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;2&nbsp;*&nbsp;r.RealS();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;r.RealS()&nbsp;is&nbsp;in&nbsp;the&nbsp;interval&nbsp;(-1/2,&nbsp;1/2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;2&nbsp;*&nbsp;r.RealS();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;x&nbsp;and&nbsp;y&nbsp;are&nbsp;in&nbsp;interval&nbsp;(-1,&nbsp;1)<br>
+&nbsp;&nbsp;}&nbsp;while&nbsp;(x&nbsp;*&nbsp;x&nbsp;+&nbsp;y&nbsp;*&nbsp;y&nbsp;&gt;=&nbsp;1);<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;x&nbsp;&lt;&lt;&nbsp;",&nbsp;"&nbsp;&lt;&lt;&nbsp;y&nbsp;&lt;&lt;&nbsp;"]"&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Throwing&nbsp;a&nbsp;die&nbsp;10&nbsp;times";<br>
+&nbsp;&nbsp;for&nbsp;(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;10;&nbsp;++i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&nbsp;"&nbsp;&lt;&lt;&nbsp;r.Integer(6)+1;<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Tossing&nbsp;a&nbsp;coin&nbsp;10&nbsp;times";<br>
+&nbsp;&nbsp;for&nbsp;(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;10;&nbsp;++i)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"&nbsp;"&nbsp;&lt;&lt;&nbsp;(r.Boolean()&nbsp;?&nbsp;"H"&nbsp;:&nbsp;"T");<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;endl;<br>
+<br>
+&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Used&nbsp;"&nbsp;&lt;&lt;&nbsp;r.Count()&nbsp;&lt;&lt;&nbsp;"&nbsp;random&nbsp;numbers"&nbsp;&lt;&lt;&nbsp;endl;<br>
+}<br>
+
+</blockquote>
+output
+<blockquote><pre>
+Seed set to [803577662]
+Random point in the unit circle [0.0521148, 0.662523]
+Throwing a die 10 times 3 5 5 6 3 5 2 2 5 5
+Tossing a coin 10 times T T H T H H H T T H
+Used 30 random numbers
+</pre></blockquote>
+
+<h4>Setting the seed</h4>
+
+In most applications it suffices to use a seed consisting of a single
+unsigned long.  In production environments, this should be set to a
+different value on each run and Random provides a facility to initialize
+this from a combination of the microsecond clock and 4 bytes from
+/dev/urandom.
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                    <th>&nbsp;
+  <th>command       <th>&nbsp; &nbsp;
+  <th>description   <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>Random <i>r</i>;
+  <td><td>Initialize <i>r</i> with a &ldquo;random&rdquo; seed.
+<tr>
+  <td><td>Random <i>r</i>(<i>s</i>)</i>;
+  <td><td>Initialize <i>r</i> with an unsigned long seed <i>s</i>.
+<tr>
+  <td><td><i>r</i>.Reseed()
+  <td><td>Re-initialize <i>r</i> with a &ldquo;random&rdquo; seed.
+<tr>
+  <td><td><i>r</i>.Reseed(<i>s</i>)
+  <td><td>Re-initialize <i>r</i> with an unsigned long seed <i>s</i>.
+<tr>
+  <td><td>cout &lt;&lt; <i>r</i>.Seedstring() &lt;&lt; endl;
+  <td><td>Print current seed.
+</table>
+</center>
+
+<p>In general the seed can be a vector of unsigned longs.  In the
+examples above the size of this vector is 1.  For all practical purposes
+different vectors will initialize the random number generator with
+distinct states and result in different sequences of random numbers.
+<p>Be sure to print out the actual seed used into the log file, e.g.,
+with
+
+<center>
+cout << "Random seed set to " << <i>r</i>.SeedString() << endl;
+</center>
+
+<br>so that you can repeat a run with the same random sequence if necessary.
+
+<p> The following are possible seed vectors
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+               <th>&nbsp;
+  <th>seed     <th>&nbsp; &nbsp;
+  <th>comment  <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>[]
+  <td><td> the empty vector is OK
+      <br> i.e., Random <i>r</i>(vector&lt;unsigned long&gt;());
+<tr>
+  <td><td>[0]
+  <td><td> and this is different
+<tr>
+  <td><td>[1,&nbsp;2]; [2,&nbsp;1]
+  <td><td> order is important
+<tr>
+  <td><td>[0,&nbsp;1]; [1]; [1,&nbsp;0]
+  <td><td> leading and trailing zeros are significant
+<tr>
+  <td><td>[3806025379UL]
+  <td><td>  provide the UL suffix for large numbers.
+</table>
+</center>
+
+<p>A key property of seeding of a random number generator is that seeds
+which are close (according to some metric) produces sequences which are
+independent (so that results from different runs with different seeds
+are equivalent to independent observations) and well separated (so that
+one sequence doesn't overlap with another).  Now MT19937 consists of
+just a single sequence and the seeding process merely picks the starting
+point.  However the second property is achieved in practise because the
+sequence length is so long.
+
+<p>The commands to manipulate the seed are
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                          <th>&nbsp;
+  <th>declaration         <th>&nbsp; &nbsp;
+  <th>definition          <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>Random(unsigned long <i>s</i>);
+  <td><td>initialize with seed set to [<i>s</i>]
+<tr>
+  <td><td>Random();
+  <td><td>initialize with seed set to [Random::RandomWord()]
+<tr>
+  <td><td>Random(const vector&lt;unsigned long&gt;&amp; <i>v</i>);
+  <td><td>initialize with seed set to <i>v</i>
+<tr>
+  <td><td>void Reseed(unsigned long <i>s</i>);
+  <td><td>seed reset to [<i>s</i>]
+<tr>
+  <td><td>void Reseed();
+  <td><td>seed reset to [Random::RandomWord()]
+<tr>
+  <td><td>void Reseed(const vector&lt;unsigned long&gt;&amp; <i>v</i>);
+  <td><td>seed reset to <i>v</i>
+<tr>
+  <td><td>static unsigned long RandomWord();
+  <td><td>produce &ldquo;random&rdquo; word from &mu;s clock and /dev/urandom
+<tr>
+  <td><td>const vector&lt;unsigned long&gt;&amp; Seed;
+  <td><td>read-only access to the seed vector
+<tr>
+  <td><td>string SeedString() const;
+  <td><td>format the seed vector suitable for printing
+<tr>
+  <td><td>static string SeedString(const vector&lt;unsigned&nbsp;long&gt;&amp; <i>v</i>);
+  <td><td>format a vector suitable for printing
+</table>
+</center>
+
+<p>In the absense of access to /dev/urandom (i.e., on most non-Linux
+platforms), successive calls to RandomWord() will be correlated.
+Typical usage would therefore entail calling it once.  If multiple
+random number sequences are required, for example in a multi-threaded
+application, then RandomWord() can be called once by the master thread
+to define a master seed and each slave thread sets its seed to a vector
+containing the master seed and a thread index.
+
+<p>Because RandomWord() returns a result in [0, 2<sup>32</sup>), there's
+a chance of collisions after about 2<sup>16</sup> invocations.  If you
+expect that your code will be invoked more often than that, then expand
+the seed vector in some systematic way to avoid collisions.  Thus if
+your code runs on millions of computers (like
+<a href="http://setiathome.ssl.berkeley.edu/">SETI@home</a>), then push
+the computers IP address (converted to an unsigned long) onto the seed
+vector.  If you expect your codes run many times over the next century,
+then push the time in minutes onto the seed vector.
+
+<p>Thus in ambitious code projects, seeding might look like this:
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<tbody align=left valign=baseline>
+<tr>
+  <td>&nbsp
+  <td>vector&lt;unsigned&nbsp;long&gt; <i>v</i>;
+  <td>&nbsp;
+<tr>
+  <td>
+  <td><i>v</i>.push_back(Random::RandomWord());&nbsp;&nbsp;// Include
+  some randomness in the seed
+<tr>
+  <td>
+  <td><i>v</i>.push_back(<i>code_version</i>);&nbsp;&nbsp;// Optional
+<tr>						    		   
+  <td>						    		   
+  <td><i>v</i>.push_back(<i>ip_address</i>);&nbsp;&nbsp;// Optional
+<tr>						    		   
+  <td>						    		   
+  <td><i>v</i>.push_back(<i>process_id</i>);&nbsp;&nbsp;// Optional
+<tr>						    		   
+  <td>						    		   
+  <td><i>v</i>.push_back(<i>minutes_since_2000</i>);&nbsp;&nbsp;// Optional
+<tr>
+  <td>
+  <td>// <b>Always</b> record seed used
+<tr>
+  <td>
+  <td>cout << "Master seed = " << Random::SeedString(<i>v</i>) << endl;
+<tr>
+  <td>
+  <td>// fork threads
+<tr>
+  <td>
+  <td>if (<i>slave</i>)
+<tr>
+  <td>
+  <td>&nbsp;&nbsp;// Append slave index to seed
+<tr>
+  <td>
+  <td>&nbsp;&nbsp;<i>v</i>.push_back(<i>index</i>);
+<tr>
+  <td>
+  <td>Random <i>r</i>(<i>v</i>);
+</table>
+</center>
+
+<h4>Random integers</h4>
+
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                         <th>&nbsp;
+  <th>routine            <th>&nbsp; &nbsp;
+  <th>min                <th>&nbsp; &nbsp;
+  <th>max                <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td><i>r</i>();
+  <td><td>0
+  <td><td>2<sup>32</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  <td><td><i>r</i>.Boolean();
+  <td><td>false
+  <td><td>true
+<tr>
+  <td><td><i>r</i>.Integer();
+  <td><td>0
+  <td><td>max(unsigned&nbsp;long)
+<tr>
+  <td><td><i>r</i>.Integer(<i>n</i>);
+  <td><td>0
+  <td><td><i>n</i>&nbsp;&minus;&nbsp;1 (for <i>n</i>&nbsp;&gt;&nbsp;0)
+<tr>
+  <td><td><i>r</i>.IntegerC(<i>n</i>);
+  <td><td>0
+  <td><td><i>n</i> (for <i>n</i>&nbsp;&ge;&nbsp;0)
+<tr>
+  <td><td><i>r</i>.Integer&lt;<i>T</i>&gt;(0);
+  <td><td>0
+  <td><td>max(<i>T</i>)
+<tr>
+  <td><td><i>r</i>.Integer&lt;<i>T</i>&gt;();
+  <td><td>min(<i>T</i>)
+  <td><td>max(<i>T</i>)
+<tr>
+  <td><td><i>r</i>.Integer&lt;<i>b</i>&gt;();
+  <td><td>0
+  <td><td>2<sup><i>b</i></sup>&nbsp;&minus;&nbsp;1
+</table>
+</center>
+
+<p>Here <i>T</i> may be any integer type: bool, char, short, int, long,
+long long, either signed or unsigned.
+
+<br>digits(<i>T</i>) is a shorthand for
+numeric_limits&lt;<i>T</i>&gt;::digits;
+
+<br>max(<i>T</i>) is a shorthand for
+numeric_limits&lt;<i>T</i>&gt;::max() and similarly for min(<i>T</i>).
+
+<p>This shows typical values for these quantities:
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                        <th>&nbsp;
+  <th><i>T</i>          <th>&nbsp; &nbsp;
+  <th>digits(<i>T</i>)  <th>&nbsp; &nbsp;
+  <th>min(<i>T</i>)     <th>&nbsp; &nbsp;
+  <th>max(<i>T</i>)     <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>bool
+  <td><td>1
+  <td><td>false
+  <td><td>true
+<tr>
+  <td><td>char
+  <td><td>7
+  <td><td>&minus;128
+  <td><td>127
+<tr>
+  <td><td>short
+  <td><td>15
+  <td><td>&minus;2<sup>15</sup>
+  <td><td>2<sup>15</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  <td><td>int
+  <td><td>31
+  <td><td>&minus;2<sup>31</sup>
+  <td><td>2<sup>31</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  <td><td>long
+  <td><td>31
+  <td><td>&minus;2<sup>31</sup>
+  <td><td>2<sup>31</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  <td><td>long long
+  <td><td>63
+  <td><td>&minus;2<sup>63</sup>
+  <td><td>2<sup>63</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  <td><td>unsigned char
+  <td><td>8
+  <td><td>0
+  <td><td>255
+<tr>
+  <td><td>unsigned short
+  <td><td>16
+  <td><td>0
+  <td><td>2<sup>16</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  
+  <td><td>unsigned int
+  <td><td>32
+  <td><td>0
+  <td><td>2<sup>32</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  <td><td>unsigned long
+  <td><td>32
+  <td><td>0
+  <td><td>2<sup>32</sup>&nbsp;&minus;&nbsp;1
+<tr>
+  <td><td>unsigned long long
+  <td><td>64
+  <td><td>0
+  <td><td>2<sup>64</sup>&nbsp;&minus;&nbsp;1
+</table>
+</center>
+
+<p>On 64-bit architectures long and unsigned long may be the same as
+long long and unsigned long long.
+
+<p>Full listing of methods to produce random integers
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                         <th>&nbsp;
+  <th>declaration        <th>&nbsp; &nbsp;
+  <th>definition         <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>unsigned&nbsp;long operator()();
+  <td><td>the &ldquo;raw&rdquo; MT19937 sequence
+<tr>
+  <td><td>bool Boolean();
+  <td><td>Integer&lt;bool&gt;()
+<tr>
+  <td><td>unsigned&nbsp;long Integer();
+  <td><td>Integer&lt;unsigned&nbsp;long&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;Integer();
+  <td><td>random <i>T</i> in [min(<i>T</i>), max(<i>T</i>)]
+<tr>
+  <td><td>template&lt;int&nbsp;<i>b</i>&gt; unsigned&nbsp;long Integer();
+  <td><td>Integer&lt;unsigned&nbsp;long, <i>b</i>&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>b</i>&gt;
+          <i>T</i>&nbsp;Integer();
+  <td><td>random <i>T</i> in [0,&nbsp;2<sup><i>b</i></sup>)
+      <br>0&nbsp;&lt;&nbsp;<i>b</i> &le; digits(<i>T</i>)
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt;
+          <i>T</i>&nbsp;Integer(<i>T</i>&nbsp;<i>n</i>);
+  <td><td>random <i>T</i> in [0,&nbsp;<i>n</i>)
+      <br><i>n</i>&nbsp;=&nbsp;0 equivalent to <i>n</i>&nbsp;= max(<i>T</i>)&nbsp;+&nbsp;1;
+      <br>return 0 for <i>n</i>&nbsp;&lt;&nbsp;0
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt;
+          <i>T</i>&nbsp;IntegerC(<i>T</i>&nbsp;<i>n</i>);
+  <td><td>random <i>T</i> in [0,&nbsp;<i>n</i>]
+      <br>return 0 for <i>n</i>&nbsp;&lt;&nbsp;0
+</table>
+</center>
+
+<h4>Random reals</h4>
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                     <th>&nbsp;
+  <th>routine        <th>&nbsp; &nbsp;
+  <th>mnemonic       <th>&nbsp; &nbsp;
+  <th>min            <th>&nbsp; &nbsp;
+  <th>max            <th>&nbsp; &nbsp;
+  <th>num            <th>&nbsp; &nbsp;
+  <th>prob           <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td><i>r</i>.Real();
+  <td><td>
+  <td><td>0
+  <td><td>1&nbsp;&minus;&nbsp;<i>h</i>
+  <td><td>2<sup><i>p</i></sup>
+  <td><td><i>h</i>
+<tr>
+  <td><td><i>r</i>.RealU();
+  <td><td>upper
+  <td><td><i>h</i>
+  <td><td>1
+  <td><td>2<sup><i>p</i></sup>
+  <td><td><i>h</i>
+<tr>
+  <td><td><i>r</i>.RealS();
+  <td><td>symmetric
+  <td><td>&minus;(1&nbsp;&minus;&nbsp;<i>h</i>)/2
+  <td><td>(1&nbsp;&minus;&nbsp;<i>h</i>)/2
+  <td><td>2<sup><i>p</i></sup>
+  <td><td><i>h</i>
+<tr>
+  <td><td><i>r</i>.RealO();
+  <td><td>open
+  <td><td><i>h</i>
+  <td><td>1&nbsp;&minus;&nbsp;<i>h</i>
+  <td><td>2<sup><i>p</i></sup>&nbsp;&minus;&nbsp;1
+  <td><td><i>h</i>/(1&nbsp;&minus;&nbsp;<i>h</i>)
+<tr>
+  <td><td><i>r</i>.RealC();
+  <td><td>closed
+  <td><td>0
+  <td><td>1
+  <td><td>2<sup><i>p</i></sup>&nbsp;+&nbsp;1
+  <td><td><i>h</i>/(1&nbsp;+&nbsp;<i>h</i>)
+<tr>
+  <td><td><i>r</i>.Float();
+  <td><td>
+  <td><td>0
+  <td><td>1&nbsp;&minus;&nbsp;<i>h</i>
+  <td><td>2<sup><i>p</i></sup>(1&nbsp;+&nbsp;<i>e</i>/2)
+  <td><td>next(<i>X</i>)&nbsp;&minus;&nbsp;<i>X</i>
+<tr>
+  <td><td><i>r</i>.FloatU();
+  <td><td>upper
+  <td><td><i>d</i>
+  <td><td>1
+  <td><td>2<sup><i>p</i></sup>(1&nbsp;+&nbsp;<i>e</i>/2)
+  <td><td><i>X</i>&nbsp;&minus;&nbsp;prev(<i>X</i>)
+</table>
+</center>
+
+<p>Here min and max give the minimum and maximum results.  num is the
+number of possible results.  prob is the probability of each result.
+
+<br>next(<i>X</i>) is the double following <i>X</i>.<br> prev(<i>X</i>)
+is the double preceding <i>X</i>.
+
+<br><i>p</i>&nbsp;= digits(double)&nbsp;= numeric_limits&lt;double&gt;::digits,
+
+<br><i>e</i>&nbsp;= min_exp(double)&nbsp;=
+&minus;numeric_limits&lt;double&gt;::min_exponent,
+
+<br><i>h</i>&nbsp;= 1/2<sup><i>p</i></sup>, and <i>d</i>&nbsp;=
+1/2<sup><i>p</i>&nbsp;+&nbsp;<i>e</i></sup>.
+
+<p>The above methods all produce doubles.  Instead of doubles, you can
+can obtain floats or long doubles by appending the type &lt;<i>T</i>&gt;
+to the function name as in
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<tbody align=left valign=baseline>
+<tr>
+  <td>&nbsp
+  <td><i>r</i>.Real&lt;float&gt;()
+  <td>&nbsp;
+<tr>
+  <td>
+  <td><i>r</i>.RealS&lt;long double&gt;()
+</table>
+</center>
+
+<p>Typically values of <i>p</i> and <i>e</i> for the various real types are
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                        <th>&nbsp;
+  <th><i>T</i>          <th>&nbsp; &nbsp;
+  <th>digits(<i>T</i>)  <th>&nbsp; &nbsp;
+  <th>min_exp(<i>T</i>) <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>float            <td><td>24     <td><td>125
+<tr>
+  <td><td>double           <td><td>53     <td><td>1021
+<tr>
+  <td><td>long double      <td><td>64     <td><td>16381
+<tr>
+  <td><td>long double (Sun)<td><td>113    <td><td>16494
+</table>
+</center>
+
+<p>The probability distributions of the results returned by
+Float<i>X</i> is such that
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<tbody align=left valign=baseline>
+<tr>
+  <td>&nbsp
+  <td>probability(Float&lt;<i>T</i>&gt;()&nbsp;&lt;&nbsp;<i>T</i>(<i>X</i>))
+         = <i>T</i>(<i>X</i>)
+  <td>&nbsp;
+<tr>
+  <td>
+  <td>probability(FloatU&lt;<i>T</i>&gt;()&nbsp;&le;&nbsp;<i>T</i>(<i>X</i>))
+         = <i>T</i>(<i>X</i>)
+</table>
+</center>
+
+for all <i>X</i> in [0,&nbsp;1]
+
+<p>You can also specify the precision (and range in the case of Float or
+FloatU) by specifying <i>p</i> (and&nbsp;<i>e</i>) as additional template
+arguments.
+
+<p>Full listing of methods to produce random reals.
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                      <th>&nbsp;
+  <th>declaration     <th>&nbsp; &nbsp;
+  <th>definition      <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>double Real();
+  <td><td>Real&lt;double&gt;()
+<tr>
+  <td><td>double RealU();
+  <td><td>RealU&lt;double&gt;()
+<tr>
+  <td><td>double RealS();
+  <td><td>RealS&lt;double&gt;()
+<tr>
+  <td><td>double RealO();
+  <td><td>RealO&lt;double&gt;()
+<tr>
+  <td><td>double RealC();
+  <td><td>RealC&lt;double&gt;()
+<tr>
+  <td><td>double Float();
+  <td><td>Float&lt;double&gt;()
+<tr>
+  <td><td>double FloatU();
+  <td><td>FloatU&lt;double&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;Real();
+  <td><td>Real&lt;<i>T</i>, digits(<i>T</i>)&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;RealU();
+  <td><td>RealU&lt;<i>T</i>, digits(<i>T</i>)&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;RealS();
+  <td><td>RealS&lt;<i>T</i>, digits(<i>T</i>)&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;RealO();
+  <td><td>RealO&lt;<i>T</i>, digits(<i>T</i>)&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;RealC();
+  <td><td>RealC&lt;<i>T</i>, digits(<i>T</i>)&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;Float();
+  <td><td>Float&lt;<i>T</i>, digits(<i>T</i>), min_exp(<i>T</i>)&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;FloatU();
+  <td><td>FloatU&lt;<i>T</i>, digits(<i>T</i>), min_exp(<i>T</i>)&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>p</i>&gt;
+          <i>T</i>&nbsp;Real();
+  <td><td>random <i>T</i> in [0,&nbsp;1&nbsp;&minus;&nbsp;<i>h</i>]
+      <br>0&nbsp;&lt;&nbsp;<i>p</i> &le; digits(<i>T</i>)
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>p</i>&gt;
+          <i>T</i>&nbsp;RealU();
+  <td><td>random <i>T</i> in [<i>h</i>,&nbsp;1]
+      <br>0&nbsp;&lt;&nbsp;<i>p</i> &le; digits(<i>T</i>)
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>p</i>&gt;
+          <i>T</i>&nbsp;RealS();
+  <td><td>random <i>T</i> in [&minus;(1&nbsp;&minus;&nbsp;<i>h</i>)/2,
+                                     (1&nbsp;&minus;&nbsp;<i>h</i>)/2]
+      <br>0&nbsp;&lt;&nbsp;<i>p</i> &le; digits(<i>T</i>)
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>p</i>&gt;
+          <i>T</i>&nbsp;RealO();
+  <td><td>random <i>T</i> in [<i>h</i>, 1&nbsp;&minus;&nbsp;<i>h</i>]
+      <br>0&nbsp;&lt;&nbsp;<i>p</i> &le; digits(<i>T</i>)
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>p</i>&gt;
+          <i>T</i>&nbsp;RealC();
+  <td><td>random <i>T</i> in [0,&nbsp;1]
+      <br>0&nbsp;&lt;&nbsp;<i>p</i> &le; digits(<i>T</i>)
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>p</i>,
+          int&nbsp;<i>e</i>&gt; <i>T</i>&nbsp;Float();
+  <td><td>random <i>T</i> in [0,&nbsp;1&nbsp;&minus;&nbsp;<i>h</i>]
+      <br>0&nbsp;&lt;&nbsp;<i>p</i> &le; digits(<i>T</i>),
+           <i>e</i>&nbsp;&gt;&nbsp;0
+      <br><i>p</i>&nbsp;+&nbsp;<i>e</i> &le;
+          digits(<i>T</i>) + min_exp(<i>T</i>)
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>, int&nbsp;<i>p</i>,
+          int&nbsp;<i>e</i>&gt; <i>T</i>&nbsp;FloatU();
+  <td><td>random <i>T</i> in [<i>d</i>,&nbsp;1]
+      <br>0&nbsp;&lt;&nbsp;<i>p</i> &le; digits(<i>T</i>),
+          <i>e</i>&nbsp;&gt;&nbsp;0
+      <br><i>p</i>&nbsp;+&nbsp;<i>e</i> &le;
+          digits(<i>T</i>) + min_exp(<i>T</i>)
+</table>
+</center>
+
+<p><i>T</i> may be any real type: float, double, long double.
+
+<br>digits(<i>T</i>) is a shorthand for
+numeric_limits&lt;<i>T</i>&gt;::digits;
+
+<br>min_exp(<i>T</i>) is a shorthand for
+&minus;numeric_limits&lt;<i>T</i>&gt;::min_exponent.
+
+<p>The methods Real<i>X</i>&lt;<i>T</i>, <i>p</i>&gt;() produce reals of
+type <i>T</i> on a &ldquo;fixed&rdquo; scale with precision <i>p</i>;
+the spacing of the results is then <i>h</i>&nbsp;= 1/2<sup><i>p</i></sup>.
+
+<p>The methods Float<i>X</i>&lt;<i>T</i>, <i>p</i>, <i>e</i>&gt;()
+produce reals of type <i>T</i> on a &ldquo;floating&rdquo; scale with
+precision <i>p</i> and exponent range <i>e</i>.  The possible results
+for numbers in [0,&nbsp;1) with such a scale can be expressed as
+<i>f</i>/2<sup><i>p</i>&nbsp;+&nbsp;<i>s</i></sup> for <i>f</i> in
+[2<sup><i>p&nbsp;&minus;&nbsp;1</i></sup>, 2<sup><i>p</i></sup>) and
+<i>s</i> in [0,&nbsp;<i>e</i>]; in addition, the result might be a
+subnormal number of the form
+<i>f</i>/2<sup><i>p</i>&nbsp;+&nbsp;<i>e</i></sup> for <i>f</i> in
+[0,&nbsp;2<sup><i>p&nbsp;&minus;&nbsp;1</i></sup>). The smallest
+non-zero result is <i>d</i>&nbsp;=
+1/2<sup><i>p</i>&nbsp;+&nbsp;<i>e</i></sup>
+
+<br>[This description assumes that subnormal numbers are supported by
+the floating representation.  These allow the gradual underflow of small
+numbers.  The implementation of Float<i>X</i> also handles the case
+where subnormals are not supported.  In this case, we require
+<i>e</i>&nbsp;&le;&nbsp;min_exp(<i>T</i>) and results which lie between
+0 and the smallest positve number underflow to zero (for Float) or to
+the smallest positive number (for FloatU).]
+
+<h4>Random booleans</h4>
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                  <th>&nbsp;
+  <th>command     <th>&nbsp; &nbsp;
+  <th>description  <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td><i>r</i>.Boolean();
+  <td><td>true with probability 1/2
+<tr>
+  <td><td><i>r</i>.Prob(<i>p</i>);
+  <td><td>true with probability <i>p</i> (real)
+<tr>
+  <td><td><i>r</i>.Prob(<i>m</i>, <i>n</i>);
+  <td><td>true with probability <i>m</i>/<i>n</i> (rational)
+</table>
+</center>
+
+<p>Full listing of methods to produce random booleans.
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                       <th>&nbsp;
+  <th>declaration      <th>&nbsp; &nbsp;
+  <th>definition       <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>bool Boolean();
+  <td><td>a coin toss
+      <br>same as Integer&lt;bool&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt;
+          bool Prob(<i>T</i>&nbsp;<i>p</i>);
+  <td><td>true with probability <i>p</i>, <i>T</i> is a real type
+      <br>false if <i>p</i>&nbsp;&le;&nbsp;0 or isnan(<i>p</i>),
+          true if <i>p</i>&nbsp;&ge;&nbsp;1
+      <br>equivalent to Float&lt;<i>T</i>&gt;()&nbsp;&lt;&nbsp;<i>p</i>
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt;
+          bool Prob(<i>T</i>&nbsp;<i>m</i>, <i>T</i>&nbsp;<i>n</i>);
+  <td><td>true with probability <i>m</i>/<i>n</i>, <i>T</i> is an integer type
+      <br>same as Integer&lt;<i>T</i>&gt;(<i>n</i>)&nbsp;&lt;&nbsp;<i>m</i>
+</table>
+</center>
+
+Compare
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                  <th>&nbsp;
+  <th>command     <th>&nbsp; &nbsp;
+  <th>description  <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>Prob&lt;int&gt;(1, 91)
+  <td><td>true with probability 1/91
+<tr>
+  <td><td>Prob&lt;float&gt;(1/91.0f)
+  <td><td>true with prob. 11799361/2<sup>30</sup> =
+          1/91 &minus; 2.8&nbsp;&times;&nbsp;10<sup>&minus;10</sup>
+      <br><i>exact</i> given that 1/91 is expressed as a float.
+<tr>
+  <td><td>Real&lt;float&gt;() < 1/91.0f
+  <td><td>true with prob. 184366/2<sup>24</sup> =
+          1/91 + 5.9&nbsp;&times;&nbsp;10<sup>&minus;8</sup>
+<tr>
+  <td><td>Float&lt;float&gt;() < 1/91.0f
+  <td><td>same as Prob&lt;float&gt;(1/91.0f), but slower
+</table>
+</center>
+
+<h4>Other random</h4>
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                      <th>&nbsp;
+  <th>declaration     <th>&nbsp; &nbsp;
+  <th>definition      <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>double Normal();
+  <td><td>Normal&lt;double&gt;()
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt; <i>T</i>&nbsp;Normal();
+  <td><td>normally distributed reals of type <i>T</i>
+      <br>mean&nbsp;=&nbsp;0; variance&nbsp;=&nbsp;1
+<tr>
+  <td><td>template&lt;typename&nbsp;<i>T</i>&gt;
+          void Shuffle(vector&lt;<i>T</i>&gt;&amp; <i>a</i>);
+  <td><td>shuffle a vector of objects of type <i>T</i>
+</table>
+</center>
+
+
+<h4>Other</h4>
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                  <th>&nbsp;
+  <th>command     <th>&nbsp; &nbsp;
+  <th>description  <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>Random <i>r</i>(<i>s</i>);
+  <td><td>initialize <i>r</i> from <i>s</i>
+<tr>
+  <td><td><i>r</i> = <i>s</i>;
+  <td><td>copy <i>s</i>'s state to <i>r</i>
+<tr>
+  <td><td><i>r</i>.Save(<i>os</i>);
+  <td><td>save <i>r</i>'s state to binary stream <i>os</i>
+<tr>
+  <td><td><i>r</i>.Restore(<i>is</i>);
+  <td><td>restore <i>r</i>'s state from binary stream <i>is</i>
+<tr>
+  <td><td>Random <i>r</i>(<i>is</i>);
+  <td><td>initialize <i>r</i>'s state from binary stream <i>is</i>
+<tr>
+  <td><td>cout &lt;&lt; <i>r</i>;
+  <td><td>write <i>r</i>'s state in text mode to cout
+<tr>
+  <td><td>cin &gt;&gt; <i>r</i>;
+  <td><td>read <i>r</i>'s state in text mode from cin
+<tr>
+  <td><td><i>r</i>.Count();
+  <td><td>the number of raw random words generated
+<tr>
+  <td><td><i>r</i>.SetCount(<i>n</i>);
+  <td><td>step the generator so that <i>r</i>.Count() is <i>n</i>
+<tr>
+  <td><td><i>r</i>.StepCount(<i>n</i>);
+  <td><td>step the generator by <i>n</i>
+</table>
+</center>
+
+<p>Save and Restore write the data in binary mode using network order.
+Thus you can save the state of <i>r</i> on a Intel machine (LSB
+ordering) and read it on a SPARC machine (MSB ordering).  These can be
+used for checkpointing long-running codes.
+
+<p>You are allowed to step the generator backwards so that Count() is
+negative.  However, be cautious about using the resulting random numers.
+In particular the random numbers with &minus;624 &le; <i>r</i>.Count()
+&lt; 0 are directly produced from <i>r</i>'s seed and may be correlated
+with the corresponding results from generators with nearby seeds.
+
+<p>There's no magic in the implementation of StepCount(<i>n</i>).  It
+methodically marches the generator forward or backward and so takes
+<i>O</i>(<i>n</i>).  Stepping forward in this way is typically about
+2&ndash;3 times faster than actually consuming the random results.
+Stepping backwards is about 1.5 times slower than stepping forwards.
+
+<p>Two ways of temporarily saving the state:
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<tbody align=left valign=baseline>
+<tr>
+  <td>&nbsp
+  <td>Random <i>r</i>;
+  <td>&nbsp;
+<tr>
+  <td>
+  <td>// Use <i>r</i> for a while
+<tr>
+  <td>
+  <td>Random <i>s</i>(<i>r</i>); // Copy <i>r</i>'s state into <i>s</i>
+<tr>
+  <td>
+  <td>// Use <i>r</i> some more
+<tr>
+  <td>
+  <td><i>r</i> = <i>s</i>; // Restores <i>r</i>'s state from <i>s</i>
+</table>
+</center>
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<tbody align=left valign=baseline>
+<tr>
+  <td>&nbsp
+  <td>Random <i>r</i>;
+  <td>&nbsp;
+<tr>
+  <td>
+  <td>// Use <i>r</i> for a while
+<tr>
+  <td>
+  <td>long long <i>n</i> = <i>r</i>.Count(); // Remember where we are
+<tr>
+  <td>
+  <td>// Use <i>r</i> some more
+<tr>
+  <td>
+  <td><i>r</i>.SetCount(<i>n</i>); // Go back to saved position
+</table>
+</center>
+
+<p>Full listing of other methods
+
+<p>
+<center>
+<table border=1 cellspacing=0 cellpadding=0 valign=baseline rules="groups">
+<thead align=left valign=baseline>
+<tr>
+                      <th>&nbsp;
+  <th>declaration     <th>&nbsp; &nbsp;
+  <th>definition      <th>&nbsp;
+<tbody align=left valign=baseline>
+<tr>
+  <td><td>Random(const Random&amp; <i>r</i>);
+  <td><td>copy constructor
+      <br>e.g., Random <i>a</i>; Random <i>b</i>(<i>a</i>);
+<tr>
+  <td><td>Random&amp; operator=(const Random&amp; <i>r</i>);
+  <td><td>copy assignment
+      <br>e.g., Random <i>a</i>; Random <i>b</i>(0); <i>b</i>&nbsp;=&nbsp;<i>a</i>;
+<tr>
+  <td><td>void Save(ostream&amp;&nbsp;<i>os</i>, bool&nbsp;<i>bin</i> = true) const;
+  <td><td>save the state to <i>os</i> in binary or text mode
+<tr>
+  <td><td>void Restore(istream&amp;&nbsp;<i>is</i>, bool&nbsp;<i>bin</i> = true);
+  <td><td>restore the state from <i>is</i> in binary or text mode
+<tr>
+  <td><td>Random(istream&amp;&nbsp;<i>is</i>, bool&nbsp;<i>bin</i> = true);
+  <td><td>initialize the state to <i>is</i> in binary or text mode
+<tr>
+  <td><td>ostream&amp; operator&lt;&lt;(ostream&amp;&nbsp;<i>os</i>,
+          const&nbsp;Random&amp;&nbsp;<i>r</i>);
+  <td><td>write <i>r</i> to <i>os</i> in text mode
+<tr>
+  <td><td>ostream&amp; operator&gt;&gt;(ostream&amp;&nbsp;<i>is</i>,
+          Random&amp;&nbsp;<i>r</i>)
+  <td><td>read <i>r</i> from <i>is</i> in text mode
+<tr>
+  <td><td>long long Count() const;
+  <td><td>the number of raw random words produced with current seed
+<tr>
+  <td><td>void SetCount(long long <i>n</i>);
+  <td><td>step the generator forward or backward so that Count() is <i>n</i>
+<tr>
+  <td><td>void StepCount(long long <i>n</i>);
+  <td><td>step the generator forward or backward by <i>n</i>
+<tr>
+  <td><td>bool operator==(const Random&amp; <i>r</i>) const;
+  <td><td>Count() == <i>r</i>.Count() &amp;&amp; Seed == <i>r</i>.Seed
+<tr>
+  <td><td>bool operator!=(const Random&amp; <i>r</i>) const;
+  <td><td>!operator==(<i>r</i>)
+</table>
+</center>
+
+<p>Note that == checks only whether the externally visible state is the
+same for two Randoms.  It's possible that the internal states (exposed,
+for example, by <i>r</i>.Save(<i>os</i>)) are different.
+
+<hr>
+<address><a href="../index.html">Charles Karney</a> (2005-11-10)</address>
+<a href="index.html">Back to index.</a>
+</body></html>

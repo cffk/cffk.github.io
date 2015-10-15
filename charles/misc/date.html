@@ -1,0 +1,150 @@
+<html>
+<head><!--Xbase href="http://charles.karney.info/misc/date.html"Y-->
+<title>Convert from date to sequential day and vice versa</title>
+<meta name="description" content="Convert from date to sequential day and vice versa">
+<meta name="author" content="Charles F. F. Karney">
+</head>
+<body topmargin=10 leftmargin=10>
+<h3>Convert from date to sequential day and vice versa</h3>
+
+<p>
+Here is some code (written for Macsyma, but easily translated into other
+languages) to convert a date to sequential day and vice versa.  The
+sequential day is numbered so that January 1, 1 AD is day 1 (a
+Saturday).  So this is offset from the &ldquo;Julian&rdquo; day which
+starts the numbering with 4713 BC.
+
+<p>
+This is inspired by a talk by John Conway at the John von Neumann
+National Supercomputer Center when he described his Doomsday algorithm
+for figuring the day of the week.  The code avoids explicitly doing
+<i>if</i>s (except for the decision of whether to use the Julian or
+Gregorian calendar).  Instead the equivalent result is achieved using
+integer arithmetic.  I got this idea from the routine for the day of the
+week in MACLisp (I believe that that routine was written by Guy Steele).
+
+<p>
+There are three issues to take care of
+<ol>
+<li>the rules for leap years,
+<li>the inconvenient placement of leap days at the end of February,
+<li>the irregular pattern of month lengths.
+</ol>
+
+<p>We deal with these as follows:
+<ol>
+<li>Leap years are given by simple rules which are straightforward to
+accommodate.
+<li>We simplify the calculations by moving January and February to the
+previous year.  Here we internally number the months March&ndash;December,
+January, February as 0&ndash;9, 10, 11.
+<li>The pattern of month lengths from March through January is regular
+with a 5-month period&mdash;31, 30, 31, 30, 31, 31, 30, 31, 30, 31, 31.
+The 5-month period is 153 days long.  Since February is now at the end
+of the year, we don't need to include its length in this part of the
+calculation.
+</ol>
+
+<p>
+The original cut over to the Gregorian calendar in Pope Gregory XIII's
+time had 1582-10-04 followed by 1582-10-15.  Here we implement the
+switch over used by the English-speaking world where 1752-09-02 was
+followed by 1752-09-14.  We also assume that the year always begins with
+January 1, whereas in reality it often was reckoned to begin in March.
+
+<hr>
+<pre>
+
+/* ================ Utility routines ================ */
+
+div(x, y) := entier(x/y)$                   /* floor(x/y) */
+remd(x, y) := x - y * div(x, y)$            /* x - y * floor(x/y) */
+
+isdategregorian(y, m, d) := is(100 * (100 * y + m) + d &gt; 17520902)$
+isdaygregorian(s) := is(s &gt; 639798)$ /* 1752-09-02 */
+
+/* ================ day(y,m,d) ================ */
+
+/* Given the date, return the day numbering sequentially starting with
+   January 1, 1 AD as day 1. */
+
+day(y, m, d) := block([gregorian : isdategregorian(y, m, d)],
+
+  /* Move Jan and Feb to previous year, making March month 0. */
+  y : y + div(m - 3, 12),
+  m : remd(m - 3, 12),
+
+  /* Julian years converted to days.
+     Julian year is 365 + 1/4 = 1461/4 days. */
+  div(1461 * y, 4)
+
+  /* Gregorian leap year corrections.  The 2 offset with respect to the
+     Julian calendar synchronizes the vernal equinox with that at the
+     time of the Council of Nicea (325 AD). */
+      + (if gregorian then div(-3 * div(y, 100), 4) + 2 else 0)
+
+  /* The zero-based start of the m'th month */
+      + div(153 * m + 2, 5)
+
+  /* The zero-based day */
+      + d - 1
+
+  /* The number of days between March 1 and December 31.
+     This makes 0001-01-01 day 1 */
+      - 305)$
+
+/* ================ date(s) ================ */
+
+/* Given a day (counting from 0001-01-01 as day 1), return the date. */
+
+date(s) := block([c : 0, y, m, d, gregorian : isdaygregorian(s)],
+
+  s : s + 305, /* s = 0 on March 1, 1BC */
+
+  if gregorian then (
+
+    s : s - 2, /* The 2 day Gregorian offset */
+
+    /* Determine century with the Gregorian rules for leap years.  The
+       Gregorian year is 365 + 1/4 - 1/100 + 1/400 = 146097/400 days. */
+    c : div(4 * s + 3, 146097),
+    s : s - div(c * 146097, 4) /* s = 0 at beginning of century */
+
+  ),
+
+  /* Determine the year using Julian rules. */
+  y : div(4 * s + 3, 1461),
+  s : s - div(1461 * y, 4), /* s = 0 at start of year, i.e., March 1 */
+
+  /* Assemble full year */
+  y : c * 100 + y,
+
+  /* Determine the month */
+  m : div(5 * s + 2, 153),
+  s : s - div(153 * m + 2, 5), /* s = 0 at beginning of month */
+
+  /* Determine day of month */
+  d : s + 1,
+
+  /* Move Jan and Feb back to original year */
+  y : y + div(m + 2, 12),
+
+  /* Renumber the months so January = 1 */
+  m : remd(m + 2, 12) + 1,
+
+  /* Return date */
+  [y, m, d])$
+
+/* ================ dow(y,m,d) ================ */
+
+/* Given the date, return the day of the week with
+   Sunday, Monday - Saturday = 0, 1 - 6.
+   The 5 offset makes day 1 (0001-01-01) a Saturday. */
+
+dow(y, m, d) := remd(day(y, m, d) + 5, 7)$
+
+</pre>
+<hr>
+<address><a href="../index.html">Charles Karney</a> (2002-08-19)</address>
+<a href="../index.html">Back to index.</a>
+</body></html>

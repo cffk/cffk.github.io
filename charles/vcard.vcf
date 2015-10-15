@@ -1,0 +1,17 @@
+begin:          vcard
+fn:             Charles F. F. Karney
+org:            Sarnoff Corportaion
+email;internet: charles@karney.com
+tel;work:       +1-609-734-2312
+tel;home:       +1-609-497-4662
+tel;fax:        +1-609-734-2323
+uid:            010000167
+adr;work:       ;;201 Washington Road;Princeton;NJ;08543-5330;USA
+adr;dom;home:	;;702 Prospect Avenue;Princeton;NJ;08540-4037;USA
+url:		http://charles.karney.info/
+geo:		40.3633,-74.6278
+bday:		1951-11-07
+n:		Karney;Charles
+photo;		value=url:http://w3.pppl.gov/~karney/william.gif
+title:		Senior Member of Technical Staff
+end:            vcard

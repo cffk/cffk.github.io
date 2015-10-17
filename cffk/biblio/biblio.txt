@@ -1,15 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-  <head>
-    <title>Charles Karney: Publications</title>
-    <meta name="description" content="Charles Karney: Publications">
-    <meta http-equiv="Content-Type"
-	  content="text/html; charset=ISO-8859-1">
-    <link rel="stylesheet" type="text/css" href="../default.css">
-    <style type="text/css"> li { margin-top: 5px; } </style>
-</head>
-
 <body topmargin=10 leftmargin=10>
 
 <h2>Charles Fielding Finch Karney: Publications</h2>
@@ -258,7 +246,7 @@
    osti:6812854 PPPL--1452
 
  * C. F. F. Karney, F. W. Perkins, and Y. C. Sun, <br>
-   ''Alfvén resonance effects on magnetosonic modes in
+   ''AlfvÃ©n resonance effects on magnetosonic modes in
    large tokamaks'', <br>
    Phys. Rev. Lett. '''42'''(24), 1621--1624 (1979). <br>
    doi:10.1103/PhysRevLett.42.1621 <br>
@@ -489,7 +477,7 @@
    osti:6683038 PPPL--1455
 
  * C. F. F. Karney and F. W. Perkins, <br>
-   ''Alfvén wave heating with high-Q eigenmodes'', <br>
+   ''AlfvÃ©n wave heating with high-Q eigenmodes'', <br>
    in ''Proc. Third Topical Conf. on Radio Frequency Plasma Heating'',
    paper D3 (1978). <br>
    osti:6449535 osti:6449535
@@ -504,7 +492,7 @@
 
  * C. F. F. Karney, <br>
    ''Reduction of the equation for lower hybrid waves in a plasma to a
-   nonlinear Schrödinger equation'', <br>
+   nonlinear SchrÃ¶dinger equation'', <br>
    in ''Proc. 1977 MACSYMA Users' Conf.'', 377--383 (NASA, 1977). <br>
    <a href="http://ntrs.nasa.gov/search.jsp?R=19770021840">
    nasa:19770021840</a> <br>
@@ -604,8 +592,8 @@
    arxiv:0908.1824.
 
  * F. W. Bessel, <br>
-   ''Über die Berechnung der geographischen Längen und Breiten aus
-   geodätischen Vermessungen'', <br>
+   ''Ãœber die Berechnung der geographischen LÃ¤ngen und Breiten aus
+   geodÃ¤tischen Vermessungen'', <br>
    Astron. Nachr. '''4'''(86), 241--254 (1825). <br>
    doi:10.1002/asna.18260041601 <br>
    arxiv:0908.1823
@@ -615,7 +603,7 @@
    ''User's Guide for DEGAS 2''</a> (2001).
 
  * B. V. Chirikov and D. L. Shepelyansky, <br>
-   ''Statistics of Poincaré recurrences and the
+   ''Statistics of PoincarÃ© recurrences and the
    structure of the stochastic layer of a nonlinear resonance'' (1983). <br>
    inis:17055778 inis:17055778 <br>
    <a href="http://www.quantware.ups-tlse.fr/chirikov/refs/chi1981b2.pdf">

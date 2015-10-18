@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Errata for Fokker-Planck and Quasilinear Codes</title>
+    <meta name="description" content="Fokker-Planck and Quasilinear Codes">
+    <meta name="author" content="Charles F. F. Karney">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="../default.css">
+    <script type="text/javascript"
+	    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body topmargin=10 leftmargin=10>
+    <h3>Errata for Fokker&ndash;Planck and Quasilinear Codes</h3>
+    <p>Date: 1986-10-31</p>
+    <p>
+      Errata for
+      <blockquote>
+	C. F. F. Karney, <br>
+	<i>Fokker&ndash;Planck and quasilinear codes</i>, <br>
+	Comput. Phys. Rep. <b>4</b>(3&ndash;4), 183&ndash;244 (1986). <br>
+	<a href="https:dx.doi.org/10.1016/0167-7977(86)90029-8">
+	  doi:10.1016/0167-7977(86)90029-8</a> <br>
+	<a href="http://arxiv.org/abs/physics/0501066">
+	  arXiv:physics/0501066</a> <br>
+	<a href="http://www.osti.gov/scitech/biblio/6284229">PPPL&ndash;2290</a>
+      </blockquote>
+    </p>
+
+    <ul>
+      <li> Page 193, equation (25b) should read:
+	\[
+	\begin{align}
+\psi_b^{(l)}(v)&={1\over 2(4l^2-1)}
+\biggl[\int_0^v {v'{}^{l+2}\over v^{l-1}}
+\biggl(1-{l-\frac12\over l+\frac32}{v'{}^2\over v^2}\biggr)
+f_b^{(l)}(v')\,dv'\\&\qquad\qquad\qquad
++\int_v^\infty {v^l\over v'{}^{l-3}}
+\biggl(1-{l-\frac12\over l+\frac32}{v^2\over v'{}^2}\biggr)
+	f_b^{(l)}(v')\,dv'\biggr].
+	\end{align}
+	\]
+      </li>
+      <li> Page 224, equation (80) should read:
+	\[
+	\Delta t_k={2\over
+\displaystyle
+\beta+\alpha-(\beta-\alpha)\cos\biggl({[2(k\bmod K)+1]\pi
+\over 2K}\biggr)}
+	\]
+      </li>
+      <li> Page 231, \(D_{cvv}^{e/e}\) should be replaced by
+	\(D_{cpp}^{e/e}\) in equation (88a) and \(F_{cv}^{e/e}\) should
+	be replaced by \(F_{cp}^{e/e}\) in equation (88c).  This last
+	change should also be made in equation (90c) on page 232.
+      </li>
+      <li> Page 243, reference 9 has appeared in J. Comp. Phys. 66 (1986) 197.
+      </li>
+    </ul>
+    <hr>
+    <a href="index.html">Back to publication list.</a>
+  </body>
+</html>

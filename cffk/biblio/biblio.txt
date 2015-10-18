@@ -165,6 +165,7 @@ Collections</h3>
    doi:10.1016/0167-7977(86)90029-8 <br>
    arxiv:physics/0501066 <br>
    osti:6284229 PPPL--2290
+   <a href="fp.html">errata</a>
 
  * C. F. F. Karney, <br>
    ''Numerical techniques for the study of long-time correlations'', <br>
@@ -312,7 +313,8 @@ Collections</h3>
    ''Stochastic ion heating by a lower hybrid wave'', <br>
    Phys. Fluids '''21'''(9) 1584--1599 (1978). <br>
    doi:10.1063/1.862406 <br>
-   osti:5031037 PPPL--1429
+   osti:5031037 PPPL--1429 <br>
+   <a href="stoch.html">errata</a>
 
  * C. F. F. Karney and A. Bers, <br>
    ''Stochastic ion heating by a perpendicularly propagating

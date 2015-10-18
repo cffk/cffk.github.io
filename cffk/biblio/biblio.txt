@@ -60,7 +60,7 @@ Collections</h3>
    J. Comput. Chem. '''26'''(3), 243--251 (2005). <br>
    doi:10.1002/jcc.20167 <br>
    arxiv:cond-mat/0401348 <br>
-   <a href="wh.html">supplement</a>
+   <a href="wh.html">errata</a>
 
  * H. Takenaga, ''et al.'', <br>
    ''Study of particle pumping characteristics for different
@@ -142,7 +142,7 @@ Collections</h3>
    doi:10.1063/1.858966 <br>
    arxiv:plasm-ph/9502001 <br>
    osti:6392639 PPPL--2598 <br>
-   <a href="cond.html">supplement</a>
+   <a href="cond.html">addenda</a>
 
  * B. J. Braams and C. F. F. Karney, <br>
    ''Differential form of the collision integral for a

@@ -2,6 +2,7 @@
 # Convert nbiblio.txt to an html page
 # git log --date=short $1 | head -3 | tail -1 | tr -s ' ' '	' |
 # cut -f2 | sed 's/$/./'
+date=`find $1 -printf '%TY-%Tm-%Td'`
 cat <<EOF
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
@@ -17,7 +18,8 @@ cat <<EOF
 
 EOF
 cat $1 |
-sed -e 's/\*/<li>/' \
+sed -e "s/@DATE@/$date/" \
+    -e 's/\*/<li>/' \
     -e "s%'''\([0-9][---0-9A-Z]*\)'''%<b>\1</b>%g" \
     -e "s% ''% <i>%g" -e "s%\([^ ]\)''%\1</i>%g" \
     -e "s%---%\&mdash;%g" \

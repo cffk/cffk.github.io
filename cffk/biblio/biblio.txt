@@ -1,7 +1,7 @@
 <body topmargin=10 leftmargin=10>
 
 <h2>Charles Fielding Finch Karney: Publications</h2>
-<p>Last update: 2015-10-17</p>
+<p>Last update: @DATE@</p>
 
 <h3>Collections</h3>
 <ul>
@@ -42,7 +42,7 @@
    ''Method for computing protein binding affinity'', <br>
    J. Comput. Chem. '''26'''(3), 243--251 (2005). <br>
    doi:10.1002/jcc.20167 <br>
-   arxiv:cond-mat/0401348.
+   arxiv:cond-mat/0401348
 
  * H. Takenaga, ''et al.'', <br>
    ''Study of particle pumping characteristics for different
@@ -470,7 +470,7 @@
    propagating electrostatic wave'', <br>
    in ''Intrinsic Stochasticity in Plasmas'', 159--168 (1979). <br>
    inis:11556563 inis:11556563 <br>
-   arxiv:physics/0501035.
+   arxiv:physics/0501035
 
  * C. F. F. Karney, A. Sen, and F. Y. F. Chu, <br>
    ''The complex modified Korteweg--DeVries equation,

@@ -1,2 +1,4 @@
-# cffk.github.io
-web pages
+# www.petrel.org
+web pages for Charles Karney, see
+
+http://www.petrel.org/cffk

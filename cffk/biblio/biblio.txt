@@ -1,16 +1,18 @@
 <body topmargin=10 leftmargin=10>
 
 <h2>Charles Fielding Finch Karney: Publications</h2>
+<p>Last update: 2015-10-17</p>
 
 <h3>Collections</h3>
 <ul>
 
  * <a href="http://scholar.google.com/citations?user=GGmZBUMAAAAJ">
-   Google Scholar</a>
- * <a href="http://arxiv.org/a/karney_c_1">arXiv</a>
- * <a href="http://orcid.org/0000-0002-5006-5836">ORCID</a>
- * <a href="http://www.researcherid.com/rid/C-1371-2013">ReseacherID</a>
- * <a href="http://www.scopus.com/authid/detail.url?authorId=6603872963">
+   Google Scholar</a> &bullet;
+   <a href="http://arxiv.org/a/karney_c_1">arXiv</a> &bullet;
+   <a href="http://orcid.org/0000-0002-5006-5836">ORCID</a> &bullet;
+   <a href="http://www.researcherid.com/rid/C-1371-2013">ReseacherID</a>
+   &bullet;
+   <a href="http://www.scopus.com/authid/detail.url?authorId=6603872963">
    Scopus</a>
 
 </ul>
@@ -460,6 +462,7 @@
    ''Temporal evolution of nonlinear lower hybrid waves'', <br>
    in ''Heating in Toroidal Plasmas'', vol. I,
    455--461 (1981). <br>
+   doi:B978-1-4832-8373-9.50055-0 <br>
    inis:13701099 inis:13701099
 
  * C. F. F. Karney, <br>
@@ -589,7 +592,7 @@
    geodesic measurements'', <br>
    Astron. Nachr. '''331'''(8), 852--861 (2010). <br>
    doi:10.1002/asna.201011352 <br>
-   arxiv:0908.1824.
+   arxiv:0908.1824
 
  * F. W. Bessel, <br>
    ''Über die Berechnung der geographischen Längen und Breiten aus

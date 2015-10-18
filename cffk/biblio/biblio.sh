@@ -24,7 +24,7 @@ sed -e 's/\*/<li>/' \
     -e "s%\([^!]\)--\([^>]\)%\1\&ndash;\2%g" \
     -e "s%\([^!]\)--\([^>]\)%\1\&ndash;\2%g" \
     -e 's%doi:\([^ ]*\)%<a href="https:dx.doi.org/\1">doi:\1</a>%g' \
-    -e 's%arxiv:\([^ ]*\)%<a href="http://arxiv.org/abs/\1">arxiv:\1</a>%g' \
+    -e 's%ar[xX]iv:\([^ ]*\)%<a href="http://arxiv.org/abs/\1">arXiv:\1</a>%g' \
     -e 's%inis:\([^ ]*\) \([^ ]*\)%<a href="https://inis.iaea.org/search/searchsinglerecord.aspx?recordsFor=SingleRecord\&RN=\1">\2</a>%g' \
     -e 's%patent:\([^ ]*\)%<a href="https://www.google.com/patents/\1">patent:\1</a>%g' \
     -e 's%osti:\([^ ]*\) \([^ ]*\)%<a href="http://www.osti.gov/scitech/biblio/\1">\2</a>%g' \

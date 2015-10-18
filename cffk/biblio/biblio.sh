@@ -10,16 +10,15 @@ cat <<EOF
   <head>
     <title>Charles Karney: Publications</title>
     <meta name="description" content="Charles Karney: Publications">
-    <meta http-equiv="Content-Type"
-	  content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <link rel="stylesheet" type="text/css" href="../default.css">
-    <style type="text/css"> li { margin-top: 5px; } </style>
+    <style type="text/css"> li.biblio { margin-top: 5px; } </style>
 </head>
 
 EOF
 cat $1 |
 sed -e "s/@DATE@/$date/" \
-    -e 's/\*/<li>/' \
+    -e 's/\*/<li class=biblio>/' \
     -e "s%'''\([0-9][---0-9A-Z]*\)'''%<b>\1</b>%g" \
     -e "s% ''% <i>%g" -e "s%\([^ ]\)''%\1</i>%g" \
     -e "s%---%\&mdash;%g" \

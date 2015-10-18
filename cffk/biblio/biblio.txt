@@ -3,7 +3,20 @@
 <h2>Charles Fielding Finch Karney: Publications</h2>
 <p>Last update: @DATE@</p>
 
-<h3>Collections</h3>
+<ul>
+ <li><a href="#collections">Collections</a></li>
+ <li><a href="#journals">Journal articles</a></li>
+ <li><a href="#conferences">Conference proceedings</a></li>
+ <li><a href="#unpublished">Unpublished reports</a></li>
+ <li><a href="#theses">Theses</a></li>
+ <li><a href="#patents">Patents</a></li>
+ <li><a href="#software">Software</a></li>
+ <li><a href="#datasets">Datasets</a></li>
+ <li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+
+<h3><a name="collections"></a>
+Collections</h3>
 <ul>
 
  * <a href="http://scholar.google.com/citations?user=GGmZBUMAAAAJ">
@@ -17,6 +30,7 @@
 
 </ul>
 
+<a name="journals"></a>
 <h3>Journal articles</h3>
 <ul>
 
@@ -24,25 +38,29 @@
    ''Algorithms for geodesics'', <br>
    J. Geodesy '''87'''(1), 43--55 (2013). <br>
    doi:10.1007/s00190-012-0578-z <br>
-   arxiv:1109.4448
+   arxiv:1109.4448 <br>
+   <a href="http://geographiclib.sf.net/geod-addenda.html">addenda</a>
 
  * C. F. F. Karney, <br>
    ''Transverse Mercator with an accuracy of a few nanometers'', <br>
    J. Geodesy '''85'''(8), 475--485 (2011). <br>
    doi:10.1007/s00190-011-0445-3 <br>
-   arxiv:1002.1417
+   arxiv:1002.1417 <br>
+   <a href="http://geographiclib.sf.net/tm-addenda.html">addenda</a>
 
  * C. F. F. Karney, <br>
    ''Quaternions in molecular modeling'', <br>
    J. Mol. Graph. Mod. '''25'''(5), 595--604 (2007). <br>
    doi:10.1016/j.jmgm.2006.04.002 <br>
-   arxiv:physics/0506177
+   arxiv:physics/0506177 <br>
+   <a href="quat.html">supplement</a>
 
  * C. F. F. Karney, J. E. Ferrara, and S. Brunner, <br>
    ''Method for computing protein binding affinity'', <br>
    J. Comput. Chem. '''26'''(3), 243--251 (2005). <br>
    doi:10.1002/jcc.20167 <br>
-   arxiv:cond-mat/0401348
+   arxiv:cond-mat/0401348 <br>
+   <a href="wh.html">supplement</a>
 
  * H. Takenaga, ''et al.'', <br>
    ''Study of particle pumping characteristics for different
@@ -123,7 +141,8 @@
    Phys. Fluids '''1B'''(7), 1355--1368 (1989). <br>
    doi:10.1063/1.858966 <br>
    arxiv:plasm-ph/9502001 <br>
-   osti:6392639 PPPL--2598
+   osti:6392639 PPPL--2598 <br>
+   <a href="cond.html">supplement</a>
 
  * B. J. Braams and C. F. F. Karney, <br>
    ''Differential form of the collision integral for a
@@ -317,7 +336,8 @@
 
 </ul>
 
-<h3>Conference proceedings</h3>
+<h3><a name="conferences"></a>
+Conference proceedings</h3>
 <ul>
 
  * R. E. Deakin, M. N. Hunter, and C. F. F. Karney, <br>
@@ -503,7 +523,8 @@
 
 </ul>
 
-<h3>Unpublished reports</h3>
+<h3><a name="unpublished"></a>
+Unpublished reports</h3>
 <ul>
 
  * C. F. F. Karney, <br>
@@ -539,7 +560,8 @@
 
 </ul>
 
-<h3>Theses</h3>
+<h3><a name="theses"></a>
+Theses</h3>
 <ul>
 
  * C. F. F. Karney, <br>
@@ -554,7 +576,8 @@
 
 </ul>
 
-<h3>Patents</h3>
+<h3><a name="patents"></a>
+Patents</h3>
 <ul>
 
  * B. C. M. Matei, S. Samarasekera, J. Y. Kim, C. F. F. Karney,
@@ -571,11 +594,31 @@
 
 </ul>
 
-<h3>Datasets</h3>
+<h3><a name="software"></a>
+Software</h3>
 <ul>
 
  * C. F. F. Karney, <br>
-   ''Nearly optimal coverings of orientation space'' (2015). <br>
+   <a href="http://geographiclib.sourceforge.net">''GeographicLib''</a>
+   (2008--). <br>
+
+ * C. F. F. Karney, <br>
+   <a href="http://exrandom.sourceforge.net">''ExRandom''</a>
+   (2014). <br>
+
+ * C. F. F. Karney, <br>
+   <a href="http://randomlib.sourceforge.net">''RandomLib''</a>
+   (2006--2014). <br>
+
+</ul>
+
+<h3><a name="datasets"></a>
+Datasets</h3>
+<ul>
+
+ * C. F. F. Karney, <br>
+   <a href="https://github.com/cffk/orientation/tree/v1.1">
+   ''Nearly optimal coverings of orientation space''</a> (2015). <br>
    doi:10.5281/zenodo.32025
 
  * C. F. F. Karney, <br>
@@ -584,8 +627,13 @@
 
 </ul>
 
-<h3>Miscellaneous</h3>
+<h3><a name="miscellaneous"></a>
+Miscellaneous</h3>
 <ul>
+
+ * ''Geodesics on an ellipsoid'', <br>
+   <a href="https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid">
+   Wikipedia page</a> (2013--).
 
  * C. F. F. Karney and R. E. Deakin, <br>
    ''F. W. Bessel (1825); The calculation of longitude and latitude from
@@ -669,5 +717,10 @@
 
 </ul>
 -->
+
+    <hr>
+    <address><a href="mailto:charles@karney.com">Charles Karney</a>
+    </address>
+    <a href="../index.html">Back to main page.</a>
 </body>
 </html>

@@ -113,13 +113,14 @@ Collections</h3>
    electrons in a weakly relativistic plasma'', <br>
    Phys. Plasmas '''2'''(2), 450--458 (1995). <br>
    doi:10.1063/1.870970 <br>
-   osti:5068087 GA--A--21599
+   osti:5068087 GA-A-21599
 
  * D. P. Stotler and C. F. F. Karney, <br>
    ''Neutral gas transport modeling with Degas 2'', <br>
    Contrib. Plasma Phys. '''34'''(2--3), 392--397 (1994). <br>
    doi:10.1002/ctpp.2150340246 <br>
-   osti:10194032 osti:10194032
+   osti:10194032 PPPL-CFP-2962 <br>
+   % inis:25024349 PPPL-CFP-2962
 
  * D. P. Stotler, D. P. Coster, B. J. Braams, A. B. Ehrhardt,
    C. F. F. Karney, and M. Petravic, <br>
@@ -127,21 +128,24 @@ Collections</h3>
    codes'', <br>
    J. Nucl. Mater. '''196--198''', 894--897 (1992). <br>
    doi:10.1016/S0022-3115(06)80163-7 <br>
-   osti:10141722 PPPL--2842
+   osti:10141722 PPPL-2842 <br>
+   % inis:23069318 PPPL-2842
 
  * D. A. Ehst and C. F. F. Karney, <br>
    ''Approximate formula for radio-frequency current drive
    efficiency with magnetic trapping'', <br>
    Nucl. Fusion '''31'''(10), 1933--1938 (1991). <br>
    doi:10.1088/0029-5515/31/10/011 <br>
-   osti:6938388 ANL/FPP/TM--247
+   osti:6938388 ANL/FPP/TM-247 <br>
+   % inis:21065650 ANL/FPP/TM-247
 
  * B. J. Braams and C. F. F. Karney, <br>
    ''Conductivity of a relativistic plasma'', <br>
    Phys. Fluids '''1B'''(7), 1355--1368 (1989). <br>
    doi:10.1063/1.858966 <br>
    arxiv:plasm-ph/9502001 <br>
-   osti:6392639 PPPL--2598 <br>
+   osti:6392639 PPPL-2598 <br>
+   % inis:20043190 PPPL-2598 <br>
    <a href="cond.html">addenda</a>
 
  * B. J. Braams and C. F. F. Karney, <br>
@@ -150,95 +154,106 @@ Collections</h3>
    Phys. Rev. Lett. '''59'''(16), 1817--1820 (1987). <br>
    doi:10.1103/PhysRevLett.59.1817 <br>
    arxiv:physics/0501067 <br>
-   osti:6268312 PPPL--2467
+   osti:6268312 PPPL-2467 <br>
+   % inis:19020127 PPPL-2467
 
  * C. F. F. Karney and N. J. Fisch, <br>
    ''Current in wave driven plasmas'', <br>
    Phys. Fluids '''29'''(1), 180--192 (1986). <br>
    doi:10.1063/1.865975 <br>
    arxiv:physics/0501059 <br>
-   osti:5509273 PPPL--2222
+   osti:5509273 PPPL-2222 <br>
+   % inis:17000435 PPPL-2222
 
  * C. F. F. Karney, <br>
    ''Fokker--Planck and quasilinear codes'', <br>
    Comput. Phys. Rep. '''4'''(3--4), 183--244 (1986). <br>
    doi:10.1016/0167-7977(86)90029-8 <br>
    arxiv:physics/0501066 <br>
-   osti:6284229 PPPL--2290
+   osti:6284229 PPPL-2290 <br>
+   % inis:17041800 PPPL-2290
    <a href="fp.html">errata</a>
 
  * C. F. F. Karney, <br>
    ''Numerical techniques for the study of long-time correlations'', <br>
    Particle Accelerators '''19'''(1--4),213--221 (1986). <br>
    arxiv:nlin.CD/0401035 <br>
-   osti:5642277 PPPL--2218
+   osti:5642277 PPPL-2218 <br>
+   % inis:17000517 PPPL-2218
 
  * C. F. F. Karney and N. J. Fisch, <br>
    ''Efficiency of current drive by fast waves'', <br>
    Phys. Fluids '''28'''(1), 116--126 (1985). <br>
    doi:10.1063/1.865191 <br>
    arxiv:physics/0501058 <br>
-   osti:6537580 PPPL--2128
+   osti:6537580 PPPL-2128 <br>
+   % inis:16028202 PPPL-2128
 
  * N. J. Fisch and C. F. F. Karney, <br>
    ''Conversion of wave energy to magnetic field energy in a plasma torus'',
    <br>
    Phys. Rev. Lett. '''54'''(9), 897--900 (1985). <br>
    doi:10.1103/PhysRevLett.54.897 <br>
-   osti:6524403 PPPL--2132
+   osti:6524403 PPPL-2132 <br>
+   % inis:16028203 PPPL-2132
 
  * N. J. Fisch and C. F. F. Karney, <br>
    ''Asymptotic analysis of radio frequency-heated collisional plasma'', <br>
    Phys. Fluids '''28'''(10), 3107--3115 (1985). <br>
    doi:10.1063/1.865352 <br>
-   osti:5597414 PPPL--2205
+   osti:5597414 PPPL-2205 <br>
+   % inis:16082667 PPPL-2205
 
  * C. F. F. Karney, N. J. Fisch, and F. C. Jobes, <br>
    ''Comparison of the theory and the practice of lower hybrid current drive'',
    <br>
    Phys. Rev. '''32A'''(4), 2554--2556 (1985). <br>
    doi:10.1103/PhysRevA.32.2554 <br>
-   osti:6192001 PPPL--2152
+   osti:6192001 PPPL-2152 <br>
+   % inis:16043337 PPPL-2152
 
  * S. E. von Goeler, ''et al.'', <br>
    ''Angular distribution of the Bremsstrahlung emission
    during lower hybrid current drive on PLT'', <br>
    Nucl. Fusion '''25'''(11), 1515--1528 (1985). <br>
    doi:10.1088/0029-5515/25/11/001 <br>
-   osti:5642336 PPPL--2225
+   osti:5642336 PPPL-2225
 
  * J. E. Stevens, ''et al.'', <br>
    ''Modelling of the electron distribution based on
    Bremsstrahlung emission during lower-hybrid current drive on PLT'', <br>
    Nucl. Fusion '''25'''(11), 1529--1541 (1985). <br>
    doi:10.1088/0029-5515/25/11/002 <br>
-   osti:5959331 PPPL--2204
+   osti:5959331 PPPL-2204
 
  * C. F. F. Karney, <br>
    ''Long-time correlations in the stochastic regime'', <br>
    Physica '''8D'''(3), 360--380 (1983). <br>
    doi:10.1016/0167-2789(83)90232-4 <br>
    arxiv:nlin.CD/0501023 <br>
-   osti:6694187 PPPL--1938
+   osti:6694187 PPPL-1938 <br>
+   % inis:17066625 PPPL-1938
 
  * Y. H. Ichikawa, T. Kamimura, and C. F. F. Karney, <br>
    ''Stochastic motion of particles in tandem mirror devices'', <br>
    Physica '''6D'''(2), 233--240 (1983). <br>
    doi:10.1016/0167-2789(83)90008-8 <br>
-   IPPJ--562
+   inis:14803778 IPPJ-562
 
  * C. F. F. Karney, A. B. Rechester, and R. B. White, <br>
    ''Effect of noise on the standard mapping'', <br>
    Physica '''4D'''(3), 425--438 (1982). <br>
    doi:10.1016/0167-2789(82)90045-8 <br>
    arxiv:nlin.CD/0501021 <br>
-   osti:6575018 PPPL--1752
+   osti:6575018 PPPL-1752 <br>
+   % inis:12609084 PPPL-1752
 
  * N. J. Fisch and C. F. F. Karney, <br>
    ''Current generation with low-frequency waves'', <br>
    Phys. Fluids '''24'''(1), 27--39 (1981). <br>
    doi:10.1063/1.863243 <br>
-   osti:5632593 PPPL--1624
+   osti:5632593 PPPL-1624 <br>
+   % inis:11529603 PPPL-1624
 
  * C. F. F. Karney, <br>
    ''Temporal evolution of lower hybrid waves in the presence
@@ -246,33 +261,38 @@ Collections</h3>
    Phys. Fluids '''24'''(1), 127--137 (1981). <br>
    doi:10.1063/1.863229 <br>
    arxiv:physics/0501047 <br>
-   osti:5236823 PPPL--1672
+   osti:5236823 PPPL-1672 <br>
+   % inis:11563417 PPPL-1672
 
  * A. H. Kritz, N. J. Fisch, and C. F. F. Karney, <br>
    ''Effect of resonance broadening on the evolution of the
    edge of a turbulent spectrum'', <br>
    Phys. Fluids '''24'''(3), 504--508 (1981). <br>
    doi:10.1063/1.863397 <br>
-   osti:5293495 PPPL--1699
+   osti:5293495 PPPL-1699 <br>
+   % inis:11563431 PPPL-1699
 
  * C. F. F. Karney and N. J. Fisch, <br>
    ''Currents driven by electron cyclotron waves'', <br>
    Nucl. Fusion '''21'''(12), 1549--1557 (1981). <br>
    doi:10.1088/0029-5515/21/12/004 <br>
-   osti:6309878 PPPL--1808
+   osti:6309878 PPPL-1808 <br>
+   % inis:12636408 PPPL-1808
 
  * C. F. F. Karney, A. Sen, and F. Y. F. Chu, <br>
    ''Nonlinear evolution of lower hybrid waves'', <br>
    Phys. Fluids '''22'''(5), 940--952 (1979). <br>
    doi:10.1063/1.862688 <br>
-   osti:6812854 PPPL--1452
+   osti:6812854 PPPL-1452 <br>
+   % inis:9415691 PPPL-1452
 
  * C. F. F. Karney, F. W. Perkins, and Y. C. Sun, <br>
    ''Alfvén resonance effects on magnetosonic modes in
    large tokamaks'', <br>
    Phys. Rev. Lett. '''42'''(24), 1621--1624 (1979). <br>
    doi:10.1103/PhysRevLett.42.1621 <br>
-   osti:6890940 PPPL--1471
+   osti:6890940 PPPL-1471 <br>
+   % inis:10434632 PPPL-1471
 
  * G. P. Leclert, C. F. F. Karney, A. Bers, and D. J. Kaup, <br>
    ''Two-dimensional self-modulation of lower hybrid waves in
@@ -286,14 +306,16 @@ Collections</h3>
    radio-frequency traveling waves'', <br>
    Phys. Fluids '''22'''(9), 1817--1824 (1979). <br>
    doi:10.1063/1.862787 <br>
-   osti:6357651 PPPL--1506
+   osti:6357651 PPPL-1506 <br>
+   % inis:10453487 PPPL-1506
 
  * C. F. F. Karney, <br>
    ''Stochastic ion heating by a lower hybrid wave: II'', <br>
    Phys. Fluids '''22'''(11), 2188--2209 (1979). <br>
    doi:10.1063/1.862512 <br>
    arxiv:physics/0501034 <br>
-   osti:6159903 PPPL--1528
+   osti:6159903 PPPL-1528 <br>
+   % inis:10475062 PPPL-1528
 
  * A. Sen, C. F. F. Karney, G. L. Johnston, and A. Bers, <br>
    ''Three-dimensional effects in the non-linear propagation
@@ -313,7 +335,8 @@ Collections</h3>
    ''Stochastic ion heating by a lower hybrid wave'', <br>
    Phys. Fluids '''21'''(9) 1584--1599 (1978). <br>
    doi:10.1063/1.862406 <br>
-   osti:5031037 PPPL--1429 <br>
+   osti:5031037 PPPL-1429 <br>
+   % inis:9396728 PPPL-1429 <br>
    <a href="stoch.html">errata</a>
 
  * C. F. F. Karney and A. Bers, <br>
@@ -353,22 +376,22 @@ Conference proceedings</h3>
    plasmas'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1996'',
    vol. 2, 633--639 (IAEA, 1997). <br>
-   inis:29009213 IAEA-CN--64/DP-16 <br>
-   osti:304210 PPPL--3221
+   inis:29009213 IAEA-CN-64/DP-16 <br>
+   osti:304210 PPPL-3221
 
  * R. P. Majeski, ''et al.'', <br>
    ''Mode conversion studies in TFTR'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1994'',
    vol. 1, 443--452 (IAEA, 1995). <br>
    inis:27018163 IAEA-CN-60/A3-4 <br>
-   osti:34428 PPPL--3086
+   osti:34428 PPPL-3086
 
  * D. P. Stotler, ''et al.'', <br>
    ''Modeling of Alcator C-MOD divertor plasmas in high
    recycling and detached regimes'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1994'',
    vol. 3, 363--372 (IAEA, 1995). <br>
-   inis:27058714 IAEA-CN--60/D-15
+   inis:27058714 IAEA-CN-60/D-15
 
  * N. J. Fisch, E. J. Valeo, C. F. F. Karney, and R. P. Majeski, <br>
    ''Possibility of using ion Bernstein waves for alpha power extraction
@@ -381,7 +404,7 @@ Conference proceedings</h3>
    plasma'', <br>
    AIP Conf. Proc. '''289''', 305--308 (1994). <br>
    doi:10.1063/1.44947 <br>
-   osti:10151625 GA--A--21254
+   osti:10151625 GA-A-21254
 
  * C. F. F. Karney, <br>
    ''Neutral gas modeling in divertors'', <br>
@@ -392,14 +415,14 @@ Conference proceedings</h3>
    devices'', <br>
    in ''Europhysics Topical Conf. on Radio Frequency Heating and
    Current Drive of Fusion Devices'', 173 (1992). <br>
-   osti:5068087 GA--A--20873
+   osti:5068087 GA-A-20873
 
  * D. B. Batchelor, ''et al.'', <br>
    ''Fast-wave current drive modelling for large
    non-circular tokamaks'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1990'',
    vol. 1, 817--822 (IAEA, 1991). <br>
-   inis:22057647 IAEA-CN--53/E-3-1 <br>
+   inis:22057647 IAEA-CN-53/E-III-11 <br>
    osti:6509146 osti:6509146
 
  * D. P. Stotler, M. Ulrickson, D. P. Coster, A. B. Ehrhardt, B. J. Braams, and
@@ -432,13 +455,13 @@ Conference proceedings</h3>
    ''Start-up and ramp-up of the PLT tokamak by lower hybrid waves'', <br>
    in ''Tokamak Start-up'', 203--216 (Springer, 1986). <br>
    doi:10.1007/978-1-4757-1889-8_12 <br>
-   osti:5183297 PPPL--2241
+   osti:5183297 PPPL-2241
 
  * R. W. Motley, ''et al.'', <br>
    ''Lower hybrid current ramp-up in the PLT tokamak'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1984'',
    vol. 1, 473--478 (IAEA, 1985). <br>
-   inis:16032336 IAEA-CN--44/F-II-2
+   inis:16032336 IAEA-CN-44/F-II-2
 
  * C. F. F. Karney, <br>
    ''Long-time correlations in stochastic systems'', <br>
@@ -451,7 +474,8 @@ Conference proceedings</h3>
    hard X-ray emission during lower hybrid current drive on PLT'', <br>
    in ''Proc. Fifth Topical Conf. on Radio Frequency Plasma Heating'',
    vol. 2, 96--103 (1983). <br>
-   osti:6087405 PPPL--2012
+   osti:6087405 PPPL-2012 <br>
+   % inis:14789642 PPPL-2012
 
  * A. B. Rechester, M. N. Rosenbluth, R. B. White, and C. F. F. Karney, <br>
    ''Statistical description of the Chirikov--Taylor
@@ -463,7 +487,7 @@ Conference proceedings</h3>
    DD reactors'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1982'',
    vol. 3, 349--361 (IAEA, 1983). <br>
-   inis:14757012 IAEA-CN--41/E-1-1
+   inis:14757012 IAEA-CN-41/E-1-1
 
  * R. B. White, A. H. Boozer, R. J. Goldston, R. G. Hay, J. Albert, and C. F. F.
    Karney, <br>
@@ -471,14 +495,14 @@ Conference proceedings</h3>
    destroyed magnetic surfaces'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1982'',
    vol. 3, 391--401 (IAEA, 1983). <br>
-   inis:14790015 IAEA-CN--41/T-3
+   inis:14790015 IAEA-CN-41/T-3
 
  * M. Porkolab, ''et al.'', <br>
    ''Lower-hybrid heating and current drive in tokamaks and related
    experiments'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1980'',
    vol. 2, 507--514 (IAEA, 1981). <br>
-   inis:14757002 IAEA-CN--41/C-4
+   inis:14757002 IAEA-CN-41/C-4
 
  * C. F. F. Karney. <br>
    ''Temporal evolution of nonlinear lower hybrid waves'', <br>
@@ -499,7 +523,8 @@ Conference proceedings</h3>
    a non-integrable evolution equation'', <br>
    in ''Solitons and Condensed Matter Physics'' (Springer-Verlag, 1978). <br>
    doi:10.1007/978-3-642-81291-0_8 <br>
-   osti:6683038 PPPL--1455
+   osti:6683038 PPPL-1455 <br>
+   % inis:10424527 PPPL-1455
 
  * C. F. F. Karney and F. W. Perkins, <br>
    ''Alfvén wave heating with high-Q eigenmodes'', <br>
@@ -548,7 +573,7 @@ Unpublished reports</h3>
  * D. Q. Hwang, C. F. F. Karney, J. C. Hosea, J. A. Murphy, C. E. Singer, and
    J. R. Wilson. <br>
    ''Modeling of ICRF heating of a tokamak plasma'' (1983). <br>
-   osti:6233876 PPPL--1990
+   osti:6233876 PPPL-1990
 
  * C. F. F. Karney and A. Bers, <br>
    ''Nonlinear orbit perturbation and ion heating'', <br>
@@ -660,7 +685,7 @@ Miscellaneous</h3>
    structure of the stochastic layer of a nonlinear resonance'' (1983). <br>
    inis:17055778 inis:17055778 <br>
    <a href="http://www.quantware.ups-tlse.fr/chirikov/refs/chi1981b2.pdf">
-   PPPL--TRANS--133</a>
+   PPPL-TRANS-133</a>
 
  * C. F. F. Karney, <br>
    ''Complex Plotting and Graphics---PLOT2'', <br>
@@ -706,22 +731,15 @@ Miscellaneous</h3>
 
 </ul>
 
-<!--
-<h3>Pending</h3>
-<ul>
-
- * G. Taylor, ''et al.'', <br>
-   ''Non-thermal electron cyclotron emission from TFTR supershot
-   plasmas,'' <br>
-   Europhysics Conference Abstracts '''13B''', 31--34 (1989).
-
- * J. C. Hosea, ''et al.'', <br>
-   ''High power ICRF heating on PLT and extrapolation to future
-   devices'', <br>
-   in ''Heating in Toroidal Plasmas'', vol. I, 213--223 (1982).
-
-</ul>
--->
+ % * G. Taylor, ''et al.'', <br>
+ %   ''Non-thermal electron cyclotron emission from TFTR supershot
+ %   plasmas,'' <br>
+ %   Europhysics Conference Abstracts '''13B''', 31--34 (1989).
+ %
+ % * J. C. Hosea, ''et al.'', <br>
+ %   ''High power ICRF heating on PLT and extrapolation to future
+ %   devices'', <br>
+ %   in ''Heating in Toroidal Plasmas'', vol. I, 213--223 (1982).
 
     <hr>
     <address><a href="mailto:charles@karney.com">Charles Karney</a>

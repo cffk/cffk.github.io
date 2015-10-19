@@ -687,19 +687,22 @@ Miscellaneous</h3>
    ''Course in Spheroidal Geodesy'' <br>
    U.S. Air Force Report FTD-MT-64-390 (1967), <br>
    doi:10.5281/zenodo.32371 <br>
-   <a href="http://www.dtic.mil/docs/citations/AD0650520">AD0650520</a>
+   <a href="http://www.dtic.mil/docs/citations/AD0650520">AD0650520</a> <br>
+   <a href="https://www.worldcat.org/oclc/6150611">oclc:6150611</a>
 
  * H. R. Helmert, <br>
    ''Mathematical and Physical Theories of Higher Geodesy, Part 1,
    Preface and the Mathematical Theories'' <br>
    (ACIC, St. Louis, 1964). <br>
-   doi:10.5281/zenodo.32050
+   doi:10.5281/zenodo.32050 <br>
+   <a href="https://www.worldcat.org/oclc/17273288">oclc:17273288</a>
 
  * H. R. Helmert, <br>
    ''Mathematical and Physical Theories of Higher Geodesy, Part 2, The
    Physical Theories'' <br>
    (ACIC, St. Louis, 1964). <br>
-   doi:10.5281/zenodo.32051
+   doi:10.5281/zenodo.32051 <br>
+   <a href="https://www.worldcat.org/oclc/17273288">oclc:17273288</a>
 
 </ul>
 

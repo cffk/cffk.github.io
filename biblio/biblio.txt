@@ -406,9 +406,9 @@ Conference proceedings</h3>
    doi:10.1063/1.44947 <br>
    osti:10151625 GA-A-21254
 
- * C. F. F. Karney, <br>
-   ''Neutral gas modeling in divertors'', <br>
-   in ''Theory of Fusion Plasmas'', 183--189 (Editrice Compositori, 1992).
+   % * C. F. F. Karney, <br>
+   %   ''Neutral gas modeling in divertors'', <br>
+   %   in ''Theory of Fusion Plasmas'', 183--189 (Editrice Compositori, 1992).
 
  * S. C. Chiu, C. F. F. Karney, R. W. Harvey, and T. K. Mau, <br>
    ''A formula for efficiency of fast wave current drive in fusion
@@ -442,14 +442,14 @@ Conference proceedings</h3>
    doi:10.1063/1.38487 <br>
    arxiv:physics/0402004
 
- * B. J. Braams and C. F. F. Karney, <br>
-   ''Numerical Fokker--Planck studies'', <br>
-   Europhysics Conference Abstracts '''11D''', 994--997 (1987).
+   %  * B. J. Braams and C. F. F. Karney, <br>
+   %    ''Numerical Fokker--Planck studies'', <br>
+   %    Europhysics Conference Abstracts '''11D''', 994--997 (1987).
 
- * B. J. Braams and C. F. F. Karney, <br>
-   ''Multigrid solution of the Fokker--Planck equation'', <br>
-   in ''Proc. 12th Conference on the Numerical Simulation of
-   Plasmas'' (1987).
+   %  * B. J. Braams and C. F. F. Karney, <br>
+   %    ''Multigrid solution of the Fokker--Planck equation'', <br>
+   %    in ''Proc. 12th Conference on the Numerical Simulation of
+   %    Plasmas'' (1987).
 
  * F. C. Jobes, ''et al.'', <br>
    ''Start-up and ramp-up of the PLT tokamak by lower hybrid waves'', <br>

@@ -35,6 +35,11 @@ Collections</h3>
 <ul>
 
  * C. F. F. Karney, <br>
+   ''Sampling exactly from the normal distribution'', <br>
+   ACM TOMS, to appear (2016). <br>
+   arxiv:1303.6257
+
+ * C. F. F. Karney, <br>
    ''Algorithms for geodesics'', <br>
    J. Geodesy '''87'''(1), 43--55 (2013). <br>
    doi:10.1007/s00190-012-0578-z <br>
@@ -177,6 +182,7 @@ Collections</h3>
  * C. F. F. Karney, <br>
    ''Numerical techniques for the study of long-time correlations'', <br>
    Particle Accelerators '''19'''(1--4),213--221 (1986). <br>
+   <a href="http://cds.cern.ch/record/708232">cern:708232 <br>
    arxiv:nlin.CD/0401035 <br>
    osti:5642277 PPPL-2218 <br>
    % inis:17000517 PPPL-2218
@@ -480,7 +486,8 @@ Conference proceedings</h3>
  * A. B. Rechester, M. N. Rosenbluth, R. B. White, and C. F. F. Karney, <br>
    ''Statistical description of the Chirikov--Taylor
    model in the presence of noise'', <br>
-   in '' Long-Time Prediction in Dynamics'', 471--483 (Wiley, 1983).
+   in '' Long-Time Prediction in Dynamics'', 471--483 (Wiley, 1983). <br>
+   oclc:8784843
 
  * C. C. Baker, ''et al.'', <br>
    ''Tokamak reactor studies: Studies of DT demonstration reactors and
@@ -553,10 +560,6 @@ Conference proceedings</h3>
 <h3><a name="unpublished"></a>
 Unpublished reports</h3>
 <ul>
-
- * C. F. F. Karney, <br>
-   ''Sampling exactly from the normal distribution'' (2013). <br>
-   arxiv:1303.6257
 
  * C. F. F. Karney, <br>
    ''Geodesics on an ellipsoid of revolution'' (2011). <br>
@@ -713,21 +716,21 @@ Miscellaneous</h3>
    U.S. Air Force Report FTD-MT-64-390 (1967), <br>
    doi:10.5281/zenodo.32371 <br>
    <a href="http://www.dtic.mil/docs/citations/AD0650520">AD0650520</a> <br>
-   <a href="https://www.worldcat.org/oclc/6150611">oclc:6150611</a>
+   oclc:6150611
 
  * H. R. Helmert, <br>
    ''Mathematical and Physical Theories of Higher Geodesy, Part 1,
    Preface and the Mathematical Theories'' <br>
    (ACIC, St. Louis, 1964). <br>
    doi:10.5281/zenodo.32050 <br>
-   <a href="https://www.worldcat.org/oclc/17273288">oclc:17273288</a>
+   oclc:17273288
 
  * H. R. Helmert, <br>
    ''Mathematical and Physical Theories of Higher Geodesy, Part 2, The
    Physical Theories'' <br>
    (ACIC, St. Louis, 1964). <br>
    doi:10.5281/zenodo.32051 <br>
-   <a href="https://www.worldcat.org/oclc/17273288">oclc:17273288</a>
+   oclc:17273288
 
 </ul>
 

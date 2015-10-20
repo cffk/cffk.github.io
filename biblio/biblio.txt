@@ -10,8 +10,7 @@
  <li><a href="#unpublished">Unpublished reports</a></li>
  <li><a href="#theses">Theses</a></li>
  <li><a href="#patents">Patents</a></li>
- <li><a href="#software">Software</a></li>
- <li><a href="#datasets">Datasets</a></li>
+ <li><a href="#software">Software and datasets</a></li>
  <li><a href="#miscellaneous">Miscellaneous</a></li>
 </ul>
 
@@ -563,7 +562,9 @@ Unpublished reports</h3>
 
  * C. F. F. Karney, <br>
    ''Geodesics on an ellipsoid of revolution'' (2011). <br>
-   arxiv:1102.1215
+   arxiv:1102.1215 <br>
+   <a href="http://geographiclib.sf.net/geod-addenda.html#geod-errata">
+   errata</a>
 
  * C. F. F. Karney and J. E. Ferrara, <br>
    ''Modeling molecules with constraints'' (2005). <br>
@@ -625,25 +626,7 @@ Patents</h3>
 </ul>
 
 <h3><a name="software"></a>
-Software</h3>
-<ul>
-
- * C. F. F. Karney, <br>
-   <a href="http://geographiclib.sourceforge.net">''GeographicLib''</a>
-   (2008--). <br>
-
- * C. F. F. Karney, <br>
-   <a href="http://exrandom.sourceforge.net">''ExRandom''</a>
-   (2014). <br>
-
- * C. F. F. Karney, <br>
-   <a href="http://randomlib.sourceforge.net">''RandomLib''</a>
-   (2006--2014). <br>
-
-</ul>
-
-<h3><a name="datasets"></a>
-Datasets</h3>
+Software and datasets</h3>
 <ul>
 
  * C. F. F. Karney, <br>
@@ -652,8 +635,25 @@ Datasets</h3>
    doi:10.5281/zenodo.32025
 
  * C. F. F. Karney, <br>
+   <a href="http://geographiclib.sourceforge.net">''GeographicLib''</a>
+   (2008--). <br>
+   doi:10.5281/zenodo.32463
+
+ * C. F. F. Karney, <br>
    ''Test set for geodesics'' (2010). <br>
    doi:10.5281/zenodo.32156
+
+ * C. F. F. Karney, <br>
+   ''Test data for the transverse Mercator projection'' (2009). <br>
+   doi:10.5281/zenodo.32470
+
+ * C. F. F. Karney, <br>
+   <a href="http://exrandom.sourceforge.net">''ExRandom''</a>
+   (2014). <br>
+
+ * C. F. F. Karney, <br>
+   <a href="http://randomlib.sourceforge.net">''RandomLib''</a>
+   (2006--2014). <br>
 
 </ul>
 

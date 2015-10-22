@@ -596,14 +596,14 @@ Theses</h3>
 <ul>
 
  * C. F. F. Karney, <br>
-   ''Parametric coupling to low frequency plasma waves'', <br>
-   S.M. thesis, Massachusetts Institute of Technology (1974). <br>
-   doi:10.5281/zenodo.32009
-
- * C. F. F. Karney, <br>
    ''Stochastic Heating of Ions in a Tokamak by Radio-Frequency Power'', <br>
    Ph.D. thesis, Massachusetts Institute of Technology (1977). <br>
    doi:10.5281/zenodo.32013
+
+ * C. F. F. Karney, <br>
+   ''Parametric coupling to low frequency plasma waves'', <br>
+   S.M. thesis, Massachusetts Institute of Technology (1974). <br>
+   doi:10.5281/zenodo.32009
 
 </ul>
 

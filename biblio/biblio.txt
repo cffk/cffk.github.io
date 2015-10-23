@@ -665,6 +665,10 @@ Miscellaneous</h3>
    <a href="https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid">
    Wikipedia page</a> (2013--).
 
+ * C. F. F. Karney, <br>
+   <a href="http://geographiclib.sourceforge.net/geodesic-papers/biblio.html">
+   ''A geodesic bibliography''</a> (2009--).
+
  * C. F. F. Karney and R. E. Deakin, <br>
    ''F. W. Bessel (1825); The calculation of longitude and latitude from
    geodesic measurements'', <br>

@@ -8,6 +8,3 @@ http://www.petrel.org/biblio/fp.html
 http://www.petrel.org/biblio/quat.html
 http://www.petrel.org/biblio/stoch.html
 http://www.petrel.org/biblio/wh.html
-http://www.petrel.org/geographic/index.html
-http://www.petrel.org/orientation/index.html
-http://www.petrel.org/random/index.html

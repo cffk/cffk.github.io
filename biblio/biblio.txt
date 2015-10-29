@@ -95,7 +95,7 @@ Collections</h3>
    Rev. Sci. Instrum. '''70'''(1), 347--350 (1999). <br>
    doi:10.1063/1.1149431
 
- * D. P. Stotler, ''et al.'', <br>
+ * D. P. Stotler, R. A. Vesey, D. P. Coster, C. F. F. Karney, ''et al.'', <br>
    ''Coupled Monte Carlo neutral-fluid plasma simulation
    of Alcator C-Mod divertor plasma near detachment'', <br>
    J. Nucl. Mater. '''266--269''', 947--952 (1999). <br>

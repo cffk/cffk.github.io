@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /geographic
+Disallow: /random
+Disallow: /orientation

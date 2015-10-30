@@ -376,7 +376,7 @@ Conference proceedings</h3>
    Conference'' (2011). <br>
    <a href="http://icaci.org/documents/ICC_proceedings/ICC2011/Oral Presentations PDF/D1-Map projection/CO-300.pdf">CO-300</a>
 
- * D. P. Stotler, C. F. F. Karney, ''et al.'', <br>
+ * D. P. Stotler, A. Yu. Pigarov, C. F. F. Karney, ''et al.'', <br>
    ''Degas 2 neutral transport modeling in high density, low temperature
    plasmas'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1996'',

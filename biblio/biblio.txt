@@ -19,14 +19,18 @@ Collections</h3>
 <ul>
 
  * <a href="http://scholar.google.com/citations?user=GGmZBUMAAAAJ">
-   Google Scholar</a> &bullet;
-   <a href="http://arxiv.org/a/karney_c_1">arXiv</a> &bullet;
-   <a href="http://orcid.org/0000-0002-5006-5836">ORCID</a> &bullet;
+   Google Scholar</a>
+   &bullet;
+   <a href="http://arxiv.org/a/karney_c_1">arXiv</a>
+   &bullet;
+   <a href="http://orcid.org/0000-0002-5006-5836">ORCID</a>
+   &bullet;
    <a href="http://www.researcherid.com/rid/C-1371-2013">ReseacherID</a>
    &bullet;
    <a href="http://www.scopus.com/authid/detail.url?authorId=6603872963">
    Scopus</a>
-
+   &bullet;
+   <a href="https://www.sri.com/about/people/charles-karney">SRI</a>
 </ul>
 
 <a name="journals"></a>

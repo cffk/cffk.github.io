@@ -674,9 +674,8 @@ Miscellaneous</h3>
  * B. V. Chirikov and D. L. Shepelyansky, <br>
    ''Statistics of Poincaré recurrences and the
    structure of the stochastic layer of a nonlinear resonance'' (1983). <br>
-   inis:17055778 inis:17055778 <br>
-   <a href="http://www.quantware.ups-tlse.fr/chirikov/refs/chi1981b2.pdf">
-   PPPL-TRANS-133</a>
+   doi: 10.5281/zenodo.33430 <br>
+   inis:17055778 PPPL-TRANS-133
 
  * C. F. F. Karney, <br>
    ''Complex Plotting and Graphics---PLOT2'', <br>

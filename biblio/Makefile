@@ -1,2 +1,2 @@
-index.html: biblio.txt biblio.sh
-	./biblio.sh $< > $@
+index.html: biblio.txt proc.sh
+	./proc.sh $< > $@

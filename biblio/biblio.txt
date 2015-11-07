@@ -619,6 +619,10 @@ Software and datasets</h3>
    doi:10.5281/zenodo.32025
 
  * C. F. F. Karney, <br>
+   <a href="http://exrandom.sourceforge.net">''ExRandom''</a>
+   (2014). <br>
+
+ * C. F. F. Karney, <br>
    <a href="http://geographiclib.sourceforge.net">''GeographicLib''</a>
    (2008--). <br>
    doi:10.5281/zenodo.32463
@@ -630,10 +634,6 @@ Software and datasets</h3>
  * C. F. F. Karney, <br>
    ''Test data for the transverse Mercator projection'' (2009). <br>
    doi:10.5281/zenodo.32470
-
- * C. F. F. Karney, <br>
-   <a href="http://exrandom.sourceforge.net">''ExRandom''</a>
-   (2014). <br>
 
  * C. F. F. Karney, <br>
    <a href="http://randomlib.sourceforge.net">''RandomLib''</a>

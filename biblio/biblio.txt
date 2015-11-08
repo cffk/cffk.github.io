@@ -492,7 +492,7 @@ Conference proceedings</h3>
    experiments'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1980'',
    vol. 2, 507--514 (IAEA, 1981). <br>
-   inis:14757002 IAEA-CN-41/C-4
+   inis:13704354 IAEA-CN-38/T-2-1
 
  * C. F. F. Karney. <br>
    ''Temporal evolution of nonlinear lower hybrid waves'', <br>

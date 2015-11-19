@@ -51,6 +51,9 @@
    <a href="wh.html">errata</a>
 
  * H. Takenaga, ''et al.'', <br>
+   % H. Takenaga, A. Sakasai, H. Kubo, N. Asakura, M. J. Schaffer,
+   % T. W. Petrie, M. A. Mahdavi, D. R. Baker, S. L. Allen, G. D. Porter,
+   % T. D. Rognlien, M. E. Rensink, D. P. Stotler, C. F. F. Karney
    ''Study of particle pumping characteristics for different
    pumping geometries in JT-60U and DIII-D divertors'', <br>
    Nucl. Fusion '''41'''(12), 1777--1787 (2001). <br>
@@ -80,6 +83,8 @@
    doi:10.1063/1.1149431
 
  * D. P. Stotler, R. A. Vesey, D. P. Coster, C. F. F. Karney, ''et al.'', <br>
+   % D. P. Stotler, R. A. Vesey, D. P. Coster, C. F. F. Karney,
+   % B. LaBombard, B. Lipschultz, C. S. Pitcher, R. Schneider
    ''Coupled Monte Carlo neutral-fluid plasma simulation
    of Alcator C-Mod divertor plasma near detachment'', <br>
    J. Nucl. Mater. '''266--269''', 947--952 (1999). <br>
@@ -202,6 +207,11 @@
    % inis:16043337 PPPL-2152
 
  * S. E. von Goeler, ''et al.'', <br>
+   % S. E. von Goeler, J. E. Stevens, S. Bernabei, M. L. Bitter,
+   % T.-K. Chu, P. C. Efthimion, N. J. Fisch, W. M. Hooke, K. W. Hill,
+   % J. C. Hosea, F. C. Jobes, C. F. F. Karney, J. A. Mervine,
+   % E. B. Meservey, R. W. Motley, P. G. Roney, S. S. Sesnic, K. Silber,
+   % G. Taylor
    ''Angular distribution of the Bremsstrahlung emission
    during lower hybrid current drive on PLT'', <br>
    Nucl. Fusion '''25'''(11), 1515--1528 (1985). <br>
@@ -209,6 +219,9 @@
    osti:5642336 PPPL-2225
 
  * J. E. Stevens, ''et al.'', <br>
+   % J. E. Stevens, S. E. von Goeler, S. Bernabei, M. L. Bitter,
+   % T.-K. Chu, P. C. Efthimion, N. J. Fisch, W. M. Hooke, J. C. Hosea,
+   % F. C. Jobes, C. F. F. Karney, E. B. Meservey, R. W. Motley, G. Taylor
    ''Modelling of the electron distribution based on
    Bremsstrahlung emission during lower-hybrid current drive on PLT'', <br>
    Nucl. Fusion '''25'''(11), 1529--1541 (1985). <br>
@@ -361,6 +374,9 @@ Conference proceedings</h3>
    <a href="http://icaci.org/documents/ICC_proceedings/ICC2011/Oral Presentations PDF/D1-Map projection/CO-300.pdf">CO-300</a>
 
  * D. P. Stotler, A. Yu. Pigarov, C. F. F. Karney, ''et al.'', <br>
+   % D. P. Stotler, A. Yu. Pigarov, C. F. F. Karney, S. I. Krasheninnikov,
+   % B. LaBombard, B. Lipschultz, G. M. McCracken, A. Niemczewski,
+   % J. A. Snipes, J. L. Terry, R. A. Vesey
    ''Degas 2 neutral transport modeling in high density, low temperature
    plasmas'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1996'',
@@ -369,6 +385,18 @@ Conference proceedings</h3>
    osti:304210 PPPL-3221
 
  * R. P. Majeski, ''et al.'', <br>
+   % R. P. Majeski, N. J. Fisch, H. Adler, S. Batha, M. G. Bell,
+   % R. E. Bell, M. L. Bitter, N. L. Bretz, R. Budny, C. E. Bush,
+   % S. R. Cauffman, Z. Chang, D. S. Darrow, A. C. England,
+   % E. Fredrickson, H. P. Furth, G. R. Hanson, M. C. Herrmann,
+   % K. W. Hill, J. C. Hosea, L. C. Johnson, D. W. Ignat, C. F. F. Karney,
+   % F. Levinton, E. Mazzucato, S. S. Medley, D. R. Mikkelsen,
+   % M. Murakami, H. E. Mynick, R. M. Nazikian, H. K. Park,
+   % C. Kieras-Phillips, A. T. Ramsey, D. A. Rasmussen, J.-M. Rax,
+   % J. H. Rogers, G. Schilling, J. F. Schivell, S. D. Scott,
+   % P. B. Snyder, J. E. Stevens, E. Synakowski, G. Taylor, E. J. Valeo,
+   % Z. H. Wang, J. B. Wilgen, J. R. Wilson, M. C. Zarnstorff,
+   % S. J. Zweben
    ''Mode conversion studies in TFTR'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1994'',
    vol. 1, 443--452 (IAEA, 1995). <br>
@@ -376,6 +404,9 @@ Conference proceedings</h3>
    osti:34428 PPPL-3086
 
  * D. P. Stotler, ''et al.'', <br>
+   % D. P. Stotler, J. A. Snipes, G. M. McCracken, B. LaBombard,
+   % M. Petravic, R. A. Vesey, S. Barle, G. Bateman, C. F. F. Karney,
+   % B. Lipschultz, J. L. Terry, S. M. Wolfe
    ''Modeling of Alcator C-MOD divertor plasmas in high
    recycling and detached regimes'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1994'',
@@ -395,10 +426,6 @@ Conference proceedings</h3>
    doi:10.1063/1.44947 <br>
    osti:10151625 GA-A-21254
 
-   % * C. F. F. Karney, <br>
-   %   ''Neutral gas modeling in divertors'', <br>
-   %   in ''Theory of Fusion Plasmas'', 183--189 (Editrice Compositori, 1992).
-
  * S. C. Chiu, C. F. F. Karney, R. W. Harvey, and T. K. Mau, <br>
    ''A formula for efficiency of fast wave current drive in fusion
    devices'', <br>
@@ -407,6 +434,8 @@ Conference proceedings</h3>
    osti:5068087 GA-A-20873
 
  * D. B. Batchelor, ''et al.'', <br>
+   % D. B. Batchelor, R. C. Goldfinger, E. F. Jaeger, M. D. Carter,
+   % D. W. Swain, D. A. Ehst, C. F. F. Karney
    ''Fast-wave current drive modelling for large
    non-circular tokamaks'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1990'',
@@ -414,13 +443,16 @@ Conference proceedings</h3>
    inis:22057647 IAEA-CN-53/E-III-11 <br>
    osti:6509146 osti:6509146
 
- * D. P. Stotler, M. Ulrickson, D. P. Coster, A. B. Ehrhardt, B. J. Braams, and
-   C. F. F. Karney, <br>
+ * D. P. Stotler, M. Ulrickson, D. P. Coster, A. B. Ehrhardt,
+   B. J. Braams, and C. F. F. Karney, <br>
    ''Compact ignition tokamak edge and divertor modeling'', <br>
    in ''1990 IEEE International Conference on Plasma Science'' (1990). <br>
    doi:10.1109/PLASMA.1990.110520
 
  * B. J. Braams, ''et al.'', <br>
+   % B. J. Braams, D. P. Coster, A. B. Ehrhardt, C. F. F. Karney,
+   % D. M. Manos, M. Petravic, C. S. Pitcher, A. T. Ramsey, D. P. Stotler,
+   % M. Ulrickson
    ''Modelling of carbon in the TFTR edge plasma'', <br>
    Europhysics Conference Abstracts '''14B''', 1417--1418 (1990). <br>
    inis:23081536 inis:23081536
@@ -441,12 +473,20 @@ Conference proceedings</h3>
    %    Plasmas'' (1987).
 
  * F. C. Jobes, ''et al.'', <br>
+   % F. C. Jobes, S. Bernabei, T.-K. Chu, N. J. Fisch, W. M. Hooke,
+   % C. F. F. Karney, E. B. Meservey, R. W. Motley, J. E. Stevens,
+   % S. E. von Goeler
    ''Start-up and ramp-up of the PLT tokamak by lower hybrid waves'', <br>
    in ''Tokamak Start-up'', 203--216 (Springer, 1986). <br>
    doi:10.1007/978-1-4757-1889-8_12 <br>
    osti:5183297 PPPL-2241
 
  * R. W. Motley, ''et al.'', <br>
+   % R. W. Motley, R. E. Bell, S. Bernabei, A. J. Cavallo, T.-K. Chu,
+   % S. A. Cohen, B. G. Denne, P. C. Efthimion, N. J. Fisch, E. Hinnov,
+   % W. M. Hooke, J. C. Hosea, F. C. Jobes, C. F. F. Karney,
+   % E. Mazzucato, E. B. Meservey, J. E. Stevens, S. Suckewer, G. Taylor,
+   % J. R. Timberlake, S. E. von Goeler, J. R. Wilson
    ''Lower hybrid current ramp-up in the PLT tokamak'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1984'',
    vol. 1, 473--478 (IAEA, 1985). <br>
@@ -459,6 +499,10 @@ Conference proceedings</h3>
    arxiv:nlin.CD/0501024
 
  * S. E. von Goeler, J. E. Stevens, C. F. F. Karney, ''et al.'', <br>
+   % S. E. von Goeler, J. E. Stevens, C. F. F. Karney, S. Bernabei,
+   % M. L. Bitter, T.-K. Chu, P. C. Efthimion, K. W. Hill, W. M. Hooke,
+   % F. C. Jobes, E. Mazzucato, E. B. Meservey, R. W. Motley, P. G. Roney,
+   % N. R. Sauthoff, S. S. Sesnic, G. Taylor, F. H. Tenney, E. J. Valeo
    ''Determination of the electron velocity distribution from the soft and
    hard X-ray emission during lower hybrid current drive on PLT'', <br>
    in ''Proc. Fifth Topical Conf. on Radio Frequency Plasma Heating'',
@@ -473,14 +517,23 @@ Conference proceedings</h3>
    oclc:8784843
 
  * C. C. Baker, ''et al.'', <br>
+   % C. C. Baker, M. A. Abdou, C. D. Boley, J. N. Brooks, R. C. Clemmer,
+   % D. A. Ehst, K. Evans, P. A. Finn, Y. Gohar, J. Jung, R. F. Mattas,
+   % B. Misra, D. L. Smith, H. C. Stevens, L. R. Turner, R. B. Wehrle,
+   % G. D. Morgan, C. A. Trachsel, L. M. Waganer, D. A. DeFreece,
+   % F. W. Perkins, N. J. Fisch, D. Q. Hwang, D. W. Ignat, S. C. Jardin,
+   % C. F. F. Karney, K. M. Ling, D. R. Mikkelsen, C. E. Singer,
+   % Y. C. Sun, D. C. Baxter, R. N. Byrne, A. E. Dabiri, D. R. Dobrott,
+   % J. E. Glancy, W. K. Hagan, J. B. McBride, S. Tamor, K. M. Berry,
+   % R. T. McGrath
    ''Tokamak reactor studies: Studies of DT demonstration reactors and
    DD reactors'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1982'',
    vol. 3, 349--361 (IAEA, 1983). <br>
    inis:14757012 IAEA-CN-41/E-1-1
 
- * R. B. White, A. H. Boozer, R. J. Goldston, R. G. Hay, J. Albert, and C. F. F.
-   Karney, <br>
+ * R. B. White, A. H. Boozer, R. J. Goldston, R. G. Hay, J. Albert, and
+   C. F. F. Karney, <br>
    ''Confinement in toroidal systems with partially
    destroyed magnetic surfaces'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1982'',
@@ -488,6 +541,11 @@ Conference proceedings</h3>
    inis:14790015 IAEA-CN-41/T-3
 
  * M. Porkolab, ''et al.'', <br>
+   % M. Porkolab, J. J. Schuss, Y. Takase, S. F. Knowlton,
+   % S. C. Luckhardt, R. E. Slusher, C. M. Surko, N. J. Fisch,
+   % W. M. Hooke, C. F. F. Karney, A. H. Kritz, R. D. McWilliams,
+   % R. W. Motley, M. Ono, F. W. Perkins, T. H. Stix, E. J. Valeo,
+   % J. R. Wilson, K.-L. Wong
    ''Lower-hybrid heating and current drive in tokamaks and related
    experiments'', <br>
    in ''Plasma Physics and Controlled Nuclear Fusion Research 1980'',
@@ -558,8 +616,8 @@ Unpublished reports</h3>
    ''Using binding free energy to guide ligand design'' (2005). <br>
    arxiv:physics/0511061
 
- * D. Q. Hwang, C. F. F. Karney, J. C. Hosea, J. A. Murphy, C. E. Singer, and
-   J. R. Wilson. <br>
+ * D. Q. Hwang, C. F. F. Karney, J. C. Hosea, J. A. Murphy,
+   C. E. Singer, and J. R. Wilson. <br>
    ''Modeling of ICRF heating of a tokamak plasma'' (1983). <br>
    osti:6233876 PPPL-1990
 
@@ -568,7 +626,8 @@ Unpublished reports</h3>
    RLE Progress Rept. No. 117, 193--197 (1976). <br>
    <a href="http://hdl.handle.net/1721.1/56587">RLE PRR 76/7</a>
 
- * A. W. Billinghurst, C. F. F. Karney, R. F. Squibbs, and S. T. Williams, <br>
+ * A. W. Billinghurst, C. F. F. Karney, R. F. Squibbs, and
+   S. T. Williams, <br>
    ''Cambridge East Greenland expedition 1971,  preliminary report'', <br>
    Cambridge Univ. Explorers and Travellers Club (1971). <br>
    doi:10.5281/zenodo.31978
@@ -721,12 +780,25 @@ Miscellaneous</h3>
 
 </ul>
 
+ % * C. F. F. Karney, <br>
+ %   ''Neutral gas modeling in divertors'', <br>
+ %   in ''Theory of Fusion Plasmas'', 183--189 (Editrice Compositori, 1992).
+ %
  % * G. Taylor, ''et al.'', <br>
+ %   % G. Taylor, C. W. Barnes, B. J. Braams, A. J. Cavallo,
+ %   % P. C. Efthimion, C. F. F. Karney, S. Tamor, M. C. Zarnstorff,
+ %   % S. J. Zweben
  %   ''Non-thermal electron cyclotron emission from TFTR supershot
  %   plasmas,'' <br>
  %   Europhysics Conference Abstracts '''13B''', 31--34 (1989).
  %
  % * J. C. Hosea, ''et al.'', <br>
+ %   % J. C. Hosea, N. L. Bretz, A. J. Cavallo, P. L. Colestock,
+ %   % C. C. Daughney, S. L. Davis, D. L. Dimock, P. C. Efthimion,
+ %   % H. P. Eubank, J. A. Murphy, D. Q. Hwang, C. F. F. Karney,
+ %   % D. H. McNeill, D. R. Mikkelsen, D. Mueller, D. E. Post, K. Sato,
+ %   % G. Schilling, S. S. Medley, C. E. Singer, A. E. Silverman,
+ %   % J. D. Strachan, S. Suckewer, H. R. Thompson, H. Toyama, J. R. Wilson
  %   ''High power ICRF heating on PLT and extrapolation to future
  %   devices'', <br>
  %   in ''Heating in Toroidal Plasmas'', vol. I, 213--223 (1982).

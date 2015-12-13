@@ -11,6 +11,7 @@
  <li><a href="#patents">Patents</a></li>
  <li><a href="#software">Software and datasets</a></li>
  <li><a href="#miscellaneous">Miscellaneous</a></li>
+ <li><a href="#scans">Scans</a></li>
 </ul>
 
 <a name="journals"></a>
@@ -752,14 +753,27 @@ Miscellaneous</h3>
    Phys. Fluids '''24'''(8), 1590 (1981). <br>
    doi:10.1063/1.863546
 
+</ul>
+
+<h3><a name="scans"></a>
+Scans</h3>
+<ul>
+
  * J. E. Keat, <br>
    ''Analysis of Least-Squares Attitude Determination Routine DOAOP'', <br>
    Computer Sciences Corp. Rept. CSC/TM-77/6034 (1977). <br>
    doi:10.5281/zenodo.32291
 
+ * V. N. Gan'shin, <br>
+   ''Geometry of the Earth Ellipsoid'', <br>
+   translated by J. M. Willis, ACIC-TC-1473 (St. Louis, 1969). <br>
+   doi:10.5281/zenodo.32854 <br>
+   <a href="http://www.dtic.mil/docs/citations/AD0689507">AD0689507</a> <br>
+   oclc:493553
+
  * G. V. Bagratuni, <br>
-   ''Course in Spheroidal Geodesy'' <br>
-   U.S. Air Force Report FTD-MT-64-390 (1967), <br>
+   ''Course in Spheroidal Geodesy'', <br>
+   U.S. Air Force Report FTD-MT-64-390 (1967). <br>
    doi:10.5281/zenodo.32371 <br>
    <a href="http://www.dtic.mil/docs/citations/AD0650520">AD0650520</a> <br>
    oclc:6150611
@@ -777,6 +791,15 @@ Miscellaneous</h3>
    (ACIC, St. Louis, 1964). <br>
    doi:10.5281/zenodo.32051 <br>
    oclc:17273288
+
+ * W. Jordan and O. Eggert, <br>
+   ''Jordan's Handbook of Geodesy'', <br>
+   translated by M. W. Carta (Army Map Service, 1962),
+   Vol. 1; Vol. 3, 1st half; Vol. 3, 2nd half. <br>
+   doi:10.5281/zenodo.35314 <br>
+   doi:10.5281/zenodo.35315 <br>
+   doi:10.5281/zenodo.35316 <br>
+   oclc:34429043
 
 </ul>
 

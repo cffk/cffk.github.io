@@ -739,7 +739,7 @@ Miscellaneous</h3>
 
  * C. F. F. Karney, <br>
    ''Complex Plotting and Graphics---PLOT2'', <br>
-   in ''MACSYMA Reference Manual, Version 10'', vol. II, chap. 2 (1983).
+   in ''MACSYMA Reference Manual, Version 10'', vol. 2, chap. 2 (1983).
 
  * C. F. F. Karney, <br>
    ''Comment on &ldquo;Chaos, periodic chaos, and the random-walk
@@ -795,7 +795,7 @@ Scans</h3>
  * W. Jordan and O. Eggert, <br>
    ''Jordan's Handbook of Geodesy'', <br>
    translated by M. W. Carta (Army Map Service, 1962),
-   Vol. 1; Vol. 3, 1st half; Vol. 3, 2nd half. <br>
+   vol. 1; vol. 3, 1st half; vol. 3, 2nd half. <br>
    doi:10.5281/zenodo.35314 <br>
    doi:10.5281/zenodo.35315 <br>
    doi:10.5281/zenodo.35316 <br>

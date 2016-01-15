@@ -97,11 +97,6 @@
    Contrib. Plasma Phys. '''38'''(1--2), 319--324 (1998). <br>
    doi:10.1002/ctpp.2150380148
 
- * C. F. F. Karney, <br>
-   ''Modern computational techniques in plasma physics'', <br>
-   Phys. Plasmas '''5'''(5), 1632--1635 (1998). <br>
-   doi:10.1063/1.872831
-
  * S. C. Chiu, C. F. F. Karney, T. K. Mau, and Y. R. Lin-Liu, <br>
    ''Theory of current drive by parallel acceleration of
    electrons in a weakly relativistic plasma'', <br>
@@ -444,11 +439,11 @@ Conference proceedings</h3>
    inis:22057647 IAEA-CN-53/E-III-11 <br>
    osti:6509146 osti:6509146
 
- * D. P. Stotler, M. Ulrickson, D. P. Coster, A. B. Ehrhardt,
-   B. J. Braams, and C. F. F. Karney, <br>
-   ''Compact ignition tokamak edge and divertor modeling'', <br>
-   in ''1990 IEEE International Conference on Plasma Science'' (1990). <br>
-   doi:10.1109/PLASMA.1990.110520
+   % * D. P. Stotler, M. Ulrickson, D. P. Coster, A. B. Ehrhardt,
+   %   B. J. Braams, and C. F. F. Karney, <br>
+   %   ''Compact ignition tokamak edge and divertor modeling'', <br>
+   %   in ''1990 IEEE International Conference on Plasma Science'' (1990). <br>
+   %   doi:10.1109/PLASMA.1990.110520
 
  * B. J. Braams, ''et al.'', <br>
    % B. J. Braams, D. P. Coster, A. B. Ehrhardt, C. F. F. Karney,
@@ -464,14 +459,14 @@ Conference proceedings</h3>
    doi:10.1063/1.38487 <br>
    arxiv:physics/0402004
 
-   %  * B. J. Braams and C. F. F. Karney, <br>
-   %    ''Numerical Fokker--Planck studies'', <br>
-   %    Europhysics Conference Abstracts '''11D''', 994--997 (1987).
+   % * B. J. Braams and C. F. F. Karney, <br>
+   %   ''Numerical Fokker--Planck studies'', <br>
+   %   Europhysics Conference Abstracts '''11D''', 994--997 (1987).
 
-   %  * B. J. Braams and C. F. F. Karney, <br>
-   %    ''Multigrid solution of the Fokker--Planck equation'', <br>
-   %    in ''Proc. 12th Conference on the Numerical Simulation of
-   %    Plasmas'' (1987).
+   % * B. J. Braams and C. F. F. Karney, <br>
+   %   ''Multigrid solution of the Fokker--Planck equation'', <br>
+   %   in ''Proc. 12th Conference on the Numerical Simulation of
+   %   Plasmas'' (1987).
 
  * F. C. Jobes, ''et al.'', <br>
    % F. C. Jobes, S. Bernabei, T.-K. Chu, N. J. Fisch, W. M. Hooke,
@@ -557,7 +552,7 @@ Conference proceedings</h3>
    ''Temporal evolution of nonlinear lower hybrid waves'', <br>
    in ''Heating in Toroidal Plasmas'', vol. I,
    455--461 (1981). <br>
-   doi:B978-1-4832-8373-9.50055-0 <br>
+   doi:10.1016/B978-1-4832-8373-9.50055-0 <br>
    inis:13701099 inis:13701099
 
  * C. F. F. Karney, <br>
@@ -730,6 +725,11 @@ Miscellaneous</h3>
  * D. P. Stotler, C. F. F. Karney, R. J. Kanzleiter, and S. Jaishankar, <br>
    <a href="http://w3.pppl.gov/degas2"
    ''User's Guide for DEGAS 2''</a> (2001).
+
+ * C. F. F. Karney, <br>
+   ''Modern computational techniques in plasma physics'', <br>
+   Phys. Plasmas '''5'''(5), 1632--1635 (1998). <br>
+   doi:10.1063/1.872831
 
  * B. V. Chirikov and D. L. Shepelyansky, <br>
    ''Statistics of Poincaré recurrences and the

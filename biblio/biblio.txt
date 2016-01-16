@@ -766,7 +766,7 @@ Scans</h3>
    doi:10.5281/zenodo.32291
 
  * T. Vincenty, <br>
-   ''Geodetic inverse solution between antipodal points'',
+   ''Geodetic inverse solution between antipodal points'', <br>
    unpublished report, DMAAC (1975). <br>
    doi:10.5281/zenodo.32999
 

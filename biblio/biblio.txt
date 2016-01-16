@@ -60,42 +60,11 @@
    Nucl. Fusion '''41'''(12), 1777--1787 (2001). <br>
    doi:10.1088/0029-5515/41/12/305
 
- * D. P. Stotler, C. F. F. Karney, M. E. Rensink, and T. D. Rognlien, <br>
-   ''Coupling of parallelized Degas 2 and UEDGE codes'', <br>
-   Contrib. Plasma Phys. '''40'''(3--4), 221--226 (2000). <br>
-   doi:10.1002/1521-3986(200006)40:3/4<221::AID-CTPP221>3.0.CO;2-L
-
  * R. J. Kanzleiter, D. P. Stotler, C. F. F. Karney, and D. Steiner, <br>
    ''Improved elastic collision modeling in Degas 2 for
    low-temperature plasmas'', <br>
    Phys. Plasmas '''7'''(12), 5064--5069 (2000). <br>
    doi:10.1063/1.1321018
-
- * C. F. F. Karney, D. P. Stotler, C. H. Skinner, J. L. Terry,
-   and D. A. Pappas, <br>
-   ''Effect of reflection on H&alpha; emissions in Alcator C-MOD'', <br>
-   Rev. Sci. Instrum. '''70'''(1), 344--346 (1999). <br>
-   doi:10.1063/1.1149347
-
- * D. P. Stotler, C. H. Skinner, and C. F. F. Karney, <br>
-   ''Spectroscopic measurements of hydrogen ion temperature
-   during divertor recombination'', <br>
-   Rev. Sci. Instrum. '''70'''(1), 347--350 (1999). <br>
-   doi:10.1063/1.1149431
-
- * D. P. Stotler, R. A. Vesey, D. P. Coster, C. F. F. Karney, ''et al.'', <br>
-   % D. P. Stotler, R. A. Vesey, D. P. Coster, C. F. F. Karney,
-   % B. LaBombard, B. Lipschultz, C. S. Pitcher, R. Schneider
-   ''Coupled Monte Carlo neutral-fluid plasma simulation
-   of Alcator C-Mod divertor plasma near detachment'', <br>
-   J. Nucl. Mater. '''266--269''', 947--952 (1999). <br>
-   doi:10.1016/S0022-3115(98)00555-8
-
- * C. F. F. Karney, D. P. Stotler, and B. J. Braams, <br>
-   ''Modeling of neutral plasma in a divertor in the
-   fluid-kinetic transition'', <br>
-   Contrib. Plasma Phys. '''38'''(1--2), 319--324 (1998). <br>
-   doi:10.1002/ctpp.2150380148
 
  * S. C. Chiu, C. F. F. Karney, T. K. Mau, and Y. R. Lin-Liu, <br>
    ''Theory of current drive by parallel acceleration of
@@ -103,22 +72,6 @@
    Phys. Plasmas '''2'''(2), 450--458 (1995). <br>
    doi:10.1063/1.870970 <br>
    osti:5068087 GA-A-21599
-
- * D. P. Stotler and C. F. F. Karney, <br>
-   ''Neutral gas transport modeling with Degas 2'', <br>
-   Contrib. Plasma Phys. '''34'''(2--3), 392--397 (1994). <br>
-   doi:10.1002/ctpp.2150340246 <br>
-   osti:10194032 PPPL-CFP-2962 <br>
-   % inis:25024349 PPPL-CFP-2962
-
- * D. P. Stotler, D. P. Coster, B. J. Braams, A. B. Ehrhardt,
-   C. F. F. Karney, and M. Petravic, <br>
-   ''Scrape-off layer modeling using coupled plasma and neutral transport
-   codes'', <br>
-   J. Nucl. Mater. '''196--198''', 894--897 (1992). <br>
-   doi:10.1016/S0022-3115(06)80163-7 <br>
-   osti:10141722 PPPL-2842 <br>
-   % inis:23069318 PPPL-2842
 
  * D. A. Ehst and C. F. F. Karney, <br>
    ''Approximate formula for radio-frequency current drive
@@ -153,23 +106,6 @@
    arxiv:physics/0501059 <br>
    osti:5509273 PPPL-2222 <br>
    % inis:17000435 PPPL-2222
-
- * C. F. F. Karney, <br>
-   ''Fokker--Planck and quasilinear codes'', <br>
-   Comput. Phys. Rep. '''4'''(3--4), 183--244 (1986). <br>
-   doi:10.1016/0167-7977(86)90029-8 <br>
-   arxiv:physics/0501066 <br>
-   osti:6284229 PPPL-2290 <br>
-   % inis:17041800 PPPL-2290
-   <a href="fp.html">errata</a>
-
- * C. F. F. Karney, <br>
-   ''Numerical techniques for the study of long-time correlations'', <br>
-   Particle Accelerators '''19'''(1--4),213--221 (1986). <br>
-   <a href="http://cds.cern.ch/record/708232">cern:708232 <br>
-   arxiv:nlin.CD/0401035 <br>
-   osti:5642277 PPPL-2218 <br>
-   % inis:17000517 PPPL-2218
 
  * C. F. F. Karney and N. J. Fisch, <br>
    ''Efficiency of current drive by fast waves'', <br>
@@ -351,12 +287,6 @@
    doi:10.1063/1.861772 <br>
    RLE PRR 77/5
 
- * A. Bers, J. L. Kulp, and C. F. F. Karney, <br>
-   ''Symbolic computation of nonlinear wave interactions on MACSYMA'', <br>
-   Comput. Phys. Comm. '''12'''(1) 81--98 (1976). <br>
-   doi:10.1016/0010-4655(76)90012-6 <br>
-   RLE PPR 76/17
-
 </ul>
 
 <h3><a name="conferences"></a>
@@ -368,6 +298,37 @@ Conference proceedings</h3>
    in ''Proc. 25th International Cartographic
    Conference'' (2011). <br>
    <a href="http://icaci.org/documents/ICC_proceedings/ICC2011/Oral Presentations PDF/D1-Map projection/CO-300.pdf">CO-300</a>
+
+ * D. P. Stotler, C. F. F. Karney, M. E. Rensink, and T. D. Rognlien, <br>
+   ''Coupling of parallelized Degas 2 and UEDGE codes'', <br>
+   Contrib. Plasma Phys. '''40'''(3--4), 221--226 (2000). <br>
+   doi:10.1002/1521-3986(200006)40:3/4<221::AID-CTPP221>3.0.CO;2-L
+
+ * C. F. F. Karney, D. P. Stotler, C. H. Skinner, J. L. Terry,
+   and D. A. Pappas, <br>
+   ''Effect of reflection on H&alpha; emissions in Alcator C-MOD'', <br>
+   Rev. Sci. Instrum. '''70'''(1), 344--346 (1999). <br>
+   doi:10.1063/1.1149347
+
+ * D. P. Stotler, C. H. Skinner, and C. F. F. Karney, <br>
+   ''Spectroscopic measurements of hydrogen ion temperature
+   during divertor recombination'', <br>
+   Rev. Sci. Instrum. '''70'''(1), 347--350 (1999). <br>
+   doi:10.1063/1.1149431
+
+ * D. P. Stotler, R. A. Vesey, D. P. Coster, C. F. F. Karney, ''et al.'', <br>
+   % D. P. Stotler, R. A. Vesey, D. P. Coster, C. F. F. Karney,
+   % B. LaBombard, B. Lipschultz, C. S. Pitcher, R. Schneider
+   ''Coupled Monte Carlo neutral-fluid plasma simulation
+   of Alcator C-Mod divertor plasma near detachment'', <br>
+   J. Nucl. Mater. '''266--269''', 947--952 (1999). <br>
+   doi:10.1016/S0022-3115(98)00555-8
+
+ * C. F. F. Karney, D. P. Stotler, and B. J. Braams, <br>
+   ''Modeling of neutral plasma in a divertor in the
+   fluid-kinetic transition'', <br>
+   Contrib. Plasma Phys. '''38'''(1--2), 319--324 (1998). <br>
+   doi:10.1002/ctpp.2150380148
 
  * D. P. Stotler, A. Yu. Pigarov, C. F. F. Karney, ''et al.'', <br>
    % D. P. Stotler, A. Yu. Pigarov, C. F. F. Karney, S. I. Krasheninnikov,
@@ -422,6 +383,22 @@ Conference proceedings</h3>
    doi:10.1063/1.44947 <br>
    osti:10151625 GA-A-21254
 
+ * D. P. Stotler and C. F. F. Karney, <br>
+   ''Neutral gas transport modeling with Degas 2'', <br>
+   Contrib. Plasma Phys. '''34'''(2--3), 392--397 (1994). <br>
+   doi:10.1002/ctpp.2150340246 <br>
+   osti:10194032 PPPL-CFP-2962 <br>
+   % inis:25024349 PPPL-CFP-2962
+
+ * D. P. Stotler, D. P. Coster, B. J. Braams, A. B. Ehrhardt,
+   C. F. F. Karney, and M. Petravic, <br>
+   ''Scrape-off layer modeling using coupled plasma and neutral transport
+   codes'', <br>
+   J. Nucl. Mater. '''196--198''', 894--897 (1992). <br>
+   doi:10.1016/S0022-3115(06)80163-7 <br>
+   osti:10141722 PPPL-2842 <br>
+   % inis:23069318 PPPL-2842
+
  * S. C. Chiu, C. F. F. Karney, R. W. Harvey, and T. K. Mau, <br>
    ''A formula for efficiency of fast wave current drive in fusion
    devices'', <br>
@@ -453,12 +430,6 @@ Conference proceedings</h3>
    Europhysics Conference Abstracts '''14B''', 1417--1418 (1990). <br>
    inis:23081536 inis:23081536
 
- * C. F. F. Karney, N. J. Fisch, and A. H. Reiman, <br>
-   ''Green's function for rf-driven current in a toroidal plasma'', <br>
-   AIP Conf. Proc. '''190''', 430--433 (1986). <br>
-   doi:10.1063/1.38487 <br>
-   arxiv:physics/0402004
-
    % * B. J. Braams and C. F. F. Karney, <br>
    %   ''Numerical Fokker--Planck studies'', <br>
    %   Europhysics Conference Abstracts '''11D''', 994--997 (1987).
@@ -467,6 +438,29 @@ Conference proceedings</h3>
    %   ''Multigrid solution of the Fokker--Planck equation'', <br>
    %   in ''Proc. 12th Conference on the Numerical Simulation of
    %   Plasmas'' (1987).
+
+ * C. F. F. Karney, N. J. Fisch, and A. H. Reiman, <br>
+   ''Green's function for rf-driven current in a toroidal plasma'', <br>
+   AIP Conf. Proc. '''190''', 430--433 (1986). <br>
+   doi:10.1063/1.38487 <br>
+   arxiv:physics/0402004
+
+ * C. F. F. Karney, <br>
+   ''Fokker--Planck and quasilinear codes'', <br>
+   Comput. Phys. Rep. '''4'''(3--4), 183--244 (1986). <br>
+   doi:10.1016/0167-7977(86)90029-8 <br>
+   arxiv:physics/0501066 <br>
+   osti:6284229 PPPL-2290 <br>
+   % inis:17041800 PPPL-2290
+   <a href="fp.html">errata</a>
+
+ * C. F. F. Karney, <br>
+   ''Numerical techniques for the study of long-time correlations'', <br>
+   Particle Accelerators '''19'''(1--4),213--221 (1986). <br>
+   <a href="http://cds.cern.ch/record/708232">cern:708232 <br>
+   arxiv:nlin.CD/0401035 <br>
+   osti:5642277 PPPL-2218 <br>
+   % inis:17000517 PPPL-2218
 
  * F. C. Jobes, ''et al.'', <br>
    % F. C. Jobes, S. Bernabei, T.-K. Chu, N. J. Fisch, W. M. Hooke,
@@ -592,6 +586,12 @@ Conference proceedings</h3>
    <a href="http://ntrs.nasa.gov/search.jsp?R=19770021840">
    nasa:19770021840</a> <br>
    RLE PRR 77/10
+
+ * A. Bers, J. L. Kulp, and C. F. F. Karney, <br>
+   ''Symbolic computation of nonlinear wave interactions on MACSYMA'', <br>
+   Comput. Phys. Comm. '''12'''(1) 81--98 (1976). <br>
+   doi:10.1016/0010-4655(76)90012-6 <br>
+   RLE PPR 76/17
 
 </ul>
 

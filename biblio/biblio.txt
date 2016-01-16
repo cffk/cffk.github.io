@@ -565,7 +565,8 @@ Conference proceedings</h3>
  * C. F. F. Karney, A. Sen, and F. Y. F. Chu, <br>
    ''The complex modified Korteweg--DeVries equation,
    a non-integrable evolution equation'', <br>
-   in ''Solitons and Condensed Matter Physics'' (Springer-Verlag, 1978). <br>
+   in ''Solitons and Condensed Matter Physics'' 71--75
+   (Springer-Verlag, 1978). <br>
    doi:10.1007/978-3-642-81291-0_8 <br>
    osti:6683038 PPPL-1455 <br>
    % inis:10424527 PPPL-1455
@@ -763,6 +764,11 @@ Scans</h3>
    ''Analysis of Least-Squares Attitude Determination Routine DOAOP'', <br>
    Computer Sciences Corp. Rept. CSC/TM-77/6034 (1977). <br>
    doi:10.5281/zenodo.32291
+
+ * T. Vincenty, <br>
+   ''Geodetic inverse solution between antipodal points'',
+   unpublished report, DMAAC (1975). <br>
+   doi:10.5281/zenodo.32999
 
  * V. N. Gan'shin, <br>
    ''Geometry of the Earth Ellipsoid'', <br>

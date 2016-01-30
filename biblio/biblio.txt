@@ -20,7 +20,7 @@
 
  * C. F. F. Karney, <br>
    ''Sampling exactly from the normal distribution'', <br>
-   ACM TOMS '''42'''(1), 3:1--14 (2016). <br>
+   ACM Trans. Math. Software '''42'''(1), 3:1--14 (2016). <br>
    doi:10.1145/2710016 <br>
    arxiv:1303.6257
 

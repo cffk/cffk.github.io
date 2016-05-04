@@ -3,6 +3,11 @@
 <h2>Charles Fielding Finch Karney: Publications</h2>
 <p>Last update: @DATE@</p>
 
+<b>NOTE:</b> Preprints of the majority of the papers listed here are
+freely available.  If you need a reprint of a paper <i>for your own
+use</i>, I will gladly send you one; send such requests to
+<a href="mailto:charles@karney.com">charles@karney.com</a>.
+
 <ul>
  <li><a href="#journals">Journal articles</a></li>
  <li><a href="#conferences">Conference proceedings</a></li>

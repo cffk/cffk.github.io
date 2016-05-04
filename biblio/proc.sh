@@ -1,5 +1,5 @@
 #! /bin/sh
-# Convert nbiblio.txt to an html page
+# Convert biblio.txt to an html page
 # git log --date=short $1 | head -3 | tail -1 | tr -s ' ' '	' |
 # cut -f2 | sed 's/$/./'
 date=`find $1 -printf '%TY-%Tm-%Td'`

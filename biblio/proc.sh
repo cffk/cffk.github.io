@@ -22,7 +22,7 @@ sed -e "s/@DATE@/$date/" \
     -e "s%'''\([0-9][---0-9A-Z]*\)'''%<b>\1</b>%g" \
     -e "s% ''% <i>%g" -e "s%\([^ ]\)''%\1</i>%g" \
     -e "s%---%\&mdash;%g" -e "s%--%\&ndash;%g" \
-    -e 's%doi:\([^ ]*\)%<a href="https://dx.doi.org/\1">doi:\1</a>%g' \
+    -e 's%doi:\([^ ]*\)%<a href="https://doi.org/\1">doi:\1</a>%g' \
     -e 's%ar[xX]iv:\([^ ]*\)%<a href="https://arxiv.org/abs/\1">arXiv:\1</a>%g' \
     -e 's%oclc:\([^ ]*\)%<a href="https://www.worldcat.org/oclc/\1">oclc:\1</a>%g' \
     -e 's%inis:\([^ ]*\) \([^ ]*\)%<a href="https://inis.iaea.org/search/search.aspx?orig_q=RN:\1">\2</a>%g' \

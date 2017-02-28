@@ -34,14 +34,14 @@ use</i>, I will gladly send you one; send such requests to
    J. Geodesy '''87'''(1), 43--55 (2013). <br>
    doi:10.1007/s00190-012-0578-z <br>
    arxiv:1109.4448 <br>
-   <a href="http://geographiclib.sf.net/geod-addenda.html">addenda</a>
+   <a href="https://geographiclib.sourceforge.io/geod-addenda.html">addenda</a>
 
  * C. F. F. Karney, <br>
    ''Transverse Mercator with an accuracy of a few nanometers'', <br>
    J. Geodesy '''85'''(8), 475--485 (2011). <br>
    doi:10.1007/s00190-011-0445-3 <br>
    arxiv:1002.1417 <br>
-   <a href="http://geographiclib.sf.net/tm-addenda.html">addenda</a>
+   <a href="https://geographiclib.sourceforge.io/tm-addenda.html">addenda</a>
 
  * C. F. F. Karney, <br>
    ''Quaternions in molecular modeling'', <br>
@@ -608,7 +608,7 @@ Unpublished reports</h3>
  * C. F. F. Karney, <br>
    ''Geodesics on an ellipsoid of revolution'' (2011). <br>
    arxiv:1102.1215 <br>
-   <a href="http://geographiclib.sf.net/geod-addenda.html#geod-errata">
+   <a href="https://geographiclib.sourceforge.io/geod-addenda.html#geod-errata">
    errata</a>
 
  * C. F. F. Karney and J. E. Ferrara, <br>
@@ -685,7 +685,7 @@ Software and datasets</h3>
    (2014). <br>
 
  * C. F. F. Karney, <br>
-   <a href="http://geographiclib.sourceforge.net">''GeographicLib''</a>
+   <a href="https://geographiclib.sourceforge.io">''GeographicLib''</a>
    (2008--). <br>
    doi:10.5281/zenodo.32463
 
@@ -712,7 +712,7 @@ Miscellaneous</h3>
    Wikipedia page</a> (2013--).
 
  * C. F. F. Karney, <br>
-   <a href="http://geographiclib.sourceforge.net/geodesic-papers/biblio.html">
+   <a href="https://geographiclib.sourceforge.io/geodesic-papers/biblio.html">
    ''A geodesic bibliography''</a> (2009--).
 
  * C. F. F. Karney and R. E. Deakin, <br>

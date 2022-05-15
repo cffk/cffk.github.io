@@ -463,7 +463,7 @@ Conference proceedings</h3>
  * C. F. F. Karney, <br>
    ''Numerical techniques for the study of long-time correlations'', <br>
    Particle Accelerators '''19'''(1--4),213--221 (1986). <br>
-   <a href="http://cds.cern.ch/record/708232">cern:708232 <br>
+   <a href="http://cds.cern.ch/record/708232">cern:708232</a> <br>
    arxiv:nlin.CD/0401035 <br>
    osti:5642277 PPPL-2218 <br>
    % inis:17000517 PPPL-2218

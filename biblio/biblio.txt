@@ -606,6 +606,10 @@ Unpublished reports</h3>
 <ul>
 
  * C. F. F. Karney, <br>
+   ''Geodesics on an arbitrary ellipsoid of revolution'' (2022). <br>
+   arxiv:2208.00492
+
+ * C. F. F. Karney, <br>
    ''Geodesics on an ellipsoid of revolution'' (2011). <br>
    arxiv:1102.1215 <br>
    <a href="https://geographiclib.sourceforge.io/geod-addenda.html#geod-errata">

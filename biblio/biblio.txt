@@ -605,6 +605,10 @@ Conference proceedings</h3>
 Unpublished reports</h3>
 <ul>
 
+ * C. F. F. Karney and S. Kim, <br>
+   ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>
+   arxiv:2208.12116
+
  * C. F. F. Karney, <br>
    ''Geodesics on an arbitrary ellipsoid of revolution'' (2022). <br>
    arxiv:2208.00492

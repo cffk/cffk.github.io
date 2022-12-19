@@ -607,7 +607,7 @@ Unpublished reports</h3>
 
  * C. F. F. Karney, <br>
    ''On auxiliary latitudes'' (2022). <br>
-   arxiv:2208.12116
+   arxiv:2212.05818
 
  * C. F. F. Karney and S. Kim, <br>
    ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>

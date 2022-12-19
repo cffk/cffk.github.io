@@ -605,6 +605,10 @@ Conference proceedings</h3>
 Unpublished reports</h3>
 <ul>
 
+ * C. F. F. Karney, <br>
+   ''On auxiliary latitudes'' (2022). <br>
+   arxiv:2208.12116
+
  * C. F. F. Karney and S. Kim, <br>
    ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>
    arxiv:2208.12116
@@ -682,6 +686,10 @@ Patents</h3>
 <h3><a name="software"></a>
 Software and datasets</h3>
 <ul>
+
+ * C. F. F. Karney, <br>
+   ''Series expansions for converting between auxiliary latitudes'' (2022). <br>
+   doi:10.5281/zenodo.7382666
 
  * C. F. F. Karney, <br>
    <a href="https://github.com/cffk/orientation/tree/v1.1">

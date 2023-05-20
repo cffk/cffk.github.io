@@ -6,7 +6,7 @@
 <b>NOTE:</b> Preprints of the majority of the papers listed here are
 freely available.  If you need a reprint of a paper <i>for your own
 use</i>, I will gladly send you one; send such requests to
-<a href="mailto:charles@karney.com">charles@karney.com</a>.
+<a href="mailto:karney@alum.mit.edu">karney@alum.mit.edu</a>.
 
 <ul>
  <li><a href="#journals">Journal articles</a></li>
@@ -22,6 +22,11 @@ use</i>, I will gladly send you one; send such requests to
 <a name="journals"></a>
 <h3>Journal articles</h3>
 <ul>
+
+ * C. F. F. Karney, <br>
+   ''On auxiliary latitudes'', <br>
+   Survey Review, to appear (2023). <br>
+   arxiv:2212.05818
 
  * C. F. F. Karney, <br>
    ''Sampling exactly from the normal distribution'', <br>
@@ -609,10 +614,6 @@ Unpublished reports</h3>
    ''The area of rhumb polygons'' (2023). <br>
    arxiv:2303.03219
 
- * C. F. F. Karney, <br>
-   ''On auxiliary latitudes'' (2022). <br>
-   arxiv:2212.05818
-
  * C. F. F. Karney and S. Kim, <br>
    ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>
    arxiv:2208.12116
@@ -863,7 +864,7 @@ Scans</h3>
  %   in ''Heating in Toroidal Plasmas'', vol. I, 213--223 (1982).
 
     <hr>
-    <address><a href="mailto:charles@karney.com">Charles Karney</a>
+    <address><a href="mailto:karney@alum.mit.edu">Charles Karney</a>
     </address>
     <a href="../index.html">Back to main page.</a>
 </body>

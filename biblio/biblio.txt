@@ -26,6 +26,7 @@ use</i>, I will gladly send you one; send such requests to
  * C. F. F. Karney, <br>
    ''On auxiliary latitudes'', <br>
    Survey Review, to appear (2023). <br>
+   doi:10.1080/00396265.2023.2217604 <br>
    arxiv:2212.05818
 
  * C. F. F. Karney, <br>
@@ -609,6 +610,10 @@ Conference proceedings</h3>
 <h3><a name="unpublished"></a>
 Unpublished reports</h3>
 <ul>
+
+ * C. F. F. Karney, <br>
+   ''Geodesic intersections'' (2023). <br>
+   arxiv:2308.00495
 
  * C. F. F. Karney, <br>
    ''The area of rhumb polygons'' (2023). <br>

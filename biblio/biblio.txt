@@ -30,7 +30,7 @@ use</i>, I will gladly send you one; send such requests to
 
  * C. F. F. Karney, <br>
    ''Geodesics on an arbitrary ellipsoid of revolution'', <br>
-   J. Geodesy, to appear (2024). <br>
+   J. Geodesy '''98'''(1), 4:1--14 (2024). <br>
    doi:10.1007/s00190-023-01813-2 <br>
    arxiv:2208.00492
 

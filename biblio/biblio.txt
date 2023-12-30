@@ -24,6 +24,17 @@ use</i>, I will gladly send you one; send such requests to
 <ul>
 
  * C. F. F. Karney, <br>
+   ''Geodesic intersections'', <br>
+   J. Surveying Eng., to appear (2024). <br>
+   arxiv:2308.00495
+
+ * C. F. F. Karney, <br>
+   ''Geodesics on an arbitrary ellipsoid of revolution'', <br>
+   J. Geodesy, to appear (2024). <br>
+   doi:10.1007/s00190-023-01813-2 <br>
+   arxiv:2208.00492
+
+ * C. F. F. Karney, <br>
    ''On auxiliary latitudes'', <br>
    Survey Review, to appear (2023). <br>
    doi:10.1080/00396265.2023.2217604 <br>
@@ -612,16 +623,8 @@ Unpublished reports</h3>
 <ul>
 
  * C. F. F. Karney, <br>
-   ''Geodesic intersections'' (2023). <br>
-   arxiv:2308.00495
-
- * C. F. F. Karney, <br>
    ''The area of rhumb polygons'' (2023). <br>
    arxiv:2303.03219
-
- * C. F. F. Karney, <br>
-   ''Geodesics on an arbitrary ellipsoid of revolution'' (2023). <br>
-   arxiv:2208.00492
 
  * C. F. F. Karney and S. Kim, <br>
    ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>

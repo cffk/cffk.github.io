@@ -25,7 +25,8 @@ use</i>, I will gladly send you one; send such requests to
 
  * C. F. F. Karney, <br>
    ''Geodesic intersections'', <br>
-   J. Surveying Eng., to appear (2024). <br>
+   J. Surveying Eng. '''150'''(3), 04024005:1--9 (2024). <br>
+   doi:10.1061/JSUED2.SUENG-1483 <br>
    arxiv:2308.00495
 
  * C. F. F. Karney, <br>
@@ -36,7 +37,7 @@ use</i>, I will gladly send you one; send such requests to
 
  * C. F. F. Karney, <br>
    ''On auxiliary latitudes'', <br>
-   Survey Review, to appear (2023). <br>
+   Survey Review '''56'''(395), 165--180 (2024). <br>
    doi:10.1080/00396265.2023.2217604 <br>
    arxiv:2212.05818
 

@@ -24,6 +24,11 @@ use</i>, I will gladly send you one; send such requests to
 <ul>
 
  * C. F. F. Karney, <br>
+   ''The area of rhumb polygons,'' <br>
+   to appear in Stud. Geophys. Geod. (2024). <br>
+   arxiv:2303.03219
+
+ * C. F. F. Karney, <br>
    ''Geodesic intersections'', <br>
    J. Surveying Eng. '''150'''(3), 04024005:1--9 (2024). <br>
    doi:10.1061/JSUED2.SUENG-1483 <br>
@@ -623,10 +628,6 @@ Conference proceedings</h3>
 Unpublished reports</h3>
 <ul>
 
- * C. F. F. Karney, <br>
-   ''The area of rhumb polygons'' (2023). <br>
-   arxiv:2303.03219
-
  * C. F. F. Karney and S. Kim, <br>
    ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>
    arxiv:2208.12116
@@ -700,6 +701,10 @@ Patents</h3>
 <h3><a name="software"></a>
 Software and datasets</h3>
 <ul>
+
+ * C. F. F. Karney, <br>
+   ''Test set for geodesics on a triaxial ellipsoid'' (2024). <br>
+   doi:10.5281/zenodo.12510796
 
  * C. F. F. Karney, <br>
    ''Series expansions for computing rhumb areas'' (2023). <br>

@@ -25,7 +25,8 @@ use</i>, I will gladly send you one; send such requests to
 
  * C. F. F. Karney, <br>
    ''The area of rhumb polygons,'' <br>
-   to appear in Stud. Geophys. Geod. (2024). <br>
+   Stud. Geophys. Geod. '''68''' (2024). <br> 
+   doi:10.1007/s11200-024-0709-z <br>
    arxiv:2303.03219
 
  * C. F. F. Karney, <br>
@@ -703,7 +704,7 @@ Software and datasets</h3>
 <ul>
 
  * C. F. F. Karney, <br>
-   ''Test set for geodesics on a triaxial ellipsoid'' (2024). <br>
+   ''Test set of geodesics on a triaxial ellipsoid'' (2024). <br>
    doi:10.5281/zenodo.12510796
 
  * C. F. F. Karney, <br>

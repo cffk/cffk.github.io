@@ -64,6 +64,7 @@ use</i>, I will gladly send you one; send such requests to
    ''Transverse Mercator with an accuracy of a few nanometers'', <br>
    J. Geodesy '''85'''(8), 475--485 (2011). <br>
    doi:10.1007/s00190-011-0445-3 <br>
+   <a href="https://rdcu.be/dRnHB">read journal article online</a><br>
    arxiv:1002.1417 <br>
    <a href="https://geographiclib.sourceforge.io/tm-addenda.html">addenda</a>
 

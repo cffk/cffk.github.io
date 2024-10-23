@@ -25,7 +25,7 @@ use</i>, I will gladly send you one; send such requests to
 
  * C. F. F. Karney, <br>
    ''The area of rhumb polygons,'' <br>
-   Stud. Geophys. Geod. '''68''' (2024). <br> 
+   Stud. Geophys. Geod. '''68'''(3--4) 99--120 (2024). <br>
    doi:10.1007/s11200-024-0709-z <br>
    arxiv:2303.03219
 

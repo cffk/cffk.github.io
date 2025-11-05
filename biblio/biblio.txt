@@ -630,6 +630,10 @@ Conference proceedings</h3>
 Unpublished reports</h3>
 <ul>
 
+ * C. F. F. Karney, <br>
+   ''Jacobi's solution for geodesics on a triaxial ellipsoid'' (2025). <br>
+   arxiv:2511.01621
+
  * C. F. F. Karney and S. Kim, <br>
    ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>
    arxiv:2208.12116

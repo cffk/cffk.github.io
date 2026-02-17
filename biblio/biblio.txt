@@ -24,6 +24,12 @@ use</i>, I will gladly send you one; send such requests to
 <ul>
 
  * C. F. F. Karney, <br>
+   ''Jacobi's solution for geodesics on a triaxial ellipsoid'', <br>
+   J. Geodesy '''100'''(2), 17:1--23 (2026). <br>
+   doi:10.1007/s00190-026-02030-3 <br>
+   arxiv:2511.01621
+
+ * C. F. F. Karney, <br>
    ''The area of rhumb polygons,'' <br>
    Stud. Geophys. Geod. '''68'''(3--4) 99--120 (2024). <br>
    doi:10.1007/s11200-024-0709-z <br>
@@ -630,10 +636,6 @@ Conference proceedings</h3>
 Unpublished reports</h3>
 <ul>
 
- * C. F. F. Karney, <br>
-   ''Jacobi's solution for geodesics on a triaxial ellipsoid'' (2025). <br>
-   arxiv:2511.01621
-
  * C. F. F. Karney and S. Kim, <br>
    ''Sensor trajectory estimation by triangulating lidar returns'' (2022). <br>
    arxiv:2208.12116
@@ -660,7 +662,7 @@ Unpublished reports</h3>
  * C. F. F. Karney and A. Bers, <br>
    ''Nonlinear orbit perturbation and ion heating'', <br>
    RLE Progress Rept. No. 117, 193--197 (1976). <br>
-   <a href="http://hdl.handle.net/1721.1/56587">RLE PRR 76/7</a>
+   <a href="https://hdl.handle.net/1721.1/56587">RLE PRR 76/7</a>
 
  * A. W. Billinghurst, C. F. F. Karney, R. F. Squibbs, and
    S. T. Williams, <br>
@@ -726,7 +728,7 @@ Software and datasets</h3>
    doi:10.5281/zenodo.32025
 
  * C. F. F. Karney, <br>
-   <a href="http://exrandom.sourceforge.net">''ExRandom''</a>
+   <a href="https://exrandom.sourceforge.net">''ExRandom''</a>
    (2014). <br>
 
  * C. F. F. Karney, <br>
@@ -743,7 +745,7 @@ Software and datasets</h3>
    doi:10.5281/zenodo.32470
 
  * C. F. F. Karney, <br>
-   <a href="http://randomlib.sourceforge.net">''RandomLib''</a>
+   <a href="https://randomlib.sourceforge.net">''RandomLib''</a>
    (2006--2014). <br>
 
 </ul>
@@ -775,7 +777,7 @@ Miscellaneous</h3>
    arxiv:0908.1823
 
  * D. P. Stotler, C. F. F. Karney, R. J. Kanzleiter, and S. Jaishankar, <br>
-   <a href="http://w3.pppl.gov/degas2"
+   <a href="https://w3.pppl.gov/degas2"
    ''User's Guide for DEGAS 2''</a> (2001).
 
  * C. F. F. Karney, <br>
